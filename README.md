@@ -6,7 +6,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 1. [Download Virtual Machine💿](#Download-Virtual-Machine-)
 2. [Choosing The Operating System💻](#Choosing-the-Operating-System-)
 3. [Download The Operating System💻](#Download-The-Operating-System-)
-4. [Virtual Machine Installation🛠️](#Virtual-Machine-Installation-)
+4. [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
 
 ## Download Virtual Machine ISO 💿
 If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org).
