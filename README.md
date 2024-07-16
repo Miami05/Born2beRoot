@@ -8,7 +8,7 @@ Born2beRoot is a 42School project designed to build foundational skills in cyber
 4. [Virtual Machine Installation](#Virtual-Machine-Installation)
 
 ## Download Virtual Machine ISO 💿
-If you haven't installed VirtualBox yet, you can download it from the official <a href= https://www.virtualbox.org target="_blank">VirtualBox website</a>.
+If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org){:target="_blank"}.
 VirtualBox is essential for setting up and running the virtual machine that will host the operating system we will be working with.
 
 ## Choosing The Operating System
