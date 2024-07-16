@@ -2,10 +2,10 @@
 Born2beRoot is a 42School project designed to build foundational skills in cybersecurity. It covers Linux system administration, network security, firewall configuration, user and group management, and secure service setups. Through hands-on tasks, students learn to identify vulnerabilities, implement security measures, and ensure system integrity.
 
 ## Index
-1. [Download Virtual Machine💿](#Download-Virtual-Machine💿)
-2. [Choosing The Operating System💻](#Choosing-the-Operating-System💻)
-3. [Download The Operating System💻](#Download-The-Operating-System💻)
-4. [Virtual Machine Installation🛠️](#Virtual-Machine-Installation🛠️)
+1. [Download Virtual Machine💿](#Download-Virtual-Machine)
+2. [Choosing The Operating System💻](#Choosing-the-Operating-System)
+3. [Download The Operating System💻](#Download-The-Operating-System)
+4. [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
 
 ## Download Virtual Machine ISO 💿
 If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org).
