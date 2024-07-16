@@ -80,11 +80,20 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
 ## Virtual Machine Installation
 1 ◦ Open Oracle VirtualBox
-[<img width="836" alt="Screenshot from 2024-07-16 16-53-38" src="https://imgur.com/5R3uOrL.png">
+<img width="836" alt="Screenshot from 2024-07-16 16-53-38" src="https://imgur.com/5R3uOrL.png">
 
 2 ◦ Click on the New command on the top 
 <img width ="836" src="https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/newVm.png">
 
 3 ◦ We must choose a name for the machine and the folder which will locate it. IMPORTANT Store the machine created inside the sgoinfre folder located in your campus server; this is important because we will run out of memory space in our session and the installation will fail. (Ask your staff if you can't find it)
-<img width="836" alt="Screenshot from 2024-07-16 16-53-38" src="https://imgur.com/mnuOSLW.png">
+<img width="836" alt="Screenshot from 2024-07-16 16-50-55" src="https://imgur.com/mnuOSLW.png">
+
+4 ◦ Now we have to set up the memory size we want to use for our VM. You are free to choose How much memory you want to use from your computer but I would suggest that 1024MB is enough for this project. 
+<img width="836" alt="Screenshot from 2024-07-16 16-51-34" src="https://imgur.com/qf8XQhX.png">
+
+5 ◦ Now the next prompts are asking to set up a virtual Hard disk. In the VirtualBox setup process, ensure to select 'Dynamically allocated' for storage on the physical hard disk. This option allows the virtual hard disk file to grow in size as needed, optimizing disk space usage. Avoid checking the option to pre-allocate the full size, as it may lead to unnecessary disk space allocation." 
+<img width="836" alt="Screenshot from 2024-07-16 16-51-44" src="https://imgur.com/bYD3HUj.png">
+
+6 ◦ Now click finish.
+<img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/t5pZMVq.png">
 
