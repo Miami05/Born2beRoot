@@ -78,4 +78,5 @@ If you decide to pursue the bonus part of the project, Debian provides several a
     And choose Boot ISO
 
 ## Virtual Machine Installation
+![alt text](<Screenshot from 2024-07-16 16-50-06.png>)
 ![New VM](https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/newVm.png)
