@@ -3,7 +3,7 @@ Born2beRoot is a 42School project designed to build foundational skills in cyber
 
 ## Index
 1. [Download Virtual Machine💿](#DownloadVirtualMachine)
-2. [Choosing The Operating System](#ChoosingtheOperatingSystem)
+2. [Choosing The Operating System](#Choosing-the-Operating-System)
 3. [Download The Operating System](#DownloadTheOperatingSystem)
 4. [Virtual Machine Installation](#VirtualMachineInstallation)
 
