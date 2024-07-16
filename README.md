@@ -8,11 +8,11 @@ Born2beRoot is a 42School project designed to build foundational skills in cyber
 4. [Virtual Machine Installation](#VirtualMachineInstallation)
 5. 
 
-## Download Virtual Machine ISO 💿
+# Download Virtual Machine ISO 💿
 If you haven't installed VirtualBox yet, you can download it from the official <a href = https://www.virtualbox.org>VirtualBox website.</a> 
 VirtualBox is essential for setting up and running the virtual machine that will host the operating system we will be working with.
 
-## Choosing The Operating System
+# Choosing The Operating System
 Debian
 
     Stability and Reliability:
@@ -68,7 +68,7 @@ If you decide to pursue the bonus part of the project, Debian provides several a
     Community and Documentation: The extensive Debian community and documentation make it easier to find support and guidance when setting up and managing additional services,
     enhancing the project's scalability and customization.
 
-## Download The Operating System
+# Download The Operating System
 Download Debian:
 
     Official Website: You can download Debian from <a href =https://www.debian.org/>Debian's official download page</a>.
