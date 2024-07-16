@@ -80,7 +80,7 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
 ## Virtual Machine Installation
 1- Open Oracle VirtualBox
-![Open Oracle VirtualBox](https://github.com/Miami05/Born2beRoot/raw/main/path/to/Screenshot%20from%202024-07-16%2016-50-06.png))
+![Open Oracle VirtualBox](</home/ldurmish/Pictures/Screenshot from 2024-07-16 16-50-06.png>)
 
 2- Click on the New command on the top 
 ![New VM](https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/newVm.png)
