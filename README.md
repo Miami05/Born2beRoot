@@ -79,10 +79,10 @@ If you decide to pursue the bonus part of the project, Debian provides several a
     And choose Boot ISO
 
 ## Virtual Machine Installation
-1- Open Oracle VirtualBox
-![Open Virtual Machine](https://github.com/Miami05/Born2beRoot/raw/main/path/to/Screenshot%20from%202024-07-16%2016-53-38.png)
+1 ◦ Open Oracle VirtualBox
+![Open Virtual Machine]<img width="836" alt="Screenshot from 2024-07-16 16-53-38" src="https://imgur.com/5R3uOrL">
 
-2- Click on the New command on the top 
+2 ◦ Click on the New command on the top 
 ![New VM](https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/newVm.png)
 
 3 ◦ We must choose a name for the machine and the folder which will locate it. IMPORTANT Store the machine created inside the sgoinfre folder located in your campus server; this is important because we will run out of memory space in our session and the installation will fail. (Ask your staff if you can't find it)
