@@ -70,7 +70,7 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
 ### Download Debian:
 
-- **Official Website:** You can download Debian from [Debian's official download page](https://www.debian.org/download){:target="_blank"}.
+- **Official Website:** You can download Debian from <a href= https://www.debian.org/download :target="_blank">Debian's official download page</a>.
 
 ### Download Rocky
 - **Official Website:** You can download Rocky from [Rocky's official download page](https://rockylinux.org/download){:target="_blank"}.
