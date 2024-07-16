@@ -8,7 +8,7 @@ Born2beRoot is a 42School project designed to build foundational skills in cyber
 4. [Virtual Machine Installation](#Virtual-Machine-Installation)
 
 ## Download Virtual Machine ISO 💿
-If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org){:target="_blank"}.
+If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org).
 VirtualBox is essential for setting up and running the virtual machine that will host the operating system we will be working with.
 
 ## Choosing The Operating System
@@ -71,8 +71,8 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
 ### Download Debian:
 
-- **Official Website:** You can download Debian from <a href= https://www.debian.org/download target="_blank">Debian's official download page</a>.
+- **Official Website:** You can download Debian from [Debian's official download page](https://www.debian.org/download).
 
 ### Download Rocky
-- **Official Website:** You can download Rocky from <a href= https://rockylinux.org/download target="_blank">Rocky's official download page</a>.
-    And choose Boot ISO.
+- **Official Website:** You can download Rocky from [Rocky's official download page](https://rockylinux.org/download).
+    And choose Boot ISO
