@@ -94,6 +94,20 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 5 ◦ Now the next prompts are asking to set up a virtual Hard disk. In the VirtualBox setup process, ensure to select 'Dynamically allocated' for storage on the physical hard disk. This option allows the virtual hard disk file to grow in size as needed, optimizing disk space usage. Avoid checking the option to pre-allocate the full size, as it may lead to unnecessary disk space allocation." 
 <img width="836" alt="Screenshot from 2024-07-16 16-51-44" src="https://imgur.com/bYD3HUj.png">
 
-6 ◦ Now click finish.
+6 ◦ Now click Finish.
 <img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/t5pZMVq.png">
 
+7 ◦ It might seem that we have already finish the installation , but there's still some steps to do. Click on Settings.
+<img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/x1m7OYH.png">
+
+8 ◦ Then click on Storage.
+<img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/K79b0UK.png">
+
+9 ◦ Click on the blue disk icon, then select 'Choose a disk file', and finally, select the Debian ISO file that you downloaded.
+<img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/WU5YJhb.png">
+
+10 ◦ After that Click OK.
+<img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/4IMXgcJ.png">
+
+11 ◦ After completing all the steps, click the 'Start' button to launch your new virtual machine.
+<img width="836" alt="Screenshot from 2024-07-16 16-51-50" src="https://imgur.com/K72dUEL.png">
