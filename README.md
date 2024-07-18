@@ -18,13 +18,14 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 4.  [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
 
 5.  [Installing Debian🌀](#Installing-Debian)
-6.  [Virtual Machine Setup⚙️](#Virtual-Machine-Setup)
-	6.1 [Installing sudo & configuration of users and groups 👤]
-	6.2 [Installing & configuring SSH 📶]
-	6.3 [Installing & configuring UFW 🔥🧱]
-	6.4 [Setting up the sudo policies 🔒]
-	6.5 [Setting up the strong password policy 🔑](
-	6.6 [Connecting via SSH 🗣]
+6. [Virtual Machine Setup ⚙️](#Virtual-Machine-Setup)
+    6.1 [Installing Sudo & Configuring Users and Groups 👤](#Installing-Sudo-Configuring-Users-and-Groups)
+    6.2 [Installing & Configuring SSH 📶](#Installing-Configuring-SSH)
+    6.3 [Installing & Configuring UFW 🔥🧱](#Installing-Configuring-UFW)
+    6.4 [Setting up Sudo Policies 🔒](#Setting-up-Sudo-Policies)
+    6.5 [Setting up a Strong Password Policy 🔑](#Setting-up-a-Strong-Password-Policy)
+    6.6 [Connecting Via SSH 🗣](#Connecting-Via-SSH)
+
 7. [Script 🚨]
 	7.1 [Total result of the script 🆗]
 8. [Crontab ⏰]
