@@ -18,7 +18,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 4.  [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
 
 5.  [Installing Debian🌀](#Installing-Debian)
-6.  [Virtual machine setup ⚙️](#Virtual-Machine-Setup)
+6.  [Virtual machine setup ⚙️](#Virtual-Machine-Setup-)
 		6.1 [Installing sudo & configuration of users and groups 👤]
 		6.2 [Installing & configuring SSH 📶]
 		6.3 [Installing & configuring UFW 🔥🧱]
@@ -47,7 +47,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
 ##  Choosing The Operating System 💻
 
+  
+
 ###  Debian
+
+  
 
 ####  Stability and Reliability:
 
@@ -55,17 +59,23 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
 - Well-established release cycle with long-term support options.
 
+  
+
 ####  Community Support:
 
 - Large and active community with extensive documentation and resources.
 
 - Suitable for both beginners and experienced users in system administration.
 
+  
+
 ####  Ease of Use:
 
 - User-friendly package management system (APT) simplifies software installation and updates.
 
-- Comprehensive documentation aids in setup and troubleshooting.  
+- Comprehensive documentation aids in setup and troubleshooting.
+
+  
 
 ####  Security Features:
 
@@ -73,19 +83,27 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
 - Regular security updates and patches ensure system integrity.
 
+  
+
 ####  Flexibility and Compatibility:
 
 - Versatile for various applications including servers, desktops, and embedded systems.
 
 - Wide compatibility with diverse hardware and software configurations.
 
+  
+
 ###  Rocky Linux
+
+  
 
 ####  Enterprise Focus:
 
 - Developed as a stable and secure distribution, aiming to replace CentOS in enterprise environments.
 
-- Follows RHEL closely, ensuring compatibility with enterprise applications.  
+- Follows RHEL closely, ensuring compatibility with enterprise applications.
+
+  
 
 ####  Community and Support:
 
@@ -93,11 +111,15 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
 - Offers enterprise-level support options through third-party vendors.
 
+  
+
 ####  Compatibility with CentOS/RHEL:
 
 - Designed to be a drop-in replacement for CentOS, maintaining compatibility with RHEL repositories and workflows.
 
-- Suitable for organizations requiring RHEL-like features without the associated costs.  
+- Suitable for organizations requiring RHEL-like features without the associated costs.
+
+  
 
 ####  Security and Stability:
 
@@ -105,34 +127,55 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
 - Long-term support and predictable release cycles ensure reliability for critical systems.
 
+  
+
 ####  Deployment and Scalability:
 
 - Optimized for large-scale deployments and mission-critical applications.
 
 - Provides tools and support for seamless scalability in enterprise environments.
 
+  
+
 ##  Bonus Part Consideration
 
-If you decide to pursue the bonus part of the project, Debian provides several advantages:  
+  
+
+If you decide to pursue the bonus part of the project, Debian provides several advantages:
+
+  
 
 -  **Stable Platform:** Debian offers a stable environment, ensuring reliability for setting up additional services such as WordPress or custom services.
 
+  
+
 -  **Availability of Packages:** With over 50,000 packages in its repository, Debian provides ample software choices for installing and configuring additional services to expand the project's scope.
+
+  
 
 -  **Community and Documentation:** The extensive Debian community and documentation make it easier to find support and guidance when setting up and managing additional services, enhancing the project's scalability and customization.
 
+  
 
 ##  Download The Operating System 💻
 
+  
+
 ###  Download Debian:
 
+  
+
 -  **Official Website:** You can download Debian from [Debian's official download page](https://www.debian.org/download).
+
+  
 
 ###  Download Rocky
 
 -  **Official Website:** You can download Rocky from [Rocky's official download page](https://rockylinux.org/download).
 
 And choose Boot ISO
+
+  
 
 ##  Virtual Machine Installation
 
@@ -145,38 +188,59 @@ And choose Boot ISO
 3 ◦ We must choose a name for the machine and the folder which will locate it. IMPORTANT Store the machine created inside the sgoinfre folder located in your campus server; this is important because we will run out of memory space in our session and the installation will fail. (Ask your staff if you can't find it)
 <img  width="836"  alt="Screenshot from 2024-07-16 16-50-55"  src="https://imgur.com/CCfeFs7.png">
 
+  
+
 4 ◦ Now we have to set up the memory size we want to use for our VM. You are free to choose How much memory you want to use from your computer but I would suggest that 1024MB is enough for this project.
+
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-34"  src="https://imgur.com/qf8XQhX.png">
+
+  
 
 5 ◦ Now the next prompts are asking to set up a virtual Hard disk. In the VirtualBox setup process, ensure to select 'Dynamically allocated' for storage on the physical hard disk. This option allows the virtual hard disk file to grow in size as needed, optimizing disk space usage. Avoid checking the option to pre-allocate the full size, as it may lead to unnecessary disk space allocation. One we established the recommended `12 GB` we must click on `Create`. If we are doing the bonus we might set `30 GB`.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-44"  src="https://imgur.com/M3WvvRH.png">
 
+
 6 ◦ Now click Finish.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/LOArHmm.png">
+
+  
 
 7 ◦ It might seem that we have already finish the installation , but there's still some steps to do. Click on Settings.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/fulL3xl.png">
 
+  
+
 8 ◦ Then click on Storage.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/j6SfLp5.png">
+
+  
 
 9 ◦ Click on the blue disk icon, then select 'Choose a disk file', and finally, select the Debian ISO file that you downloaded.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/zJxdFTC.png">
 
+  
+
 10 ◦ After that Click OK.
-<img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/SYnM1xP.png">  
+<img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/SYnM1xP.png">
+
+  
 
 11 ◦ After completing all the steps, click the 'Start' button to launch your new virtual machine.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/rmtkgaX.png">
 
+
 12 ◦ If it show this error.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/e0eXvOy.png">
+
+  
 
 13 ◦ Navigate to Settings, then General, and ensure that the Version is specified as Oracle Linux (64bit).
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/tDF2G2A.png">
 
-
+  
 ##  Installing Debian🌀
+
+  
 
 -  **Hey there! Your eyesight is important. 👀 Enlarge the window for a better view:**
 
@@ -285,4 +349,4 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-## Virtual machine setup ⚙️
+## Virtual machine setup⚙️
