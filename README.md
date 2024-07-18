@@ -341,6 +341,6 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
-## Virtual Machine Setup ⚙️
+## Virtual Machine Setup
 
 ## Script🚨
