@@ -344,4 +344,6 @@ Then, press the Tab key and select Continue
 
 ## Virtual Machine Setup📡
 
+### Installing Sudo and Configuring Users and Groups 👤
+
 ## Script🚨
