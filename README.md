@@ -18,7 +18,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 4.  [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
 
 5.  [Installing Debian🌀](#Installing-Debian)
-6. [Virtual Machine Setup ⚙️](#Virtual-Machine-Setup-)
+6. [Virtual Machine Setup ⚙️](#Virtual-Machine-Setup)
     6.1 [Installing Sudo & Configuring Users and Groups 👤](#Installing-Sudo-Configuring-Users-and-Groups)
     6.2 [Installing & Configuring SSH 📶](#Installing-Configuring-SSH)
     6.3 [Installing & Configuring UFW 🔥🧱](#Installing-Configuring-UFW)
