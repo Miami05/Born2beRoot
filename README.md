@@ -111,33 +111,52 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
 - Long-term support and predictable release cycles ensure reliability for critical systems.
 
+  
+
 ####  Deployment and Scalability:
 
 - Optimized for large-scale deployments and mission-critical applications.
 
 - Provides tools and support for seamless scalability in enterprise environments.
 
-##  Bonus Part Consideration  
+  
+
+##  Bonus Part Consideration
+
+  
 
 If you decide to pursue the bonus part of the project, Debian provides several advantages:
 
+  
+
 -  **Stable Platform:** Debian offers a stable environment, ensuring reliability for setting up additional services such as WordPress or custom services.
+
+  
 
 -  **Availability of Packages:** With over 50,000 packages in its repository, Debian provides ample software choices for installing and configuring additional services to expand the project's scope.
 
+  
+
 -  **Community and Documentation:** The extensive Debian community and documentation make it easier to find support and guidance when setting up and managing additional services, enhancing the project's scalability and customization.
+
+  
 
 ##  Download The Operating System 💻
 
+  
+
 ###  Download Debian:
 
--  **Official Website:** You can download Debian from [Debian's official download page](https://www.debian.org/download).  
+-  **Official Website:** You can download Debian from [Debian's official download page](https://www.debian.org/download).
+
+  
 
 ###  Download Rocky
 
 -  **Official Website:** You can download Rocky from [Rocky's official download page](https://rockylinux.org/download).
-
 And choose Boot ISO
+
+  
 
 ##  Virtual Machine Installation
 
@@ -145,56 +164,73 @@ And choose Boot ISO
 
 <img  width="836"  alt="Screenshot from 2024-07-16 16-53-38"  src="https://imgur.com/5R3uOrL.png">
 
+  
+
 2 ◦ Click on the New command on the top
 
 <img  width  ="836"  src="https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/newVm.png">
+
+  
 
 3 ◦ We must choose a name for the machine and the folder which will locate it. IMPORTANT Store the machine created inside the sgoinfre folder located in your campus server; this is important because we will run out of memory space in our session and the installation will fail. (Ask your staff if you can't find it)
 
 <img  width="836"  alt="Screenshot from 2024-07-16 16-50-55"  src="https://imgur.com/mnuOSLW.png">
 
+  
+
 4 ◦ Now we have to set up the memory size we want to use for our VM. You are free to choose How much memory you want to use from your computer but I would suggest that 1024MB is enough for this project.
 
-<img  width="836"  alt="Screenshot from 2024-07-16 16-51-34"  src="https://imgur.com/qf8XQhX.png">  
+<img  width="836"  alt="Screenshot from 2024-07-16 16-51-34"  src="https://imgur.com/qf8XQhX.png">
+
+  
 
 5 ◦ Now the next prompts are asking to set up a virtual Hard disk. In the VirtualBox setup process, ensure to select 'Dynamically allocated' for storage on the physical hard disk. This option allows the virtual hard disk file to grow in size as needed, optimizing disk space usage. Avoid checking the option to pre-allocate the full size, as it may lead to unnecessary disk space allocation."
 
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-44"  src="https://imgur.com/bYD3HUj.png">
 
-6 ◦ Now click Finish.
 
+6 ◦ Now click Finish.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/t5pZMVq.png">
 
-7 ◦ It might seem that we have already finish the installation , but there's still some steps to do. Click on Settings.
+  
 
-<img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/x1m7OYH.png">  
+7 ◦ It might seem that we have already finish the installation , but there's still some steps to do. Click on Settings.
+<img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/x1m7OYH.png">
+
+  
 
 8 ◦ Then click on Storage.
-
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/K79b0UK.png">
 
-9 ◦ Click on the blue disk icon, then select 'Choose a disk file', and finally, select the Debian ISO file that you downloaded.
-
-<img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/WU5YJhb.png">
   
-10 ◦ After that Click OK.
 
+9 ◦ Click on the blue disk icon, then select 'Choose a disk file', and finally, select the Debian ISO file that you downloaded.
+<img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/WU5YJhb.png">
+
+  
+
+10 ◦ After that Click OK.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/4IMXgcJ.png">
 
-11 ◦ After completing all the steps, click the 'Start' button to launch your new virtual machine.
+  
 
+11 ◦ After completing all the steps, click the 'Start' button to launch your new virtual machine.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/K72dUEL.png">
 
-12 ◦ If it show this error.
+  
 
+12 ◦ If it show this error.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/e0eXvOy.png">
 
-13 ◦ Navigate to Settings, then General, and ensure that the Version is specified as Other/Unknown 64-bit.
+  
 
+13 ◦ Navigate to Settings, then General, and ensure that the Version is specified as Other/Unknown 64-bit.
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/Grt79wF.png">
 
+  
 ##  Installing Debian🌀
 
+  
 
 -  **Hey there! Your eyesight is important. 👀 Enlarge the window for a better view:**
 
@@ -214,3 +250,32 @@ And choose Boot ISO
 
 5 ◦  Now we select the country. In my case is Germany 🇩🇪
 <img  width="836"  src="https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/Germany.png">
+
+6 ◦ Configuring locales: I will go with United States
+<img  width="836"  src="https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/configuringLocales.png">
+
+7 ◦ Now it's time to select a keymap. Our keyboard uses the ANSI standard, so please choose `American English`. If you're unsure about your keyboard's standard, we highly recommend asking your staff.
+<img  width="836"  src="https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/Keyboard.png">
+
+8 ◦ First, we need to set the `Hostname`, which should be your login followed by '42', as required by the subject
+Then, press the Tab key and select Continue.
+<img  width="836"  src="https://imgur.com/lVj1CF0.png">
+
+9 ◦ For the `Domain Name`, leave this section empty, as the subject does not specify anything.
+Then, press the Tab key and select Continue
+<img  width="836"  src="https://imgur.com/pl6Z0bq.png">
+
+10 ◦ We need to set a password for the root user. It is important to write it down or take a photo, as we will need it later. To verify the password, press the `Down Arrow ⬇️` to the option Show Password in Clear option and press the `Space Bar` to display it. You should see something like the photo below. Then, press the Tab key and select Continue
+<img  width="836"  src="https://imgur.com/GeH6nHo.png">
+
+11 ◦ Repeat the process as you need to confirm the password we just set.
+<img  width="836"  src="https://imgur.com/Q7wARyG.png">
+
+12 ◦ Set up the username as specified in the subject, we require a new user that is not the root user, and the username must be your student login.
+<img  width="836"  src="https://imgur.com/k77lb6S.png">
+
+13 ◦ Repeat you `User Name`.
+<img  width="836"  src="https://imgur.com/z5jZ6Q4.png">
+
+14 ◦Now we need to set the password for our new user. I'm choosing the same password as for the `Root User`.
+<img  width="836"  src="https://imgur.com/xDkMipw.png">
