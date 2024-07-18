@@ -39,7 +39,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 6.  [Virtual Machine Setup📡](#Virtual-Machine-Setup)<br>
 
-	6.1 [Installing Sudo and Configuring Users and Groups 👤](#Installing-Sudo-and-Configuring-Users-and-Groups-)
+	6.1 [Installing Sudo and Configuring Users and Groups 👤](#Installing-Sudo-and-Configuring-Users-and-Groups-) <br>
 	6.2 [Installing and configuring SSH 📶](#Installing-and-Configuring-SSH-)
 
 7.  [Script🚨](#Script)
