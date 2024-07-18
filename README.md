@@ -18,7 +18,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 4.  [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
 
 5.  [Installing Debian🌀](#Installing-Debian)
-6. [Virtual Machine Setup ⚙️](#Virtual-Machine-Setup)
+6. [Virtual Machine Setup⚙️](#Virtual-Machine-Setup)
 7. [Script 🚨](#Script)
 8. [Crontab ⏰]
 9. [Signature.txt 📝]
