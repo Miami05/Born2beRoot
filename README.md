@@ -31,7 +31,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 	11.1 [Evaluation answers 💯]
     11.2 [Evaluation commands ⌨️] 
 
-##  Download Virtual Machine ISO 💿
+##  Download Virtual Machine💿
 
 If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org).
 
