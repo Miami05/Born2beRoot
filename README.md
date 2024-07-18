@@ -19,6 +19,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 5.  [Installing Debian🌀](#Installing-Debian)
 6.  [Virtual machine setup ⚙️](#Virtual-Machine-Setup-)
+
 		6.1 [Installing sudo & configuration of users and groups 👤]
 		6.2 [Installing & configuring SSH 📶]
 		6.3 [Installing & configuring UFW 🔥🧱]
@@ -191,7 +192,6 @@ And choose Boot ISO
   
 
 4 ◦ Now we have to set up the memory size we want to use for our VM. You are free to choose How much memory you want to use from your computer but I would suggest that 1024MB is enough for this project.
-
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-34"  src="https://imgur.com/qf8XQhX.png">
 
   
