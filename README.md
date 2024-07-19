@@ -23,7 +23,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 3. [Download The Operating System💻](#3-download-the-operating-system)
 4. [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
 5. [Installing Debian🌀](#5-installing-debian)
-6. [Virtual Machine Setup📡](#6-virtual-machine-setup)
+6. [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
    6.1 [Installing Sudo and Configuring Users and Groups 👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
    6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
 7. [Script🚨](#script)
