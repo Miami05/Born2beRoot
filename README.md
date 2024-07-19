@@ -18,8 +18,8 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 4. [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
 5. [Installing Debian🌀](#5-installing-debian)
 6. [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
-   6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
-   6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
+   <a href="#installing-sudo-and-configuring-users-and-groups">6.1 Installing Sudo and Configuring Users and Groups 👤</a><br>
+	<a href="#installing-and-configuring-ssh">6.2 Installing and Configuring SSH 📶</a><br>
 7. [Script🚨](#script)
 8. [Crontab ⏰](#crontab)
 9. [Signature.txt 📝](#signaturetxt)
