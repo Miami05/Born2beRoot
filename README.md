@@ -16,7 +16,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
   
 
-1.  [Download Virtual Machine💿](#Download-Virtual-Machine)
+1. [Download virtual machine ISO 💿](#1--download-the-virtual-machine-iso-)
 
   
 
