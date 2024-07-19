@@ -150,7 +150,6 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 -  **Availability of Packages:** With over 50,000 packages in its repository, Debian provides ample software choices for installing and configuring additional services to expand the project's scope.
 -  **Community and Documentation:** The extensive Debian community and documentation make it easier to find support and guidance when setting up and managing additional services, enhancing the project's scalability and customization.
 
-
 ##  3. Download The Operating System 💻
 
 ###  Download Debian:
@@ -296,137 +295,41 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178797258-8c34bc31-16a7-4aef-8406-cecc21fdf028.png">
 
-
-
-
-
-
-
 19 ◦ We click on `Cancel` the erasing of the data is not required.
-
-
-
-
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178797666-78cdf892-1a83-4c68-8f85-0d5440cd4854.png">
 
-
-
-
-
-
-
 20 ◦ Once again, select a password for encrypting the `LVM`. As mentioned earlier, you'll need to repeat this process, so it's advisable to write it down. You can use the same password as before.
-
-
-
-
 
 <img  width="836"  src="https://imgur.com/DSWYNrL.png">
 
-
-
-
-
-
-
 21 ◦ Repeat the password we just set.
-
-
-
-
 
 <img  width="836"  src="https://imgur.com/VXGHUeh.png">
 
-
-
-
-
-
-
 22 ◦In this step, we must input the required amount of volume group to use during the guided partitioning. We can enter `max` or the total available memory, which in this case is `12.4 GB`.
-
-
-
-
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178799165-c6b05fd2-86ad-45b7-a026-9ee169eda5d5.png">
 
-
-
-
-
-
-
 23 ◦ To wrap the partitioning and write the changes in the disk we choose the option `Finish partitioning and write changes to disk`.
-
-
-
-
 
 <img  width="836"  src="https://imgur.com/ThEB4H7.png">
 
-
-
-
-
-
-
 24 ◦ We choose the option `Yes` and then we confirm that we do not want more changes.
-
-
-
-
 
 <img  width="836"  src="https://imgur.com/ho1HF2V.png">
 
-
-
-
-
-
-
 25 ◦ We select the option `No` since additional packages are not required and we don't need them.
-
-
-
-
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png">
 
-
-
-
-
-
-
 26 ◦ We choose our Country.
-
-
-
-
 
 <img  width="836"  src="https://imgur.com/xVZHPcR.png">
 
-
-
-
-
-
-
 27 ◦ We choose `deb.debian.org` as is the recommended by Debian itself.
 
-
-
-
-
 <img  width="836"  src="https://imgur.com/w7Uc3Ch.png">
-
-
-
-
-
-
 
 28 ◦ We will left this option blank and we click on `Continue`.
 
