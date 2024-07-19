@@ -55,15 +55,15 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
   
 
-6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
+	6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
 
   
 
-6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
+	6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
 
   
 
-6.3 [Installing and Configuring UFW🔥](#installing-and-configuring-ufw)<br>
+	6.3 [Installing and Configuring UFW🔥](#63-installing-and-configuring-ufw)<br>
 
   
 
