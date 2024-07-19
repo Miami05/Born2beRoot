@@ -34,7 +34,10 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	6.4 [Setting Up the Sudo Policies🔒](#64-setting-up-the-sudo-policies)<br>
 
-	6.5 [Setting up a strong password policy🔑](#65-setting-up-a-strong-password-policy)
+
+	6.5 [Setting up a strong password policy🔑](#65-setting-up-a-strong-password-policy)<br>
+
+	6.6 [Connecting Via SSH🗣](#66-connecting-via-ssh)
 
 7.  [Script🚨](#script)
 
@@ -634,5 +637,7 @@ We use command `sudo chage -M <time> <username>` where -M is maximum days, shoul
 Then check it again.
 
 <img  width="836"  src="https://imgur.com/xmLO25A.png">
+
+## 6.6 Connecting Via SSH🗣
 
 ##  Script🚨
