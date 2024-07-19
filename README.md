@@ -545,11 +545,11 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 🤔 **What does each command❓**
 
--   **Password Tries**: Limits wrong password attempts to 3.
+-   **Password Tries**: If you enter your password incorrectly 3 times, sudo will stop trying and you'll have to start over.
 -   **Custom Error Message**: Displays a personalized message for wrong passwords.
--   **Logfile**: Records `sudo` activity in a specified file.
--   **Log Input/Output**: Keeps logs of command inputs and outputs.
--   **Log Directory**: Stores these logs in a specified directory.
+-   **Logfile**: All the commands run with sudo will be recorded in the file located at /var/log/sudo/sudo_config.
+-   **Log Input/Output**: This setting helps keep track of what was typed and what the system responded when using sudo commands.
+-   **Log Directory**: The logs of what you type and see when using sudo are saved in the /var/log/sudo directory.
 -   **Require TTY**: Ensures `sudo` is used from a terminal.
 -   **Secure Path**: Defines safe directories for `sudo` commands.
 
