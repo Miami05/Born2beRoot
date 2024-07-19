@@ -1,5 +1,9 @@
 
+  
+
 #  Born2beRoot
+
+  
 
   
 
@@ -11,7 +15,11 @@ Born2beRoot is a 42School project designed to build foundational skills in cyber
 
   
 
+  
+
 Through hands-on tasks, students learn to identify vulnerabilities, implement security measures, and ensure system integrity.
+
+  
 
   
 
@@ -21,50 +29,91 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
   
 
+  
+
 1.  [Download Virtual Machine💿](#1-download-virtual-machine)
+
+  
 
 2.  [Choosing The Operating System💻](#2-choosing-the-operating-system-)
 
+  
+
 3.  [Download The Operating System💻](#3-download-the-operating-system-)
+
+  
 
 4.  [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
 
+  
+
 5.  [Installing Debian🌀](#5-installing-debian)
+
+  
 
 6.  [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
 
-	6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
+  
 
-	6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
+6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
 
-	6.3 [Installing and Configuring UFW🔥](#installing-and-configuring-ufw)<br>
+  
+
+6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
+
+  
+
+6.3 [Installing and Configuring UFW🔥](#installing-and-configuring-ufw)<br>
+
+  
 
 7.  [Script🚨](#script)
 
+  
+
 8.  [Crontab ⏰](#crontab)
+
+  
 
 9.  [Signature.txt 📝](#signaturetxt)
 
+  
+
 10.  [Bonus ⭐](#bonus)
+
+  
 
 -  [Manual partition](#manual-partition)
 
+  
+
 -  [Wordpress & services configuration 🌐](#wordpress--services-configuration)
+
+  
 
 -  [Additional service ➕](#additional-service)
 
+  
+
 11.  [Correction sheet ✅](#correction-sheet)
 
+  
+
 -  [Evaluation answers 💯](#evaluation-answers)
+
+  
 
 -  [Evaluation commands ⌨️](#evaluation-commands)
 
   
+
   
 
   
 
 ##  1. Download Virtual Machine💿
+
+  
 
   
 
@@ -76,7 +125,11 @@ If you haven't installed VirtualBox yet, you can download it from the official [
 
   
 
+  
+
 VirtualBox is essential for setting up and running the virtual machine that will host the operating system we will be working with.
+
+  
 
   
 
@@ -92,7 +145,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ###  Debian
+
+  
 
   
 
@@ -106,7 +163,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 - Known for its robust stability and reliability, ideal for server environments.
+
+  
 
   
 
@@ -120,13 +181,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Community Support:
 
   
 
   
 
+  
+
 - Large and active community with extensive documentation and resources.
+
+  
 
   
 
@@ -140,13 +207,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Ease of Use:
 
   
 
   
 
+  
+
 - User-friendly package management system (APT) simplifies software installation and updates.
+
+  
 
   
 
@@ -160,13 +233,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Security Features:
 
   
 
   
 
+  
+
 - Strong focus on security with features like SELinux and AppArmor.
+
+  
 
   
 
@@ -180,7 +259,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Flexibility and Compatibility:
+
+  
 
   
 
@@ -192,7 +275,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 - Wide compatibility with diverse hardware and software configurations.
+
+  
 
   
 
@@ -208,13 +295,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Enterprise Focus:
 
   
 
   
 
+  
+
 - Developed as a stable and secure distribution, aiming to replace CentOS in enterprise environments.
+
+  
 
   
 
@@ -228,13 +321,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Community and Support:
 
   
 
   
 
+  
+
 - Growing community particularly among former CentOS users.
+
+  
 
   
 
@@ -248,13 +347,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Compatibility with CentOS/RHEL:
 
   
 
   
 
+  
+
 - Designed to be a drop-in replacement for CentOS, maintaining compatibility with RHEL repositories and workflows.
+
+  
 
   
 
@@ -268,13 +373,19 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Security and Stability:
 
   
 
   
 
+  
+
 - Built with enterprise-grade security features like SELinux and strict adherence to stability.
+
+  
 
   
 
@@ -288,7 +399,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 ####  Deployment and Scalability:
+
+  
 
   
 
@@ -300,7 +415,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 - Provides tools and support for seamless scalability in enterprise environments.
+
+  
 
   
 
@@ -316,7 +435,11 @@ VirtualBox is essential for setting up and running the virtual machine that will
 
   
 
+  
+
 If you decide to pursue the bonus part of the project, Debian provides several advantages:
+
+  
 
   
 
@@ -332,7 +455,11 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
   
 
+  
+
 -  **Availability of Packages:** With over 50,000 packages in its repository, Debian provides ample software choices for installing and configuring additional services to expand the project's scope.
+
+  
 
   
 
@@ -348,7 +475,11 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
   
 
+  
+
 ##  3. Download The Operating System 💻
+
+  
 
   
 
@@ -364,7 +495,11 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
   
 
+  
+
 -  **Official Website:** You can download Debian from [Debian's official download page](https://www.debian.org/download).
+
+  
 
   
 
@@ -378,7 +513,11 @@ If you decide to pursue the bonus part of the project, Debian provides several a
 
   
 
+  
+
 -  **Official Website:** You can download Rocky from [Rocky's official download page](https://rockylinux.org/download).
+
+  
 
   
 
@@ -392,7 +531,11 @@ And choose Boot ISO
 
   
 
+  
+
 ##  4. Virtual Machine Installation
+
+  
 
   
 
@@ -404,7 +547,11 @@ And choose Boot ISO
 
   
 
+  
+
 2 ◦ Click on the New command on the top
+
+  
 
   
 
@@ -416,7 +563,11 @@ And choose Boot ISO
 
   
 
+  
+
 3 ◦ We must choose a name for the machine and the folder which will locate it. IMPORTANT Store the machine created inside the sgoinfre folder located in your campus server; this is important because we will run out of memory space in our session and the installation will fail. (Ask your staff if you can't find it)
+
+  
 
   
 
@@ -428,7 +579,11 @@ And choose Boot ISO
 
   
 
+  
+
 4 ◦ Now we have to set up the memory size we want to use for our VM. You are free to choose How much memory you want to use from your computer but I would suggest that 1024MB is enough for this project.
+
+  
 
   
 
@@ -440,7 +595,11 @@ And choose Boot ISO
 
   
 
+  
+
 5 ◦ Now the next prompts are asking to set up a virtual Hard disk. In the VirtualBox setup process, ensure to select 'Dynamically allocated' for storage on the physical hard disk. This option allows the virtual hard disk file to grow in size as needed, optimizing disk space usage. Avoid checking the option to pre-allocate the full size, as it may lead to unnecessary disk space allocation. One we established the recommended `12 GB` we must click on `Create`. If we are doing the bonus we might set `30 GB`.
+
+  
 
   
 
@@ -450,7 +609,11 @@ And choose Boot ISO
 
   
 
+  
+
 6 ◦ Now click Finish.
+
+  
 
   
 
@@ -462,7 +625,11 @@ And choose Boot ISO
 
   
 
+  
+
 7 ◦ It might seem that we have already finish the installation , but there's still some steps to do. Click on Settings.
+
+  
 
   
 
@@ -474,7 +641,11 @@ And choose Boot ISO
 
   
 
+  
+
 8 ◦ Then click on Storage.
+
+  
 
   
 
@@ -486,7 +657,11 @@ And choose Boot ISO
 
   
 
+  
+
 9 ◦ Click on the blue disk icon, then select 'Choose a disk file', and finally, select the Debian ISO file that you downloaded.
+
+  
 
   
 
@@ -498,7 +673,11 @@ And choose Boot ISO
 
   
 
+  
+
 10 ◦ After that Click OK.
+
+  
 
   
 
@@ -510,7 +689,11 @@ And choose Boot ISO
 
   
 
+  
+
 11 ◦ After completing all the steps, click the 'Start' button to launch your new virtual machine.
+
+  
 
   
 
@@ -520,7 +703,11 @@ And choose Boot ISO
 
   
 
+  
+
 12 ◦ If it show this error.
+
+  
 
   
 
@@ -532,11 +719,17 @@ And choose Boot ISO
 
   
 
+  
+
 13 ◦ Navigate to Settings, then General, and ensure that the Version is specified as Oracle Linux (64bit).
 
   
 
+  
+
 <img  width="836"  alt="Screenshot from 2024-07-16 16-51-50"  src="https://imgur.com/tDF2G2A.png">
+
+  
 
   
 
@@ -550,7 +743,11 @@ And choose Boot ISO
 
   
 
+  
+
 -  **Hey there! Your eyesight is important. 👀 Enlarge the window for a better view:**
+
+  
 
   
 
@@ -562,7 +759,11 @@ And choose Boot ISO
 
   
 
+  
+
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae.png">
+
+  
 
   
 
@@ -572,7 +773,11 @@ And choose Boot ISO
 
   
 
+  
+
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178789949-4fe83ac8-23b8-4f82-a034-a6d5e81d4f17.png">
+
+  
 
   
 
@@ -582,7 +787,11 @@ And choose Boot ISO
 
   
 
+  
+
 <img  width="836"  src="https://github.com/Vikingu-del/Born2beRoot/raw/main/photos/installation/Country.png
+
+  
 
   
 
@@ -592,7 +801,11 @@ And choose Boot ISO
 
   
 
+  
+
 4 ◦ Time to select continent. In our case we will select `Europe` 🇪🇺.
+
+  
 
   
 
@@ -602,7 +815,11 @@ And choose Boot ISO
 
   
 
+  
+
 5 ◦ Now we select the country. In my case is Germany 🇩🇪
+
+  
 
   
 
@@ -612,7 +829,11 @@ And choose Boot ISO
 
   
 
+  
+
 6 ◦ Configuring locales: I will go with United States
+
+  
 
   
 
@@ -622,7 +843,11 @@ And choose Boot ISO
 
   
 
+  
+
 7 ◦ Now it's time to select a keymap. Our keyboard uses the ANSI standard, so please choose `American English`. If you're unsure about your keyboard's standard, we highly recommend asking your staff.
+
+  
 
   
 
@@ -632,11 +857,17 @@ And choose Boot ISO
 
   
 
+  
+
 8 ◦ First, we need to set the `Hostname`, which should be your login followed by '42', as required by the subject
 
   
 
+  
+
 Then, press the Tab key and select Continue.
+
+  
 
   
 
@@ -646,11 +877,17 @@ Then, press the Tab key and select Continue.
 
   
 
+  
+
 9 ◦ For the `Domain Name`, leave this section empty, as the subject does not specify anything.
 
   
 
+  
+
 Then, press the Tab key and select Continue
+
+  
 
   
 
@@ -660,7 +897,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 10 ◦ We need to set a password for the root user. It is important to write it down or take a photo, as we will need it later. To verify the password, press the `Down Arrow ⬇️` to the option Show Password in Clear option and press the `Space Bar` to display it. You should see something like the photo below. Then, press the Tab key and select Continue
+
+  
 
   
 
@@ -670,7 +911,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 11 ◦ Repeat the process as you need to confirm the password we just set.
+
+  
 
   
 
@@ -680,7 +925,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 12 ◦ Set up the username as specified in the subject, we require a new user that is not the root user, and the username must be your student login.
+
+  
 
   
 
@@ -690,7 +939,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 13 ◦ Repeat you `User Name`.
+
+  
 
   
 
@@ -700,7 +953,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 14 ◦ Now we need to set the password for our new user. I'm choosing the same password as for the `Root User`.
+
+  
 
   
 
@@ -710,7 +967,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 15 ◦ We confirm the password, to see the password use the `Down Arrow ⬇️` to reveal the password and press the `Space Bar` Than press Continue with the `Tab Bar`.
+
+  
 
   
 
@@ -720,7 +981,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 16 ◦ Select Guied - use entire disk and set up encrypted LVM. ⚠️❗️ If you want to do the bonus select Manual and then click here ❗️⚠️
+
+  
 
   
 
@@ -730,7 +995,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 17 ◦ Select the disk where you want to create the partition (only one disk should be displayed).
+
+  
 
   
 
@@ -740,7 +1009,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 18 ◦ After choosing the disk, proceed to create the partition as described in the subject. To do this correctly, select the second option `Separate /home partition`.
+
+  
 
   
 
@@ -750,7 +1023,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 19 ◦ We choose option `Yes` so the changes will be writen in the disk and so we can set the logical volume manager (LVM).
+
+  
 
   
 
@@ -760,7 +1037,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 19 ◦ We click on `Cancel` the erasing of the data is not required.
+
+  
 
   
 
@@ -770,7 +1051,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 20 ◦ Once again, select a password for encrypting the `LVM`. As mentioned earlier, you'll need to repeat this process, so it's advisable to write it down. You can use the same password as before.
+
+  
 
   
 
@@ -780,7 +1065,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 21 ◦ Repeat the password we just set.
+
+  
 
   
 
@@ -790,7 +1079,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 22 ◦In this step, we must input the required amount of volume group to use during the guided partitioning. We can enter `max` or the total available memory, which in this case is `12.4 GB`.
+
+  
 
   
 
@@ -800,7 +1093,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 23 ◦ To wrap the partitioning and write the changes in the disk we choose the option `Finish partitioning and write changes to disk`.
+
+  
 
   
 
@@ -810,7 +1107,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 24 ◦ We choose the option `Yes` and then we confirm that we do not want more changes.
+
+  
 
   
 
@@ -820,7 +1121,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 25 ◦ We select the option `No` since additional packages are not required and we don't need them.
+
+  
 
   
 
@@ -830,7 +1135,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 26 ◦ We choose our Country.
+
+  
 
   
 
@@ -840,7 +1149,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 27 ◦ We choose `deb.debian.org` as is the recommended by Debian itself.
+
+  
 
   
 
@@ -850,7 +1163,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 28 ◦ We will left this option blank and we click on `Continue`.
+
+  
 
   
 
@@ -860,7 +1177,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 29 ◦ We select the option `No` as we want to remain out of the statistics.
+
+  
 
   
 
@@ -870,7 +1191,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 30 ◦ We will leave all software choices blank by navigating with the `Down Arrow` key and selecting with the `Space Bar`, then click `Continue`.
+
+  
 
   
 
@@ -880,7 +1205,11 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 31 ◦ We select `Yes` for install [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) in the hard disk.
+
+  
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png">
 
@@ -888,15 +1217,25 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 32 ◦ We will choose the device `/dev/sda (ata_VBOX_HARDDISK)` for the installation for boot loader.
+
+  
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png">
 
   
 
+  
+
 33 ◦ To finish the installation we click on `Continue`.
 
+  
+
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
+
+  
 
   
 
@@ -906,103 +1245,181 @@ Then, press the Tab key and select Continue
 
   
 
+  
+
 ➤ First of all, we must select `Debian GNU/Linux`.
+
+  
 
 <img  width="836"  src="https://imgur.com/gjPh3EF.png">
 
   
 
+  
+
 ➤ Now, we must enter the encryption password that we previously set. In my case, it is `ldurmish42`.
+
+  
 
 <img  width="836"  src="https://imgur.com/ZoPXpI7.png">
 
   
 
+  
+
 ➤ After that we must introduce the user and password that we created.
+
+  
 
 <img  width="836"  src="https://imgur.com/dbvFPQg.png">
 
   
 
+  
+
 ➤In my case the user is `ldurmish` and the password is `ldurmish42`.
+
+  
 
 <img  width="836"  src="https://imgur.com/Xp3M5o3.png">
 
-### We have set everything ready for starting the setup of our Debian virtual machine❗️
+  
+
+###  We have set everything ready for starting the setup of our Debian virtual machine❗️
+
+  
 
   
 
 ##  6.1 Installing Sudo and Configuring Users and Groups👤
 
+  
+
 1 ◦ The installation begins by switching the user to root so we can install `sudo`. To do this, enter `su` at the bash prompt and provide the root password, which is `ldurmish42` in my case. Once logged in as root, run the command `apt install sudo` to have the package manager install the required packages for `sudo`.
+
+  
 
 <img  width="836"  src="https://imgur.com/86gUU8q.png">
 
   
 
+  
+
 2 ◦ We must reboot machine so the changes can be applied. For that purpose we will use the command `sudo reboot`
+
+  
 
 <img  width="836"  src="https://imgur.com/PFs6oEr.png">
 
   
 
+  
+
 3 ◦ Once the machine is rebooted we have to input the encryption password and the login again. To check if sudo have been installed correctly we must switch to root user and then use the command `sudo -V`; this command will show the sudo version (it will show extra info like the plugins installed).
+
+  
 
 <img  width="836"  src="https://imgur.com/cFc0sCu.png">
 
+  
+
 **OPTIONAL** ➤ In case of the output being too large we can redirect the command output to a file via `sudo -V > file.txt` . The `> file.txt` part of the command saves the output into a file named `file.txt`, replacing any existing content in that file.
+
+  
 
 <img  width="836"  src="https://imgur.com/gICBKU5.png">
 
+  
+
 Then edit the file using `nano file.txt` ,`vim` or `cat`.
+
+  
 
 <img  width="836"  src="https://imgur.com/T6QohNe.png">
 
+  
+
 Exit from `nano file.txt` using `Ctrl X`
+
+  
 
 <img  width="836"  src="https://imgur.com/qTSA49M.png">
 
+  
+
 Other option would be putting `sudo -V| more` after the command.
+
+  
 
 <img  width="836"  src="https://imgur.com/DT7ycDo.png">
 
   
 
+  
+
 4 ◦ **Now, this step is for the everyone that didn't put his user as the other user asked by the subject during the installation of the system.** Still in the root user we will create an additional user with `sudo adduser <login>`. If you had already done it will show the same message as is the image.
+
+  
 
 <img  width="836"  src="https://imgur.com/S4LsIGa.png">
 
   
 
+  
+
 5 ◦ We will create a new group called `user42`. For that we must use `sudo addgroup user42`.
+
+  
 
 <img  width="836"  src="https://imgur.com/GMR4re8.png">
 
   
 
+  
+
 6 ◦ With `sudo adduser <user> <groupname>` we can include a user to a group. We must include out user in the groups `sudo` and `user42`.
+
+  
 
 <img  width="836"  src="https://imgur.com/hKTkHQj.png">
 
   
 
+  
+
 7 ◦ Or editing the /etc/group file using `nano /etc/group` the groups `sudo` and `user42` must be present with our user.
+
+  
 
 <img  width="836"  src="https://imgur.com/sRq3jFC.png">
 
+  
+
 🤔 **Was the group created without problems?** Truth is that there is no sign of one, still we can check it using `getent group <groupname>` or we can also use `cat /etc/group` and see all groups and the users in any of them.
+
+  
 
 8 ◦ Once we are done with that we can check it using `getent group <groupname>` the groups `sudo` and `user42` must be present with our user.
 
+  
+
 <img  width="836"  src="https://imgur.com/Wis6XA2.png">
+
+  
 
 <img  width="836"  src="https://imgur.com/4gQ943a.png">
 
   
 
+  
+
 ##  6.2 Installing and Configuring SSH📶
 
+  
+
 ##  🧠 What is SSH❓
+
+  
 
   
 
@@ -1010,7 +1427,11 @@ SSH stands for "Secure Shell." It is a protocol designed to provide a secure way
 
   
 
+  
+
 ###  How Does SSH Work?
+
+  
 
   
 
@@ -1018,47 +1439,81 @@ SSH works using a client-server model, where:
 
   
 
+  
+
 -  **Client:** This is your computer.
+
+  
 
 -  **Server:** This is the remote computer you want to connect to.
 
   
 
+  
+
 When you use SSH to connect to the server, a secure channel is created between the client and the server, allowing you to send commands and receive data safely.
 
+  
+
 1 ◦ First thing, we write the command `su` to switch in the root and we should update the system using `sudo apt update`.
+
+  
 
 <img  width="836"  src="https://imgur.com/T3jZ3el.png">
 
   
 
+  
+
 2 ◦ Following up we will install the main tool for remote access with the SSH protocol, using Open SSH. The installation requires the package `sudo apt install openssh-server`.
 
+  
+
 When we are asked for confirmation we will write `y`, and just then the installation will proceed.
+
+  
 
 <img  width="836"  src="https://imgur.com/iPIWYjM.png">
 
   
 
+  
+
 Curious to see if the installation has been completed without problems?
 
+  
+
 You can use `sudo service ssh status` to check the status. It should show **Active** to confirm that it is running correctly.
+
+  
 
 <img  width="836"  src="https://imgur.com/4L4Aey3.png">
 
   
 
+  
+
 3 ◦ Going on, some files have been created and we need to configure them. For that we will use [Nano](https://en.wikipedia.org/wiki/GNU_Nano) or [VIM](https://en.wikipedia.org/wiki/Vim_(text_editor)) (we will need to install vim since it's not preinstalled using `sudo apt install vim`) or any other text editor.
 
+  
+
 Press y to confirm the installation.
+
+  
 
 <img  width="836"  src="https://imgur.com/gGaFmAb.png">
 
   
 
+  
+
 4 ◦ First file that we will edit will be `/etc/ssh/sshd_config`. If you are not on root you will not be able to edit the file, as you know, for switching to root we use `su`.
 
+  
+
 <img  width="836"  src="https://imgur.com/7uyBoXP.png">
+
+  
 
   
 
@@ -1066,50 +1521,98 @@ Press y to confirm the installation.
 
   
 
+  
+
 ➤ #Port 22 -> Port 4242
+
+  
 
 <img  width="836"  src="https://imgur.com/q45SdVq.png">
 
   
 
+  
+
 ➤ #PermitRootLogin prohibit-password -> PermitRootLogin no
+
+  
 
 <img  width="836"  src="https://imgur.com/Qf3YFD8.png">
 
   
 
+  
+
 6 ◦ To exit insert mode in `VIM`, press the `ESC` key. Then, to save your changes and quit, press `Shift` + `:` to enter command mode, type `wq`(write &quit), and press `Enter`. If you didn't make any changes, simply type `:q` and press `Enter` to quit without saving.
+
+  
 
 <img  width="836"  src="https://imgur.com/nOEMcBX.png">
 
   
 
+  
+
 7 ◦ Now with the file `/etc/ssh/ssh_config`. (not `sshd_config`)
+
+  
 
 <img  width="836"  src="https://imgur.com/cKkxpew.png">
 
   
 
+  
+
 Edit the following line:
+
+  
 
 ➤ #Port 22 -> Port 4242
 
+  
+
 <img  width="836"  src="https://imgur.com/jjEx9vD.png">
+
+  
 
 To exit insert mode in `VIM`, press the `ESC` key. Then, to save your changes and quit, press `Shift` + `:` to enter command mode, type `wq`(write &quit), and press `Enter`.
 
   
 
+  
+
 8 ◦ Finally we must restart the ssh service so it can be updated. For that purpose we will use `sudo service ssh restart`.
+
+  
 
 <img  width="836"  src="https://imgur.com/ZFaw2s9.png">
 
   
 
+  
+
 9 ◦ When it is done we will check the service state with `sudo service ssh status` and confirm that everything is alright.
+
+  
 
 <img  width="836"  src="https://imgur.com/gThOP8O.png">
 
-## Installing and Configuring UFW🔥
+  
 
-## Script🚨
+##  6.3 Installing and Configuring UFW🔥
+
+🧠 **What is [UFW](https://en.wikipedia.org/wiki/Uncomplicated_Firewall)❓** It is a [firewall](https://en.wikipedia.org/wiki/Firewall_(computing)) which use the command line for setting up [iptables](https://en.wikipedia.org/wiki/Iptables) using a small number of easy commands.
+
+1 ◦ First things first, we need to install the packages for UFW, for that we will use `sudo apt install ufw`, then when we are asked for confirmation type `y` and the installation will proceed.
+<img  width="836"  src="https://imgur.com/Kfri3Cf.png">
+
+2 ◦ When we are done with it, we want to start it using the command `sudo ufw enable` and then it have to show us the the _firewall is active._
+<img  width="836"  src="https://imgur.com/cqrJggA.png">
+
+3 ◦ Then we must allow our firewall to accept the connections that will happens in the 4242 port. What we will do is use `sudo ufw allow 4242`.
+<img  width="836"  src="https://imgur.com/enh6PfU.png">
+
+4 ◦ Lastly we will check if everything done here is correct checking the actual state of our firewall. For that we will use `sudo ufw status`. Alternatively `sudo ufw status verbose` or `sudo ufw status numbered` can be used.
+<img  width="836"  src="https://imgur.com/57sQoM8.png">
+
+##  Script🚨
