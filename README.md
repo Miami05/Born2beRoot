@@ -521,6 +521,8 @@ To exit insert mode in `VIM`, press the `ESC` key. Then, to save your changes an
 
 3 ◦ We must edit the file that we created in the first step of this section. Use any text editor, but for this guide as is in every screenshot we will use nano. Use `nano /etc/sudoers.d/sudo_config`.
 
+<img  width="836"  src="https://imgur.com/lK1aLrX.png">
+
 4 ◦ Once we are editing the file we must set it up with the following commands.
 ```sh
 Defaults  passwd_tries=3
@@ -531,5 +533,19 @@ Defaults  iolog_dir="/var/log/sudo"
 Defaults  requiretty
 Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
+
+➤ As it should be on the file.
+
+<img  width="836"  src="https://imgur.com/KjPbhVz.png">
+
+🤔 **What does each command❓**
+
+-   **Password Tries**: Limits wrong password attempts to 3.
+-   **Custom Error Message**: Displays a personalized message for wrong passwords.
+-   **Logfile**: Records `sudo` activity in a specified file.
+-   **Log Input/Output**: Keeps logs of command inputs and outputs.
+-   **Log Directory**: Stores these logs in a specified directory.
+-   **Require TTY**: Ensures `sudo` is used from a terminal.
+-   **Secure Path**: Defines safe directories for `sudo` commands.
 
 ##  Script🚨
