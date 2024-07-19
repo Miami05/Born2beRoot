@@ -552,4 +552,87 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 
 ## 6.5 Setting up a strong password policy🔑
 
+1 ◦ First step will be editing the login.defs file.
+
+<img  width="836"  src="https://imgur.com/jq3KVHI.png">
+
+2 ◦ Once we are done editing the file, we will set the next parameters:
+
+➤ PASS_MAX_DAYS 99999 -> PASS_MAX_DAYS 30
+
+➤ PASS_MIN_DAYS 0 -> PASS_MIN_DAYS 2
+
+<img  width="836"  src="https://user-images.githubusercontent.com/66915274/179328449-32a40f67-a18d-4f29-993b-94d013cd7670.png">
+
+PASS_MAX_DAYS: It's the max days till password expiration.
+
+PASS_MIN_DAYS: It's the min days till password change.
+
+PASS_WARN_AGE: It's the days till password warning.
+
+3 ◦ For continuing the installation we must install the next packages with the following command`sudo apt install libpam-pwquality` , then we write `Y` so we can continue, we wait till it finish.
+
+<img  width="836"  src="https://imgur.com/nxsgXMT.png">
+
+4 ◦ Next thing we must do is is edit a file and change itś content. We will use `nano /etc/pam.d/common-password`.
+
+<img  width="836"  src="https://imgur.com/rtYusAj.png">
+
+5 ◦ After retry=3 we must add the following commands:
+```sh
+minlen=10
+ucredit=-1
+dcredit=-1
+lcredit=-1
+maxrepeat=3
+reject_username
+difok=7
+enforce_for_root
+```
+
+➤ This is how the line must be↙️
+<img  width="836"  src="https://imgur.com/9srPwvE.png">
+
+➤ This is how the file must look ↙️
+
+<img  width="836"  src="https://imgur.com/Bql97y1.png">
+
+**What does each command❓**
+
+minlen=10 ➤ The minimum characters a password must contain.
+
+ucredit=-1 ➤ The password at least have to contain a capital letter. We must write it with a - sign, as is how it knows that's referring to minimum characters; if we put a + sign it will refer to maximum characters.
+
+dcredit=-1 ➤ The password at least have to contain a digit.
+
+lcredit=-1 ➤ The password at least have to contain a lowercase letter.
+
+maxrepeat=3 ➤ The password can not have the same character repeated three continuously times.
+
+reject_username ➤ The password can not contain the username inside itself.
+
+difok=7 ➤ The password it have to contain at least seven different characters from the last password used.
+
+enforce_for_root ➤ We will implement this password policy to root.
+
+6 ◦ Now this password policy applies to new users created later or change a new password. But for the root user and login user we create at the beginning, we need to manually change the time setting of days between password change.
+
+Use command: `sudo chage -l <username>` to check the password of root and login user.
+
+As the picture below, the minimum, maximum days between password change are still default, because we create these two users before we create the password policy.
+
+<img  width="836"  src="https://imgur.com/ObBpyEu.png">
+
+We use command `sudo chage -m <time> <username>` where -m is for minimum days should be 2 days to modify the days between password change.
+
+<img  width="836"  src="https://imgur.com/PN8JJmM.png">
+
+We use command `sudo chage -M <time> <username>` where -M is maximum days, should be 30 days.
+
+<img  width="836"  src="https://imgur.com/HRfCDrS.png">
+
+Then check it again.
+
+<img  width="836"  src="https://imgur.com/xmLO25A.png">
+
 ##  Script🚨
