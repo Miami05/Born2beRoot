@@ -37,7 +37,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	6.5 [Setting up a strong password policy🔑](#65-setting-up-a-strong-password-policy)<br>
 
-	6.6 [Connecting Via SSH🗣](#66-connecting-via-ssh)
+	6.6 [Connecting Via SSH through to Nat🗣](#66-connecting-via-ssh-through-to-nat)<br>
 
 7.  [Script🚨](#script)
 
@@ -638,6 +638,33 @@ Then check it again.
 
 <img  width="836"  src="https://imgur.com/xmLO25A.png">
 
-## 6.6 Connecting Via SSH🗣
+## 6.6 Connecting Via SSH through to Nat🗣
 
+1 ◦ If we want to connect via SSH we must close the machine and go to settings.
+
+<img  width="836"  src="https://imgur.com/EYpBIgQ.png">
+
+2 ◦ Once there we will click on `Network`.
+
+<img  width="836"  src="https://imgur.com/1PkiyQx.png">
+
+3 ◦ We check if it's attached to NAT(Network Address Translation)
+
+<img  width="836"  src="https://imgur.com/JlSqFMS.png">
+
+3 ◦ Click on `Advanced` so it shows more options, then we click on `Port fowarding`.
+
+
+
+4 ◦ Click on the emoji for adding a new rule.
+
+<img  width="836"  src="https://imgur.com/WnFOHCq.png">
+
+5 ◦ Lastly we will add the `4242` port to host and client. The IP's are not required. We will click accept so changes can be saved.
+
+<img  width="836"  src="https://imgur.com/40SKVPT.png">
+
+➤ To connect via ssh from the machine to the virtual machine using and the use the command `ssh <user>@localhost -p 4242`. It will give this error message.
+
+<img  width="836"  src="https://imgur.com/S0DLT2j.png">
 ##  Script🚨
