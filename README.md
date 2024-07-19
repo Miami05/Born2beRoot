@@ -16,48 +16,27 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
   
 
-1.  [Download Virtual Machine💿](#Download-Virtual-Machine-)
+## Index
 
-  
+1. [Download Virtual Machine💿](#download-virtual-machine)
+2. [Choosing The Operating System💻](#choosing-the-operating-system)
+3. [Download The Operating System💻](#download-the-operating-system)
+4. [Virtual Machine Installation🛠️](#virtual-machine-installation)
+5. [Installing Debian🌀](#installing-debian)
+6. [Virtual Machine Setup📡](#virtual-machine-setup)
+   6.1 [Installing Sudo and Configuring Users and Groups 👤](#installing-sudo-and-configuring-users-and-groups)
+   6.2 [Installing and Configuring SSH📶](#installing-and-configuring-ssh)
+7. [Script🚨](#script)
+8. [Crontab ⏰](#crontab)
+9. [Signature.txt 📝](#signaturetxt)
+10. [Bonus ⭐](#bonus)
+    - [Manual partition](#manual-partition)
+    - [Wordpress & services configuration 🌐](#wordpress--services-configuration)
+    - [Additional service ➕](#additional-service)
+11. [Correction sheet ✅](#correction-sheet)
+    - [Evaluation answers 💯](#evaluation-answers)
+    - [Evaluation commands ⌨️](#evaluation-commands)
 
-2.  [Choosing The Operating System💻](#Choosing-the-Operating-System-)
-
-  
-
-3.  [Download The Operating System💻](#Download-The-Operating-System-)
-
-  
-
-4.  [Virtual Machine Installation🛠️](#Virtual-Machine-Installation)
-
-  
-
-5.  [Installing Debian🌀](#Installing-Debian)
-
-6.  [Virtual Machine Setup📡](#Virtual-Machine-Setup-)<br>
-
-	6.1 [Installing Sudo and Configuring Users and Groups 👤](#--installing-sudo-and-configuring-users-and-groups)<br>
-	6.2 [Installing and configuring SSH📶](#Installing-and-Configuring-SSH-)
-
-7.  [Script🚨](#Script)
-
-8. [Crontab ⏰]
-
-9. [Signature.txt 📝]
-
-10. [Bonus ⭐]
-
-10.1 [Manual partition]
-
-10.2 [Wordpress & services configuration 🌐]
-
-10.3 [Additional service ➕]
-
-11. [Correction sheet ✅](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_EN.md#9--correction-
-
-11.1 [Evaluation answers 💯]
-
-11.2 [Evaluation commands ⌨️]
 
   
 
