@@ -19,13 +19,13 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 ## Index
 
 1. [Download Virtual Machine💿](#1-download-virtual-machine)
-2. [Choosing The Operating System💻](#choosing-the-operating-system)
-3. [Download The Operating System💻](#download-the-operating-system)
-4. [Virtual Machine Installation🛠️](#virtual-machine-installation)
-5. [Installing Debian🌀](#installing-debian)
-6. [Virtual Machine Setup📡](#virtual-machine-setup)
-   6.1 [Installing Sudo and Configuring Users and Groups 👤](#installing-sudo-and-configuring-users-and-groups)
-   6.2 [Installing and Configuring SSH📶](#installing-and-configuring-ssh)
+2. [Choosing The Operating System💻](#2-choosing-the-operating-system)
+3. [Download The Operating System💻](#3-download-the-operating-system)
+4. [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
+5. [Installing Debian🌀](#5-installing-debian)
+6. [Virtual Machine Setup📡](#6-virtual-machine-setup)
+   6.1 [Installing Sudo and Configuring Users and Groups 👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
+   6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
 7. [Script🚨](#script)
 8. [Crontab ⏰](#crontab)
 9. [Signature.txt 📝](#signaturetxt)
