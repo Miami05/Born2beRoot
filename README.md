@@ -10,12 +10,6 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
   
 
-  
-
-##  Index
-
-  
-
 ## Index
 
 1. [Download Virtual Machine💿](#1-download-virtual-machine)
@@ -24,7 +18,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 4. [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
 5. [Installing Debian🌀](#5-installing-debian)
 6. [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
-   6.1 [Installing Sudo and Configuring Users and Groups 👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
+   6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
    6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
 7. [Script🚨](#script)
 8. [Crontab ⏰](#crontab)
@@ -606,7 +600,7 @@ Then, press the Tab key and select Continue
 <img  width="836"  src="https://imgur.com/Xp3M5o3.png">
 ### We have set everything ready for starting the setup of our Debian virtual machine❗️
 
-##  6.1 Installing Sudo and Configuring Users and Groups 👤
+##  6.1 Installing Sudo and Configuring Users and Groups👤
 1 ◦ The installation begins by switching the user to root so we can install `sudo`. To do this, enter `su` at the bash prompt and provide the root password, which is `ldurmish42` in my case. Once logged in as root, run the command `apt install sudo` to have the package manager install the required packages for `sudo`.
 <img  width="836"  src="https://imgur.com/86gUU8q.png">
 
