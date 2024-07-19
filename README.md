@@ -9,57 +9,44 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 1.  [Download Virtual Machine💿](#1-download-virtual-machine)
 
 
-
 2.  [Choosing The Operating System💻](#2-choosing-the-operating-system-)
-
 
 
 3.  [Download The Operating System💻](#3-download-the-operating-system-)
 
 
-
 4.  [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
-
 
 
 5.  [Installing Debian🌀](#5-installing-debian)
 
 
-
 6.  [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
 
-
-
 	6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
-
 
 
 	6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
 
 
-
 	6.3 [Installing and Configuring UFW🔥](#63-installing-and-configuring-ufw)<br>
 
 
+	6.4 [Setting Up the Sudo Policies🔒](#64-setting-up-the-sudo-policies)<br>
 
 7.  [Script🚨](#script)
-
 
 
 8.  [Crontab ⏰](#crontab)
 
 
-
 9.  [Signature.txt 📝](#signaturetxt)
-
 
 
 10.  [Bonus ⭐](#bonus)
 
 
-
 -  [Manual partition](#manual-partition)
-
 
 
 -  [Wordpress & services configuration 🌐](#wordpress--services-configuration)
@@ -521,5 +508,7 @@ To exit insert mode in `VIM`, press the `ESC` key. Then, to save your changes an
 4 ◦ Lastly we will check if everything done here is correct checking the actual state of our firewall. For that we will use `sudo ufw status`. Alternatively `sudo ufw status verbose` or `sudo ufw status numbered` can be used.
 
 <img  width="836"  src="https://imgur.com/57sQoM8.png">
+
+## 6.4 Setting Up the Sudo Policies🔒
 
 ##  Script🚨
