@@ -18,7 +18,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 ## Index
 
-1. [Download Virtual Machine💿](#download-virtual-machine)
+1. [Download Virtual Machine💿](#1-download-virtual-machine)
 2. [Choosing The Operating System💻](#choosing-the-operating-system)
 3. [Download The Operating System💻](#download-the-operating-system)
 4. [Virtual Machine Installation🛠️](#virtual-machine-installation)
