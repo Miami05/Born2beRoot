@@ -1,6 +1,3 @@
-
-  
-
 #  Born2beRoot
 
   
@@ -37,10 +34,10 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 5.  [Installing Debian🌀](#Installing-Debian)
 
-6.  [Virtual Machine Setup📡](#Virtual-Machine-Setup)<br>
+6.  [Virtual Machine Setup📡](#Virtual-Machine-Setup-)<br>
 
-	6.1 [Installing Sudo and Configuring Users and Groups👤](#Installing-Sudo-and-Configuring-Users-and-Groups) <br>
-	6.2 [Installing and configuring SSH📶](#Installing-and-Configuring-SSH)
+	6.1 [Installing Sudo and Configuring Users and Groups👤](#Installing-Sudo-and-Configuring-Users-and-Groups-) <br>
+	6.2 [Installing and configuring SSH📶](#Installing-and-Configuring-SSH-)
 
 7.  [Script🚨](#Script)
 
@@ -54,7 +51,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 10.2 [Wordpress & services configuration 🌐]
 
-10.3 [Aditional service ➕]
+10.3 [Additional service ➕]
 
 11. [Correction sheet ✅](https://github.com/gemartin99/Born2beroot-Tutorial/blob/main/README_EN.md#9--correction-
 
@@ -630,7 +627,7 @@ Then, press the Tab key and select Continue
 <img  width="836"  src="https://imgur.com/Xp3M5o3.png">
 ### We have set everything ready for starting the setup of our Debian virtual machine❗️
 
-##  6.1 Installing Sudo and Configuring Users and Groups 👤
+###  6.1 Installing Sudo and Configuring Users and Groups 👤
 1 ◦ The installation begins by switching the user to root so we can install `sudo`. To do this, enter `su` at the bash prompt and provide the root password, which is `ldurmish42` in my case. Once logged in as root, run the command `apt install sudo` to have the package manager install the required packages for `sudo`.
 <img  width="836"  src="https://imgur.com/86gUU8q.png">
 
@@ -664,8 +661,8 @@ Other option would be putting `sudo -V| more` after the command.
 <img  width="836"  src="https://imgur.com/Wis6XA2.png">
 <img  width="836"  src="https://imgur.com/4gQ943a.png">
 
-##  6.2 Installing and Configuring SSH📶
-### 🧠 What is SSH❓
+###  6.2 Installing and Configuring SSH📶
+## 🧠 What is SSH❓
 
 SSH stands for "Secure Shell." It is a protocol designed to provide a secure way to access a remote computer. Unlike older methods that weren't secure, SSH encrypts the connection between your computer and the remote computer, making it safe from eavesdropping and hacking.
 
