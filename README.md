@@ -38,7 +38,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 
 
-	6.3 [Installing and Configuring UFW🔥](#installing-and-configuring-ufw)<br>
+	6.3 [Installing and Configuring UFW🔥](#63-installing-and-configuring-ufw)<br>
 
 
 
