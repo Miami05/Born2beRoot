@@ -652,17 +652,17 @@ Then check it again.
 
 <img  width="836"  src="https://imgur.com/JlSqFMS.png">
 
-3 ◦ Click on `Advanced` so it shows more options, then we click on `Port fowarding`.
+4 ◦ Click on `Advanced` so it shows more options, then we click on `Port forwarding`.
 
+<img  width="836"  src="https://imgur.com/ZSM08jE.png"
 
-
-4 ◦ Click on the emoji for adding a new rule.
+5 ◦ Click on the emoji for adding a new rule.
 
 <img  width="836"  src="https://imgur.com/WnFOHCq.png">
 
-5 ◦ Lastly we will add the `4242` port to host and client. The IP's are not required. We will click accept so changes can be saved.
+6 ◦ Lastly we will add the `4242` port to host and client. The IP's are not required. We will click accept so changes can be saved.
 
-<img  width="836"  src="https://imgur.com/40SKVPT.png">
+<img  width="836"  src="https://imgur.com/eUTWmtd.png">
 
 ➤ To connect via ssh from the machine to the virtual machine using and the use the command `ssh <user>@localhost -p 4242`. It will give this error message.
 
