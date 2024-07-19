@@ -33,9 +33,11 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 6.  [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
 
-6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
+	6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
 
-6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
+	6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
+
+	6.3 [Installing and configuring UFW 🔥🧱](#63-installing-and-configurin-ufw)<br>
 
 7.  [Script🚨](#script)
 
@@ -1107,5 +1109,7 @@ To exit insert mode in `VIM`, press the `ESC` key. Then, to save your changes an
 9 ◦ When it is done we will check the service state with `sudo service ssh status` and confirm that everything is alright.
 
 <img  width="836"  src="https://imgur.com/gThOP8O.png">
+
+## Installing and configuring UFW 🔥🧱
 
 ## Script🚨
