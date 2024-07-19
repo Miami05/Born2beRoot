@@ -511,4 +511,25 @@ To exit insert mode in `VIM`, press the `ESC` key. Then, to save your changes an
 
 ## 6.4 Setting Up the Sudo Policies🔒
 
+1 ◦ Beginning with this section, we will create a file in _/etc/sudoerd.d/_. The file will serve the purpose of storing our sudo policy. The command that we will use will be `touch /etc/sudoers.d/sudo_config`.
+
+<img  width="836"  src="https://imgur.com/DT2aAtP.png">
+
+2 ◦ Then we must create a directory as is asked in the subject in _/var/log/_ because each commands need to be logged, the input and output. We will use `mkdir /var/log/sudo` for our folder.
+
+<img  width="836"  src="https://imgur.com/YPBH6Ep.png">
+
+3 ◦ We must edit the file that we created in the first step of this section. Use any text editor, but for this guide as is in every screenshot we will use nano. Use `nano /etc/sudoers.d/sudo_config`.
+
+4 ◦ Once we are editing the file we must set it up with the following commands.
+```sh
+Defaults  passwd_tries=3
+Defaults  badpass_message="Wrong password"
+Defaults  logfile="/var/log/sudo/sudo_config"
+Defaults  log_input, log_output
+Defaults  iolog_dir="/var/log/sudo"
+Defaults  requiretty
+Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+```
+
 ##  Script🚨
