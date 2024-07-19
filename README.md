@@ -34,6 +34,8 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	6.4 [Setting Up the Sudo Policies🔒](#64-setting-up-the-sudo-policies)<br>
 
+	6.5 [Setting up a strong password policy🔑](#65-setting-up-a-strong-password-policy)
+
 7.  [Script🚨](#script)
 
 
@@ -547,5 +549,7 @@ Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/
 -   **Log Directory**: Stores these logs in a specified directory.
 -   **Require TTY**: Ensures `sudo` is used from a terminal.
 -   **Secure Path**: Defines safe directories for `sudo` commands.
+
+## 6.5 Setting up a strong password policy🔑
 
 ##  Script🚨
