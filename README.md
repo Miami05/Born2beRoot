@@ -654,17 +654,21 @@ Then check it again.
 
 4 ◦ Click on `Advanced` so it shows more options, then we click on `Port forwarding`.
 
-<img  width="836"  src="https://imgur.com/ZSM08jE.png"
+<img  width="836"  src="https://imgur.com/ZSM08jE.png">
 
 5 ◦ Click on the emoji for adding a new rule.
 
 <img  width="836"  src="https://imgur.com/WnFOHCq.png">
 
-6 ◦ Lastly we will add the `4242` port to host and client. The IP's are not required. We will click accept so changes can be saved.
+6 ◦ Lastly we will add the `2222` port to host and `4242` port to client. The IP's are not required. We will click accept so changes can be saved.
 
 <img  width="836"  src="https://imgur.com/eUTWmtd.png">
 
-➤ To connect via ssh from the machine to the virtual machine using and the use the command `ssh <user>@localhost -p 4242`. It will give this error message.
+➤ To connect via ssh from the machine to the virtual machine using and the use the command `ssh <user>@localhost -p 2222`. It will require for your password.
 
-<img  width="836"  src="https://imgur.com/S0DLT2j.png">
+<img  width="836"  src="https://imgur.com/J3cktmC.png">
+
+7 ◦ Now you are connected.
+
+<img  width="836"  src="https://imgur.com/8JsHyhI.png">
 ##  Script🚨
