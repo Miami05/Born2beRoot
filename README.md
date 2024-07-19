@@ -37,7 +37,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	6.2 [Installing and Configuring SSH📶](#62-installing-and-configuring-ssh)<br>
 
-	6.3 [Installing and Configuring UFW🔥](#63-installing-and-configuring-ufw-)<br>
+	6.3 [Installing and Configuring UFW🔥](#63-installing-and-configuring-ufw)<br>
 
 7.  [Script🚨](#script)
 
