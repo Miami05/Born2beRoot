@@ -415,7 +415,7 @@ Other option would be putting `sudo -V| more` after the command.
 
 6 ◦ With `sudo adduser <user> <groupname>` we can include a user to a group. We must include out user in the groups `sudo` and `user42`.
 
-<img  width="836"  src="https://imgur.com/hKTkHQj.png">
+<img  width="836"  src="https://imgur.com/KGcKP8W.png">
 
 7 ◦ Or editing the /etc/group file using `nano /etc/group` the groups `sudo` and `user42` must be present with our user.
 
