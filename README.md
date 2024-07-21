@@ -762,6 +762,40 @@ Finally, we must show a percentage of the used memory. To do this, again, we wil
 
 <img  width="836"  src="https://imgur.com/n76fihy.png">
 
+
+###  7-6  CPU usage percentage
+
+### 1 ◦ Using `vmstat` to Capture CPU Statistics
+
+The `vmstat` command reports virtual memory statistics and other system performance metrics. We will use it to gather CPU statistics.
+
+<img  width="836"  src="https://imgur.com/3Fk7Qcz.png">
+
+-   **`1`**: Interval in seconds between updates.
+-   **`2`**: Number of updates (including the initial report).
+
+This command provides two reports of system statistics. The first report is a summary since the last boot, and the second report is an update after 1 second.
+
+### 2 ◦ Extracting the Last Report
+
+We need the most recent data, so we extract the last line of the output from `vmstat`.
+
+<img  width="836"  src="https://imgur.com/PK2scpS.png">
+
+### 3 ◦ Extracting the CPU Idle Percentage
+
+We use `awk` to extract the 15th column from the last line, which represents the CPU idle percentage (`%id`).
+
+<img  width="836"  src="https://imgur.com/uY5d8Yt.png">
+
+### 4 ◦ Calculating the CPU Usage Percentage
+
+To find the CPU usage percentage, we subtract the idle percentage from 100.
+
+<img  width="836"  src="https://imgur.com/wq8VXwB.png">
+
+If you see `0.0%` CPU usage, it usually means your computer isn't doing much work at the moment. This can also happen if you’re checking the CPU usage for a very short time, which might miss small bursts of activity.
+
 ### 7-7 Last reboot
 
 To find out when your system was last restarted, you can use the `who` command combined with `awk` to extract and display the relevant information. Follow the steps below to get a concise view of the last boot time:
