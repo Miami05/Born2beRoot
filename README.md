@@ -979,5 +979,4 @@ Result after executing the script ↙️
 
 <img  width="836"  src="https://imgur.com/hcAdhjx.png">
 
-
-8. Crontab⏰
+## 8. Crontab⏰
