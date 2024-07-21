@@ -8,15 +8,11 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 1.  [Download Virtual Machine💿](#1-download-virtual-machine)
 
-
 2.  [Choosing The Operating System💻](#2-choosing-the-operating-system-)
-
 
 3.  [Download The Operating System💻](#3-download-the-operating-system-)
 
-
 4.  [Virtual Machine Installation🛠️](#4-virtual-machine-installation)
-
 
 5.  [Installing Debian🌀](#5-installing-debian)
 
@@ -41,11 +37,9 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	7.1 [Total result of the script🆗](#71-total-result-of-the-script)
 
-8.  [Crontab ⏰](#crontab)
-
+8.  [Crontab⏰](#8-crontab)
 
 9.  [Signature.txt 📝](#signaturetxt)
-
 
 10.  [Bonus ⭐](#bonus)
 
@@ -976,3 +970,14 @@ wall "	Architecture: $arch
 	Network: IP $ip ($mac)
 	Sudo: $cmnd cmd"
 ```
+
+Script viewed from nano ↙️
+
+<img  width="836"  src="https://imgur.com/uXxNGC4.png">
+
+Result after executing the script ↙️
+
+<img  width="836"  src="https://imgur.com/hcAdhjx.png">
+
+
+8. Crontab⏰
