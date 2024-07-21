@@ -761,3 +761,25 @@ To obtain the total space, we will use a very similar command. The only differen
 Finally, we must show a percentage of the used memory. To do this, again, we will use a command very similar to the previous two. The only thing we will change is that we will combine the two previous commands to have two variables, one that represents the used memory and the other the total. Once we have done this, we will perform an operation to obtain the percentage `use/total*100` and the result of this operation will be printed as it appears in the subject, between parentheses and with the % symbol at the end. The final command is this: `df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%)\n"), use/total*100}'`.
 
 <img  width="836"  src="https://imgur.com/n76fihy.png">
+
+### 7-7 Last reboot
+
+To find out when your system was last restarted, you can use the `who` command combined with `awk` to extract and display the relevant information. Follow the steps below to get a concise view of the last boot time:
+
+### 1 ◦ View Last System Boot Time
+
+Run the following command to display the time of the last system boot:
+
+<img  width="836"  src="https://imgur.com/ywhbSJA.png">
+
+### 2 ◦ Extract and Display Only the Date and Time
+
+To filter out the unnecessary information and display only the date and time of the last boot, use the `awk` command as follows:
+
+<img  width="836"  src="https://imgur.com/g5mFulX.png">
+
+-   `who -b` provides the last system boot information.
+-   `awk '$1 == "system" {print $3 " " $4}'` processes the output to extract only the date and time:
+    -   `$1` matches the first field in the output, which is `system`.
+    -   `$3` and `$4` represent the date and time fields, respectively.
+    -   The command outputs the date and time in a clean format.
