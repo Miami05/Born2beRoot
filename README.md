@@ -730,34 +730,34 @@ To show the number of virtual cores is very similar to the previous one. We will
 
 ### 7- 4 RAM
 
-To show the RAM memory we will use the command `free` to see at the moment information about the RAM, the used part, free, reserved for other resources, etc. For more info about the command we will put free --help. We will use free --mega since that unit of measure appears in the subject.
+1 ◦ To show the RAM memory we will use the command `free` to see at the moment information about the RAM, the used part, free, reserved for other resources, etc. For more info about the command we will put free --help. We will use free --mega since that unit of measure appears in the subject.
 
 <img  width="836"  src="https://imgur.com/QKfkAj6.png">
 
-Once we have run this command, we must filter our search since we do not need all the information that it provides. The first thing we need to show is the used memory, for which we will use the command `awk`, which processes data based on text files, that is, we can use the data that interests us from a file. Finally, what we will do is compare if the first word of a row is equal to "Mem:" we will print the third word of that row, which will be the used memory. The whole command together would be `free --mega | awk '$1 == "Mem:" {print $3}'`. In the script the return value of this command will be assigned to a variable that will be concatenated with other variables so that everything is the same as specified in the subject.
+2 ◦ Once we have run this command, we must filter our search since we do not need all the information that it provides. The first thing we need to show is the used memory, for which we will use the command `awk`, which processes data based on text files, that is, we can use the data that interests us from a file. Finally, what we will do is compare if the first word of a row is equal to "Mem:" we will print the third word of that row, which will be the used memory. The whole command together would be `free --mega | awk '$1 == "Mem:" {print $3}'`. In the script the return value of this command will be assigned to a variable that will be concatenated with other variables so that everything is the same as specified in the subject.
 
 <img  width="836"  src="https://imgur.com/XWd5JpO.png">
 
-To obtain the total memory, the command is practically the same as the previous one, the only thing we must change is that instead of printing the third word of the row, we want the second one `free --mega | awk '$1 == "Mem:" {print $2}'`.
+3 ◦ To obtain the total memory, the command is practically the same as the previous one, the only thing we must change is that instead of printing the third word of the row, we want the second one `free --mega | awk '$1 == "Mem:" {print $2}'`.
 
 <img  width="836"  src="https://imgur.com/Svkw466.png">
 
-Finally, we must calculate the % of used memory. The command is again similar to the previous ones, the only modification we will make is in the printing part. As the operation to get the percentage is not exact, it can give us many decimals and in the subject only 2 appear, so we will do the same, that is why we use `%.2f` so that only 2 decimals are shown. Another thing you may not know is that in printf to show a `%` you have to put `%%`. The whole command `free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'`.
+4 ◦ Finally, we must calculate the % of used memory. The command is again similar to the previous ones, the only modification we will make is in the printing part. As the operation to get the percentage is not exact, it can give us many decimals and in the subject only 2 appear, so we will do the same, that is why we use `%.2f` so that only 2 decimals are shown. Another thing you may not know is that in printf to show a `%` you have to put `%%`. The whole command `free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'`.
 
 <img  width="836"  src="https://imgur.com/uHCTeHm.png">
 
 ### 7-5 Disk memory
 
-To view the occupied and available memory of the disk, we will use the `df` command, which stands for "disk filesystem", it is used to get a complete summary of the use of disk space. As indicated in the subject, the used memory is shown in MB, so we will then use the -m flag. Next, we will do a grep to only show us the lines that contain "/dev/" and then we will do another grep with the -v flag to exclude lines that contain "/boot". Finally, we will use the awk command and sum the value of the third word of each line to once all the lines are summed, print the final result of the sum. The entire command is as follows: `df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use "\n"}'`.
+1 ◦ To view the occupied and available memory of the disk, we will use the `df` command, which stands for "disk filesystem", it is used to get a complete summary of the use of disk space. As indicated in the subject, the used memory is shown in MB, so we will then use the -m flag. Next, we will do a grep to only show us the lines that contain "/dev/" and then we will do another grep with the -v flag to exclude lines that contain "/boot". Finally, we will use the awk command and sum the value of the third word of each line to once all the lines are summed, print the final result of the sum. The entire command is as follows: `df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use "\n"}'`.
 
 <img  width="836"  src="https://imgur.com/gsJ7YOF.png">
 
-To obtain the total space, we will use a very similar command. The only differences will be that the values we will sum will be $2 instead of $3 and the other difference is that in the subject the total size appears in Gb, so as the result of the sum gives us the number in Mb we must transform it to Gb, for this we must divide the number by 1024 and remove the decimals.
+2 ◦ To obtain the total space, we will use a very similar command. The only differences will be that the values we will sum will be $2 instead of $3 and the other difference is that in the subject the total size appears in Gb, so as the result of the sum gives us the number in Mb we must transform it to Gb, for this we must divide the number by 1024 and remove the decimals.
 `df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_result += $2} END {printf ("%.0fGb\n"), memory_result/1024}'`
 
 <img  width="836"  src="https://imgur.com/GxMlM7S.png">
 
-Finally, we must show a percentage of the used memory. To do this, again, we will use a command very similar to the previous two. The only thing we will change is that we will combine the two previous commands to have two variables, one that represents the used memory and the other the total. Once we have done this, we will perform an operation to obtain the percentage `use/total*100` and the result of this operation will be printed as it appears in the subject, between parentheses and with the % symbol at the end. The final command is this: `df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%)\n"), use/total*100}'`.
+3 ◦ Finally, we must show a percentage of the used memory. To do this, again, we will use a command very similar to the previous two. The only thing we will change is that we will combine the two previous commands to have two variables, one that represents the used memory and the other the total. Once we have done this, we will perform an operation to obtain the percentage `use/total*100` and the result of this operation will be printed as it appears in the subject, between parentheses and with the % symbol at the end. The final command is this: `df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%)\n"), use/total*100}'`.
 
 <img  width="836"  src="https://imgur.com/n76fihy.png">
 
@@ -865,3 +865,51 @@ To count the number of established connections, pipe the filtered results to `wc
 <img  width="836"  src="https://imgur.com/qojExku.png">
 
 `wc -l`: Counts the number of lines in the output, which corresponds to the number of established connections.
+
+### 7 - 10 Number of users
+
+We will use the `users` command which will show us the names of the users there are, knowing this, we will put `wc -w` to count the number of words in the command output. The entire command is as follows: `users | wc -w`.
+
+<img  width="836"  src="https://imgur.com/3NVwEm0.png">
+
+### 7-11 IP Address & MAC
+
+### 1 ◦ Get the Host IP Address
+
+To obtain the host's IP address, use the `hostname` command with the `-I` option.
+
+<img  width="836"  src="https://imgur.com/pYG1wJj.png">
+
+`hostname -I`: Displays all IP addresses assigned to the host. If multiple IP addresses are assigned, they will all be shown.
+
+### 2 ◦ Get the MAC Address
+
+To retrieve the MAC address, which uniquely identifies your network interface, use the `ip link` command combined with `grep` and `awk`.
+
+<img  width="836"  src="https://imgur.com/JtC1e2k.png">
+
+### 7-12 Number of commands executed with sudo
+
+To determine the number of commands executed with `sudo`, you can use `journalctl`, a tool for managing system logs. The following steps outline how to filter and count these entries effectively.
+
+### 1 ◦ Use `journalctl` to Access Logs
+
+`journalctl` allows you to view and manage logs collected by `systemd`. We'll use it to filter logs related to `sudo`.
+
+<img  width="836"  src="https://imgur.com/fKC9AMK.png">
+
+**`_COMM=sudo`**: Filters the logs to include only entries where the command (`_COMM`) is `sudo`. This shows all logs where `sudo` was invoked, including system startup and shutdown entries.
+
+### 2 ◦ Filter for Specific Commands
+
+To focus on commands executed via `sudo`, filter further to exclude irrelevant log entries (such as root session starts/ends). Use `grep` to show only the lines related to actual commands.
+
+<img  width="836"  src="https://imgur.com/PGyUb55.png">
+
+**`grep COMMAND`**: Filters the output to include only lines that contain "COMMAND", which represents actual commands run via `sudo`.
+
+### 3 ◦ Count the Number of Commands
+
+Finally, count the number of filtered lines using `wc -l` to get the total number of commands executed with `sudo`.
+
+<img  width="836"  src="https://imgur.com/y0GTKJ8.png">
