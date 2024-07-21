@@ -720,3 +720,44 @@ For the architecture of the SO to be shown, you will use the command `uname -a` 
 ### 7-2 Physical Cores
 
 For the number of fiscal cores to be shown we will use the file /proc/cpuinfo, which give us information about the CPU: its type, brand, model, performance, etc. We will use `grep "physical id" /proc/cpuinfo | wc -l` with the command grep looking inside the file "physical id" and with wc -l to count the line of the grep output.
+
+<img  width="836"  src="https://imgur.com/CEZaJIS.png">
+
+### 7-3 Virtual Cores
+To show the number of virtual cores is very similar to the previous one. We will again use the file /proc/cpuinfo, but in this case we will use the command `grep processor /proc/cpuinfo | wc -l`. The usage is practically the same as before, only that instead of counting the lines of "physical id" we will do it with "processor". We do it this way for the same reason as before, the way of quantifying marks 0 if there is a processor.
+
+<img  width="836"  src="https://imgur.com/rv1ggkB.png">
+
+### 7-4 RAM
+
+To show the RAM memory we will use the command `free` to see at the moment information about the RAM, the used part, free, reserved for other resources, etc. For more info about the command we will put free --help. We will use free --mega since that unit of measure appears in the subject.
+
+<img  width="836"  src="https://imgur.com/QKfkAj6.png">
+
+Once we have run this command, we must filter our search since we do not need all the information that it provides. The first thing we need to show is the used memory, for which we will use the command `awk`, which processes data based on text files, that is, we can use the data that interests us from a file. Finally, what we will do is compare if the first word of a row is equal to "Mem:" we will print the third word of that row, which will be the used memory. The whole command together would be `free --mega | awk '$1 == "Mem:" {print $3}'`. In the script the return value of this command will be assigned to a variable that will be concatenated with other variables so that everything is the same as specified in the subject.
+
+<img  width="836"  src="https://imgur.com/XWd5JpO.png">
+
+To obtain the total memory, the command is practically the same as the previous one, the only thing we must change is that instead of printing the third word of the row, we want the second one `free --mega | awk '$1 == "Mem:" {print $2}'`.
+
+<img  width="836"  src="https://imgur.com/Svkw466.png">
+
+Finally, we must calculate the % of used memory. The command is again similar to the previous ones, the only modification we will make is in the printing part. As the operation to get the percentage is not exact, it can give us many decimals and in the subject only 2 appear, so we will do the same, that is why we use `%.2f` so that only 2 decimals are shown. Another thing you may not know is that in printf to show a `%` you have to put `%%`. The whole command `free --mega | awk '$1 == "Mem:" {printf("(%.2f%%)\n", $3/$2*100)}'`.
+
+<img  width="836"  src="https://imgur.com/uHCTeHm.png">
+
+
+### 7-5 Disk memory
+
+To view the occupied and available memory of the disk, we will use the `df` command, which stands for "disk filesystem", it is used to get a complete summary of the use of disk space. As indicated in the subject, the used memory is shown in MB, so we will then use the -m flag. Next, we will do a grep to only show us the lines that contain "/dev/" and then we will do another grep with the -v flag to exclude lines that contain "/boot". Finally, we will use the awk command and sum the value of the third word of each line to once all the lines are summed, print the final result of the sum. The entire command is as follows: `df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use "\n"}'`.
+
+<img  width="836"  src="https://imgur.com/gsJ7YOF.png">
+
+To obtain the total space, we will use a very similar command. The only differences will be that the values we will sum will be $2 instead of $3 and the other difference is that in the subject the total size appears in Gb, so as the result of the sum gives us the number in Mb we must transform it to Gb, for this we must divide the number by 1024 and remove the decimals.
+`df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_result += $2} END {printf ("%.0fGb\n"), memory_result/1024}'`
+
+<img  width="836"  src="https://imgur.com/GxMlM7S.png">
+
+Finally, we must show a percentage of the used memory. To do this, again, we will use a command very similar to the previous two. The only thing we will change is that we will combine the two previous commands to have two variables, one that represents the used memory and the other the total. Once we have done this, we will perform an operation to obtain the percentage `use/total*100` and the result of this operation will be printed as it appears in the subject, between parentheses and with the % symbol at the end. The final command is this: `df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%)\n"), use/total*100}'`.
+
+<img  width="836"  src="https://imgur.com/n76fihy.png">
