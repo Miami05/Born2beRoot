@@ -259,6 +259,7 @@ Then, press the Tab key and select Continue
 <img  width="836"  src="https://imgur.com/k77lb6S.png">
 
 13 ◦ Repeat you `User Name`.
+
 <img  width="836"  src="https://imgur.com/z5jZ6Q4.png">
 
 14 ◦ Now we need to set the password for our new user. I'm choosing the same password as for the `Root User`.
@@ -281,7 +282,7 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://imgur.com/cwY7P0j.png">
 
-19 ◦ We choose option `Yes` so the changes will be writen in the disk and so we can set the logical volume manager (LVM).
+19 ◦ We choose option `Yes` so the changes will be written in the disk and so we can set the logical volume manager (LVM).
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178797258-8c34bc31-16a7-4aef-8406-cecc21fdf028.png">
 
@@ -687,6 +688,22 @@ Then check it again.
 4 ◦ Click `OK` to save the settings and close the dialog.
 
 <img  width="836"  src="https://imgur.com/60Z7mHm.png">
+
+5 ◦ Boot up your virtual machine and open a terminal within the VM and run the following command to find its IP address
+`ip a`
+
+<img  width="836"  src="https://imgur.com/x4jshuA.png">
+
+U will see the IP of your virtual machine.
+
+6 ◦ To connect via ssh from the machine to the virtual machine using and the use the command
+`ssh <username>@<vm_ip_address> -p 4242`. Which on my case is `ssh ldurmish@10.12.245.227 -p 4242`
+You will be prompted to enter the password.
+
+<img  width="836"  src="https://imgur.com/OybBTji.png">
+
+7 ◦ Now you are connected.
+<img  width="836"  src="https://imgur.com/BmK8ojy.png">
 
 ## 7. Script🚨
 
