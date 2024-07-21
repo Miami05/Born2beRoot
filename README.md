@@ -728,7 +728,7 @@ To show the number of virtual cores is very similar to the previous one. We will
 
 <img  width="836"  src="https://imgur.com/rv1ggkB.png">
 
-### 7-4 RAM
+### 7- 4 RAM
 
 To show the RAM memory we will use the command `free` to see at the moment information about the RAM, the used part, free, reserved for other resources, etc. For more info about the command we will put free --help. We will use free --mega since that unit of measure appears in the subject.
 
@@ -746,7 +746,6 @@ Finally, we must calculate the % of used memory. The command is again similar to
 
 <img  width="836"  src="https://imgur.com/uHCTeHm.png">
 
-
 ### 7-5 Disk memory
 
 To view the occupied and available memory of the disk, we will use the `df` command, which stands for "disk filesystem", it is used to get a complete summary of the use of disk space. As indicated in the subject, the used memory is shown in MB, so we will then use the -m flag. Next, we will do a grep to only show us the lines that contain "/dev/" and then we will do another grep with the -v flag to exclude lines that contain "/boot". Finally, we will use the awk command and sum the value of the third word of each line to once all the lines are summed, print the final result of the sum. The entire command is as follows: `df -m | grep "/dev/" | grep -v "/boot" | awk '{memory_use += $3} END {print memory_use "\n"}'`.
@@ -761,7 +760,6 @@ To obtain the total space, we will use a very similar command. The only differen
 Finally, we must show a percentage of the used memory. To do this, again, we will use a command very similar to the previous two. The only thing we will change is that we will combine the two previous commands to have two variables, one that represents the used memory and the other the total. Once we have done this, we will perform an operation to obtain the percentage `use/total*100` and the result of this operation will be printed as it appears in the subject, between parentheses and with the % symbol at the end. The final command is this: `df -m | grep "/dev/" | grep -v "/boot" | awk '{use += $3} {total += $2} END {printf("(%d%%)\n"), use/total*100}'`.
 
 <img  width="836"  src="https://imgur.com/n76fihy.png">
-
 
 ###  7-6  CPU usage percentage
 
@@ -778,7 +776,7 @@ This command provides two reports of system statistics. The first report is a su
 
 ### 2 ◦ Extracting the Last Report
 
-We need the most recent data, so we extract the last line of the output from `vmstat`.
+We need the most recent data, so we extract the last line of the output from `vmstat` we use `tail -1`.
 
 <img  width="836"  src="https://imgur.com/PK2scpS.png">
 
@@ -817,3 +815,53 @@ To filter out the unnecessary information and display only the date and time of 
     -   `$1` matches the first field in the output, which is `system`.
     -   `$3` and `$4` represent the date and time fields, respectively.
     -   The command outputs the date and time in a clean format.
+
+### 7-8 LVM active
+
+To determine if Logical Volume Management (LVM) is active on your system, you can use the `lsblk` command combined with some basic shell scripting.
+
+### 1 ◦ Use `lsblk` to Check for LVM
+
+The `lsblk` command lists information about all available block devices (e.g., hard drives, SSDs, memory devices) and their properties. We need to look for "lvm" in the output, which indicates the presence of LVM volumes.
+
+<img  width="836"  src="https://imgur.com/IIMp2ph.png">
+
+### 2 ◦ Filter Output for LVM Information
+
+To automate the process of determining whether LVM is active, you can use a shell script to search for "lvm" in the `lsblk` output. The script will count occurrences of "lvm" and print "yes" if LVM is present, or "no" if it is not.
+
+<img  width="836"  src="https://imgur.com/78v58Sp.png">
+
+**Explanation:**
+
+-   `lsblk`: Lists block devices and their details.
+-   `grep "lvm"`: Searches for the term "lvm" in the `lsblk` output.
+-   `wc -l`: Counts the number of lines containing "lvm".
+-   `if [ $(...) -gt 0 ]`: Checks if the count is greater than 0.
+-   `echo "yes"`: Prints "yes" if LVM is found.
+-   `echo "no"`: Prints "no" if LVM is not found.
+-   `fi`: Ends the `if` block.
+
+### 7 - 9 TCP connections
+
+To determine the number of established TCP connections on your system, you can use the `ss` command. This command replaces the outdated `netstat` utility and provides a more modern and efficient way to view socket statistics.
+
+### 1 ◦ Use the `ss` Command: The `ss` command is used to display detailed information about network sockets. We will use it with specific flags to filter the results for TCP connections.
+
+<img  width="836"  src="https://imgur.com/1l01GrM.png">
+
+### 2 ◦ Filter for TCP Connections:
+
+-   Use the `-ta` flag with `ss` to list all TCP connections.
+-   `-t` stands for TCP sockets.
+-   `-a` shows all sockets (both listening and non-listening).
+
+<img  width="836"  src="https://imgur.com/XXVRrdl.png">
+
+### 3 ◦ Counting the Number of Established Connections
+
+To count the number of established connections, pipe the filtered results to `wc -l`, which counts the number of lines in the output `ss -ta | grep ESTAB | wc -l`.
+
+<img  width="836"  src="https://imgur.com/qojExku.png">
+
+`wc -l`: Counts the number of lines in the output, which corresponds to the number of established connections.
