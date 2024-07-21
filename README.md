@@ -917,7 +917,7 @@ Finally, count the number of filtered lines using `wc -l` to get the total numbe
 ## 7.1 Total result of the script🆗
 
 ⚠️ Remember not to copy and paste if you do not know the function of each command. ⚠️
-
+```
 #!/bin/bash
 
 # ARCH
@@ -975,3 +975,4 @@ wall "	Architecture: $arch
 	User log: $ulog
 	Network: IP $ip ($mac)
 	Sudo: $cmnd cmd"
+```
