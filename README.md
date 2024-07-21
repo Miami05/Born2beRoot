@@ -38,10 +38,10 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 	6.5 [Setting up a strong password policy🔑](#65-setting-up-a-strong-password-policy)<br>
 
 
-	6.6 [Connecting Via SSH through Nat🗣](#66-connecting-via-ssh-through-to-nat)<br>
+	6.6 [Connecting Via SSH through Nat 🗣](#66-connecting-via-ssh-through-to-nat)<br>
 
 
-	6.7 [Connecting Via SSH through Bridged Adapter🗣](#67-connecting-via-ssh-through-to-bridged-adapter)<br>
+	6.7 [Connecting Via SSH through Bridged Adapter 🗣](#67-connecting-via-ssh-through-to-bridged-adapter)<br>
 
 7.  [Script🚨](#7-script)
 
@@ -642,7 +642,7 @@ Then check it again.
 
 <img  width="836"  src="https://imgur.com/xmLO25A.png">
 
-## 6.6 Connecting Via SSH through Nat🗣
+## 6.6 Connecting Via SSH through Nat 🗣
 
 1 ◦ If we want to connect via SSH through NAT we must close the machine and go to settings.
 
@@ -676,7 +676,7 @@ Then check it again.
 
 <img  width="836"  src="https://imgur.com/8JsHyhI.png">
 
-## 6.7 Connecting Via SSH through Bridged Adapter🗣
+## 6.7 Connecting Via SSH through Bridged Adapter 🗣
 
 1 ◦ If we want to connect via SSH through Bridged Adapter we must close the machine and go to settings.
 
