@@ -37,9 +37,13 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	6.5 [Setting up a strong password policy🔑](#65-setting-up-a-strong-password-policy)<br>
 
-	6.6 [Connecting Via SSH through to Nat🗣](#66-connecting-via-ssh-through-to-nat)<br>
 
-7.  [Script🚨](#script)
+	6.6 [Connecting Via SSH through Nat🗣](#66-connecting-via-ssh-through-to-nat)<br>
+
+
+	6.7 [Connecting Via SSH through Bridged Adapter🗣](#67-connecting-via-ssh-through-to-bridged-adapter)<br>
+
+7.  [Script🚨](#7-script)
 
 
 8.  [Crontab ⏰](#crontab)
@@ -638,9 +642,9 @@ Then check it again.
 
 <img  width="836"  src="https://imgur.com/xmLO25A.png">
 
-## 6.6 Connecting Via SSH through to Nat🗣
+## 6.6 Connecting Via SSH through Nat🗣
 
-1 ◦ If we want to connect via SSH we must close the machine and go to settings.
+1 ◦ If we want to connect via SSH through NAT we must close the machine and go to settings.
 
 <img  width="836"  src="https://imgur.com/EYpBIgQ.png">
 
@@ -671,4 +675,37 @@ Then check it again.
 7 ◦ Now you are connected.
 
 <img  width="836"  src="https://imgur.com/8JsHyhI.png">
-##  Script🚨
+
+## 6.7 Connecting Via SSH through Bridged Adapter🗣
+
+1 ◦ If we want to connect via SSH through Bridged Adapter we must close the machine and go to settings.
+
+<img  width="836"  src="https://imgur.com/EYpBIgQ.png">
+
+2 ◦ Once there we will click on `Network`.
+
+<img  width="836"  src="https://imgur.com/1PkiyQx.png">
+
+3 ◦ Under `Adapter 1`, change the "Attached to" dropdown from `NAT` to `Bridged Adapter`.
+
+<img  width="836"  src="https://imgur.com/JlSqFMS.png">
+
+4 ◦ Click `OK` to save the settings and close the dialog.
+
+<img  width="836"  src="https://imgur.com/60Z7mHm.png">
+
+## 7. Script🚨
+
+Going into this part, you need to take special attention to everything, as is important to learn all that is here. **Do not cheat this part!** You will be asked how the script works during the evaluation, or as the evaluator sees.
+
+🧠 **What is a script❓** It is a sequence of commands stored in a file that when executed will do the function of each command.
+
+### 7-1 Architecture
+
+For the architecture of the SO to be shown, you will use the command `uname -a` ("-a" == "--all"). What this command does is print all information, except if the CPU is unknown or the platform hardware.
+
+<img  width="836"  src="https://imgur.com/On8kR8P.png">
+
+### 7-2 Physical Cores
+
+For the number of fiscal cores to be shown we will use the file /proc/cpuinfo, which give us information about the CPU: its type, brand, model, performance, etc. We will use `grep "physical id" /proc/cpuinfo | wc -l` with the command grep looking inside the file "physical id" and with wc -l to count the line of the grep output.
