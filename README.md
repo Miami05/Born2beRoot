@@ -39,6 +39,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 7.  [Script🚨](#7-script)
 
+	7.1 [Total result of the script🆗](#71-total-result-of-the-script)
 
 8.  [Crontab ⏰](#crontab)
 
@@ -75,7 +76,6 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 If you haven't installed VirtualBox yet, you can download it from the official [VirtualBox website](https://www.virtualbox.org).
 VirtualBox is essential for setting up and running the virtual machine that will host the operating system we will be working with.
-
 
 ##  2. Choosing The Operating System 💻
 
@@ -913,3 +913,5 @@ To focus on commands executed via `sudo`, filter further to exclude irrelevant l
 Finally, count the number of filtered lines using `wc -l` to get the total number of commands executed with `sudo`.
 
 <img  width="836"  src="https://imgur.com/y0GTKJ8.png">
+
+## 7.1 Total result of the script🆗
