@@ -41,17 +41,13 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 9.  [Signature.txt📝](#9-signaturetxt)
 
-10.  [Bonus ⭐](#bonus)
+10.  [Bonus⭐](#10-bonus)
 
+	10.1 [Manual partition](#101-manual-partition)
 
--  [Manual partition](#manual-partition)
+	10.2 [Wordpress & services configuration 🌐](#102-wordpress--services-configuration)|
 
-
--  [Wordpress & services configuration 🌐](#wordpress--services-configuration)
-
-
-
--  [Additional service ➕](#additional-service)
+	10.3 [Additional service ➕](#103-additional-service)
 
 
 
@@ -264,7 +260,7 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://imgur.com/3ksvHxJ.png">
 
-16 ◦ Select Guied - use entire disk and set up encrypted LVM. ⚠️❗️ If you want to do the bonus select Manual and then [click here](#9-bonus) ❗️⚠️
+16 ◦ Select Guied - use entire disk and set up encrypted LVM. ⚠️❗️ If you want to do the bonus select Manual and then [click here](#10-bonus) ❗️⚠️
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178795367-b82018de-edc8-47d3-8cd6-b90c5e3be2fa.png">
 
@@ -280,63 +276,63 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178797258-8c34bc31-16a7-4aef-8406-cecc21fdf028.png">
 
-19 ◦ We click on `Cancel` the erasing of the data is not required.
+20 ◦ We click on `Cancel` the erasing of the data is not required.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178797666-78cdf892-1a83-4c68-8f85-0d5440cd4854.png">
 
-20 ◦ Once again, select a password for encrypting the `LVM`. As mentioned earlier, you'll need to repeat this process, so it's advisable to write it down. You can use the same password as before.
+21 ◦ Once again, select a password for encrypting the `LVM`. As mentioned earlier, you'll need to repeat this process, so it's advisable to write it down. You can use the same password as before.
 
 <img  width="836"  src="https://imgur.com/DSWYNrL.png">
 
-21 ◦ Repeat the password we just set.
+22 ◦ Repeat the password we just set.
 
 <img  width="836"  src="https://imgur.com/VXGHUeh.png">
 
-22 ◦In this step, we must input the required amount of volume group to use during the guided partitioning. We can enter `max` or the total available memory, which in this case is `12.4 GB`.
+23 ◦In this step, we must input the required amount of volume group to use during the guided partitioning. We can enter `max` or the total available memory, which in this case is `12.4 GB`.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178799165-c6b05fd2-86ad-45b7-a026-9ee169eda5d5.png">
 
-23 ◦ To wrap the partitioning and write the changes in the disk we choose the option `Finish partitioning and write changes to disk`.
+24 ◦ To wrap the partitioning and write the changes in the disk we choose the option `Finish partitioning and write changes to disk`.
 
 <img  width="836"  src="https://imgur.com/ThEB4H7.png">
 
-24 ◦ We choose the option `Yes` and then we confirm that we do not want more changes.
+25 ◦ We choose the option `Yes` and then we confirm that we do not want more changes.
 
 <img  width="836"  src="https://imgur.com/ho1HF2V.png">
 
-25 ◦ We select the option `No` since additional packages are not required and we don't need them.
+26 ◦ We select the option `No` since additional packages are not required and we don't need them.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png">
 
-26 ◦ We choose our Country.
+27 ◦ We choose our Country.
 
 <img  width="836"  src="https://imgur.com/xVZHPcR.png">
 
-27 ◦ We choose `deb.debian.org` as is the recommended by Debian itself.
+28 ◦ We choose `deb.debian.org` as is the recommended by Debian itself.
 
 <img  width="836"  src="https://imgur.com/w7Uc3Ch.png">
 
-28 ◦ We will left this option blank and we click on `Continue`.
+29 ◦ We will left this option blank and we click on `Continue`.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png">
 
-29 ◦ We select the option `No` as we want to remain out of the statistics.
+30 ◦ We select the option `No` as we want to remain out of the statistics.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178803926-a4efbc70-f3e2-4e6c-9809-9152478d8237.png">
 
-30 ◦ We will leave all software choices blank by navigating with the `Down Arrow` key and selecting with the `Space Bar`, then click `Continue`.
+31 ◦ We will leave all software choices blank by navigating with the `Down Arrow` key and selecting with the `Space Bar`, then click `Continue`.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178804377-e775b89e-93d4-482f-a4d0-0ef126f47719.png">
 
-31 ◦ We select `Yes` for install [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) in the hard disk.
+32 ◦ We select `Yes` for install [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) in the hard disk.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png">
 
-32 ◦ We will choose the device `/dev/sda (ata_VBOX_HARDDISK)` for the installation for boot loader.
+33 ◦ We will choose the device `/dev/sda (ata_VBOX_HARDDISK)` for the installation for boot loader.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png">
 
-33 ◦ To finish the installation we click on `Continue`.
+34 ◦ To finish the installation we click on `Continue`.
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png">
 
@@ -1039,3 +1035,5 @@ cd `/home/ldurmish/sgoinfre/Born2beRoot/`
 <img  width="836"  src="https://imgur.com/QW37nQk.png">
 
 **Important**: You can safely reopen and use the virtual machine because the state is saved in the snapshot. If you need to make changes and then verify the integrity again, revert to this snapshot before generating a new shasum.
+
+## 10. Bonus⭐
