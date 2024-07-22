@@ -44,7 +44,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
     10.1 [Manual Partition](#101-manual-partition)
 
-	10.2 [Wordpress and services configuration🌐](#102-wordpress-and-services-configuration)
+	10.2 [Wordpress and Services Configuration🌐](#102-wordpress-and-services-configuration)
 
     10.3
 
@@ -1645,7 +1645,7 @@ As is requires on the subject.
 70 ◦ Once we have finished with the installation of Debian, we must set up our virtual machine.
 [Click here to navigate to the virtual machine settings ⚙️](https://github.com/Miami05/Born2beRoot?tab=readme-ov-file#6-virtual-machine-setup)
 
-### 10.2 Wordpress and services configuration🌐
+### 10.2 Wordpress and Services Configuration🌐
 
 Lighttpd<br>
 🧠 What is Lighttpd❓ Lighttpd is a web server designed to be fast, secure, flexible, and standards-compliant. It is optimized for environments where speed is a top priority because it consumes less CPU and RAM than other servers.
@@ -1666,3 +1666,15 @@ Lighttpd<br>
 **Settings → Network → Advanced → Port forwarding → Replicate the capture**
 
 <img  src="https://imgur.com/6keGD2p.png">
+
+### WordPress
+
+🧠 **What is Wordpress❓** It is a content management system focused on the creation of any type of website.
+
+1 ◦ To install the latest version of WordPress we must first install wget and zip. To do this we will use the following command `sudo apt install wget zip`.
+
+🧠 **What is wget❓** It is a command line tool used to download files from the web.
+
+🧠 **What is zip❓** It is a command line utility for compressing and decompressing files in ZIP format.
+
+<img  src=https://imgur.com/BwdDL3C.png">
