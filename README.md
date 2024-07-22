@@ -1677,4 +1677,33 @@ Lighttpd<br>
 
 🧠 **What is zip❓** It is a command line utility for compressing and decompressing files in ZIP format.
 
-<img  src=https://imgur.com/BwdDL3C.png">
+<img  src="https://imgur.com/BwdDL3C.png">
+
+2 ◦ Once we have installed the packages we must locate ourselves in the folder /var/www/ with the command cd we will access it cd /var/www/.
+
+<img  src="https://imgur.com/DhF7JyO.png">
+
+3 ◦ Once we are in the path /var/www/ we must download the latest version of WordPress. We will use the following command `sudo wget https://wordpress.org/latest.zip`
+
+4 ◦ Unzip the file you just downloaded with the command `sudo unzip latest.zip`.
+
+5 ◦ We will rename the folder html and call it html_old. sudo mv html/ html_old/.
+
+<img  src="https://imgur.com/2SiWUi3>
+
+6 ◦ Now we will rename the wordpress folder and call it html. sudo mv wordpress/ html
+
+<img  src="https://imgur.com/ZnV1Av5.png">
+
+7 ◦ Finally, we will set the permissions for the `html` folder using the command `sudo chmod -R 755 html`.
+
+<img  src="https://imgur.com/vAg1JVe.png">
+
+Here’s a breakdown of the command and what the permissions mean:
+
+-   **`chmod`**: Stands for "change mode," the command used to modify file and directory permissions.
+-   **`-R`**: Stands for "recursive," meaning the command will apply the permissions to the `html` directory and all its subdirectories and files.
+-   **`755`**: The numeric mode representing the permissions:
+    -   **7**: The owner has read (`4`), write (`2`), and execute (`1`) permissions.
+    -   **5**: The group has read (`4`) and execute (`1`) permissions, but no write permissions.
+    -   **5**: Others have read (`4`) and execute (`1`) permissions, but no write permissions.
