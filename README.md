@@ -44,6 +44,10 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
     10.1 [Manual Partition](#101-manual-partition)
 
+	10.2 [Wordpress and services configuration🌐](#102-wordpress-and-services-configuration)
+
+    10.3
+
 11.  [Correction sheet ✅](#correction-sheet)
 
 
@@ -1032,3 +1036,583 @@ cd `/home/ldurmish/sgoinfre/Born2beRoot/`
 ## 10. Bonus⭐
 
 ### 10.1 Manual partition
+
+1 ◦ When choosing disk partitioning, we will select manual. This way we can edit the partitions one by one.
+
+[![Screen Shot 2022-10-23 at 4 30 48 PM](https://user-images.githubusercontent.com/66915274/197397840-b6ae9d65-a6aa-4a5d-a03f-856d9ce81644.png)](https://user-images.githubusercontent.com/66915274/197397840-b6ae9d65-a6aa-4a5d-a03f-856d9ce81644.png)
+
+2 ◦ In this section, it shows us a general description of our partitions and mount points. Currently, we do not have any partitions. To create a new partition table, we must choose the device where we want to create them. In our case, we will choose the only one available.
+
+[![Screen Shot 2022-10-23 at 4 35 39 PM](https://user-images.githubusercontent.com/66915274/197398114-44abc561-d34d-47c9-b512-581b4ec6fddb.png)](https://user-images.githubusercontent.com/66915274/197398114-44abc561-d34d-47c9-b512-581b4ec6fddb.png)
+
+3 ◦ We accept the confirmation message. Basically, it warns us that if there are already partitions on the device, they will be deleted and that if we are sure to create a new empty partition table.
+
+[![Screen Shot 2022-10-23 at 4 36 08 PM](https://user-images.githubusercontent.com/66915274/197398137-b9fe1f96-5907-462e-8a50-44b71ae2aefe.png)](https://user-images.githubusercontent.com/66915274/197398137-b9fe1f96-5907-462e-8a50-44b71ae2aefe.png)
+
+4 ◦ Once we have completed the previous step, we can see how our partition table appears empty. Now we must configure it, for this we must select it.
+
+[![Screen Shot 2022-10-23 at 4 36 35 PM](https://user-images.githubusercontent.com/66915274/197398172-b05fa7aa-e5b4-40cb-afd4-03a1404d7885.png)](https://user-images.githubusercontent.com/66915274/197398172-b05fa7aa-e5b4-40cb-afd4-03a1404d7885.png)
+
+5 ◦ We will create a new partition.
+
+[![Screen Shot 2022-10-23 at 4 36 54 PM](https://user-images.githubusercontent.com/66915274/197398199-70570553-de1b-49a9-8c44-da9a1e4b5c1e.png)](https://user-images.githubusercontent.com/66915274/197398199-70570553-de1b-49a9-8c44-da9a1e4b5c1e.png)
+
+We will start by creating this:
+
+[![image](https://user-images.githubusercontent.com/66915274/197427077-48636236-4012-4edf-b0e4-319db502e685.png)](https://user-images.githubusercontent.com/66915274/197427077-48636236-4012-4edf-b0e4-319db502e685.png)
+
+6 ◦ As the subject indicates, the size of the partition must be 500 megabytes.
+
+[![Screen Shot 2022-10-23 at 4 37 27 PM](https://user-images.githubusercontent.com/66915274/197398241-604b2bb2-7303-412a-b382-40bfbf443ed0.png)](https://user-images.githubusercontent.com/66915274/197398241-604b2bb2-7303-412a-b382-40bfbf443ed0.png)
+
+7 ◦ We choose the type of partition. We choose primary because it will be the partition where the Operating System will be installed.
+
+[![Screen Shot 2022-10-23 at 4 37 38 PM](https://user-images.githubusercontent.com/66915274/197398253-2c0f8205-3d3f-4ab7-94a3-70c37ee014d9.png)](https://user-images.githubusercontent.com/66915274/197398253-2c0f8205-3d3f-4ab7-94a3-70c37ee014d9.png)
+
+Brief description of all types of partitions:
+
+◦ **Primary:** The only partition on which an OS can be installed. There can only be 4 primary partitions per hard drive or 3 primary and one extended.
+
+◦ **Secondary/Extended:** It was designed to break the 4 primary partition limitation on a single physical disk. There can only be one partition of this type per disk, and it only serves to contain logical partitions.
+
+◦ **Logical:** It occupies a portion of the primary/extended partition or the whole of it, which has been formatted with a specific type of file system (in our case we will use ext4) and has been assigned a unit, so the operating system recognizes the logical partitions or its file system. There can be a maximum of 23 logical partitions in an extended partition, however, Linux, the OS we are currently working with, reduces it to 15, more than enough for this project.
+
+8 ◦ We will select beginning because we want the new partition to be created at the beginning of the available space.
+
+[![Screen Shot 2022-10-23 at 4 37 52 PM](https://user-images.githubusercontent.com/66915274/197398265-c63d7b32-55b7-45ad-86b3-166e44cfd598.png)](https://user-images.githubusercontent.com/66915274/197398265-c63d7b32-55b7-45ad-86b3-166e44cfd598.png)
+
+9 ◦ In the following screenshot it shows the details of the partition. We will modify the mount point as specified in the subject.
+
+[![Screen Shot 2022-10-23 at 4 38 27 PM](https://user-images.githubusercontent.com/66915274/197398293-2487ded0-2584-48c4-a5ea-1f2464ec39f9.png)](https://user-images.githubusercontent.com/66915274/197398293-2487ded0-2584-48c4-a5ea-1f2464ec39f9.png)
+
+10 ◦ We choose boot as the mount point for our partition.
+
+[![Screen Shot 2022-10-23 at 4 38 49 PM](https://user-images.githubusercontent.com/66915274/197398322-51b9854b-ab32-4d81-8126-3ef3913858a6.png)](https://user-images.githubusercontent.com/66915274/197398322-51b9854b-ab32-4d81-8126-3ef3913858a6.png)
+
+11 ◦ We finish configuring the current partition.
+
+[![Screen Shot 2022-10-23 at 4 39 07 PM](https://user-images.githubusercontent.com/66915274/197398336-72b17153-73dc-48a5-b7d3-839877e8983b.png)](https://user-images.githubusercontent.com/66915274/197398336-72b17153-73dc-48a5-b7d3-839877e8983b.png)
+
+12 ◦ Once we have completed the previous step, the partition should already appear. Now we must create a logical partition with all the available space on the disk, which has no mount point and is encrypted. To do this, we select the free space where we want to create it.
+
+[![Screen Shot 2022-10-23 at 4 39 37 PM](https://user-images.githubusercontent.com/66915274/197398367-ee8a1f5d-3941-4a86-a775-90f29b1c955e.png)](https://user-images.githubusercontent.com/66915274/197398367-ee8a1f5d-3941-4a86-a775-90f29b1c955e.png)
+
+As is requires on the subject.
+[![image](https://user-images.githubusercontent.com/66915274/197431553-718358bb-6570-41dd-b114-09acc347999d.png)](https://user-images.githubusercontent.com/66915274/197431553-718358bb-6570-41dd-b114-09acc347999d.png)
+
+13 ◦ We create a new partition.
+
+[![Screen Shot 2022-10-23 at 4 39 58 PM](https://user-images.githubusercontent.com/66915274/197398396-843c7fb3-b945-4305-a960-02aa9d4ca940.png)](https://user-images.githubusercontent.com/66915274/197398396-843c7fb3-b945-4305-a960-02aa9d4ca940.png)
+
+14 ◦ We select the maximum size.
+
+[![Screen Shot 2022-10-23 at 4 40 26 PM](https://user-images.githubusercontent.com/66915274/197398425-63205376-839f-4986-a8d0-981cdaa380e4.png)](https://user-images.githubusercontent.com/66915274/197398425-63205376-839f-4986-a8d0-981cdaa380e4.png)
+
+15 ◦ We select the type of partition, in this case logical.
+
+[![Screen Shot 2022-10-23 at 4 40 53 PM](https://user-images.githubusercontent.com/66915274/197398448-49c99180-9a3d-4dd4-a9ce-d680bfdefa1c.png)](https://user-images.githubusercontent.com/66915274/197398448-49c99180-9a3d-4dd4-a9ce-d680bfdefa1c.png)
+
+16 ◦ We will modify the mount point.
+
+[![Screen Shot 2022-10-23 at 4 41 44 PM](https://user-images.githubusercontent.com/66915274/197398500-188cc4fb-4eb5-4a56-893b-58838877c056.png)](https://user-images.githubusercontent.com/66915274/197398500-188cc4fb-4eb5-4a56-893b-58838877c056.png)
+
+17 ◦ We will choose the option not to mount it.
+
+[![Screen Shot 2022-10-23 at 4 42 11 PM](https://user-images.githubusercontent.com/66915274/197398518-f6fb7588-8c53-40a9-9ceb-238d6a62d942.png)](https://user-images.githubusercontent.com/66915274/197398518-f6fb7588-8c53-40a9-9ceb-238d6a62d942.png)
+
+18 ◦ We finish configuring the current partition.
+
+[![Screen Shot 2022-10-23 at 4 42 41 PM](https://user-images.githubusercontent.com/66915274/197398541-922f2c4d-ed5a-4d92-8083-ccf57aec3dee.png)](https://user-images.githubusercontent.com/66915274/197398541-922f2c4d-ed5a-4d92-8083-ccf57aec3dee.png)
+
+19 ◦ We will configure encrypted volumes. This way we can encrypt our partition.
+
+[![Screen Shot 2022-10-23 at 4 43 08 PM](https://user-images.githubusercontent.com/66915274/197398562-2369fa90-7db9-4ba3-abed-7ac15ede8b81.png)](https://user-images.githubusercontent.com/66915274/197398562-2369fa90-7db9-4ba3-abed-7ac15ede8b81.png)
+
+20 ◦ We accept the confirmation message.
+
+[![Screen Shot 2022-10-23 at 4 43 27 PM](https://user-images.githubusercontent.com/66915274/197398573-9720e351-04f4-49f0-a3dc-fe0ce1ada296.png)](https://user-images.githubusercontent.com/66915274/197398573-9720e351-04f4-49f0-a3dc-fe0ce1ada296.png)
+
+21 ◦ We create the encrypted volumes.
+
+[![Screen Shot 2022-10-23 at 4 43 46 PM](https://user-images.githubusercontent.com/66915274/197398595-b36ab8da-86c6-483a-99fd-079293a92570.png)](https://user-images.githubusercontent.com/66915274/197398595-b36ab8da-86c6-483a-99fd-079293a92570.png)
+
+22 ◦ We select which partition we want to encrypt.
+
+[![Screen Shot 2022-10-23 at 4 44 06 PM](https://user-images.githubusercontent.com/66915274/197398615-7c9f8e45-7885-4f39-84eb-e3a056eeb2c7.png)](https://user-images.githubusercontent.com/66915274/197398615-7c9f8e45-7885-4f39-84eb-e3a056eeb2c7.png)
+
+23 ◦ We finish configuring the current partition.
+
+[![Screen Shot 2022-10-23 at 4 44 35 PM](https://user-images.githubusercontent.com/66915274/197398649-06749ec8-903d-4b1a-af2a-c2dad77bcaec.png)](https://user-images.githubusercontent.com/66915274/197398649-06749ec8-903d-4b1a-af2a-c2dad77bcaec.png)
+
+24 ◦ We finish because we don't want to create more encrypted volumes.
+
+[![Screen Shot 2022-10-23 at 4 44 49 PM](https://user-images.githubusercontent.com/66915274/197398663-0bd74c65-b3fd-430c-b3e6-4f1e0c76ae8d.png)](https://user-images.githubusercontent.com/66915274/197398663-0bd74c65-b3fd-430c-b3e6-4f1e0c76ae8d.png)
+
+25 ◦ We accept the confirmation message. It tells us that everything inside the partition will be encrypted and it should not take long to finish.
+
+[![Screen Shot 2022-10-23 at 4 45 06 PM](https://user-images.githubusercontent.com/66915274/197398670-91db3e3e-b271-4e1b-ad8a-28ceb06e0897.png)](https://user-images.githubusercontent.com/66915274/197398670-91db3e3e-b271-4e1b-ad8a-28ceb06e0897.png)
+
+26 ◦ We don't care if it takes a long time or not, we cancel it because there is nothing to encrypt since the partition is empty.
+
+[![Screen Shot 2022-10-23 at 4 45 27 PM](https://user-images.githubusercontent.com/66915274/197398685-6603ef31-d499-46da-949f-ade8e2a05bf9.png)](https://user-images.githubusercontent.com/66915274/197398685-6603ef31-d499-46da-949f-ade8e2a05bf9.png)
+
+27 ◦ Again we must enter a password, this time it will be the encryption phrase. As I previously mentioned, you must repeat the process and write it down as it will be important in the future.
+
+<img  src="https://imgur.com/nNzSkrx.png">
+
+28 ◦ We repeat the encryption phrase.
+
+<img  src="https://imgur.com/az22E4l.png">
+
+
+29 ◦ We will configure the logical volume manager.
+
+[![Screen Shot 2022-10-23 at 4 50 17 PM](https://user-images.githubusercontent.com/66915274/197398933-85e0025e-0a4d-41f0-8fd0-5f0c8ee32e9b.png)](https://user-images.githubusercontent.com/66915274/197398933-85e0025e-0a4d-41f0-8fd0-5f0c8ee32e9b.png)
+
+30 ◦ We will accept the confirmation message as we agree to save the changes to the disk.
+
+[![Screen Shot 2022-10-23 at 4 50 42 PM](https://user-images.githubusercontent.com/66915274/197398945-d79ea2a7-a13e-4e6a-9e9c-40bdcd2dd502.png)](https://user-images.githubusercontent.com/66915274/197398945-d79ea2a7-a13e-4e6a-9e9c-40bdcd2dd502.png)
+
+31 ◦ We will create a new volume group. Volume groups group partitions.
+
+[![Screen Shot 2022-10-23 at 4 52 04 PM](https://user-images.githubusercontent.com/66915274/197399021-29b21274-37c1-4fd9-8526-962969d1cce3.png)](https://user-images.githubusercontent.com/66915274/197399021-29b21274-37c1-4fd9-8526-962969d1cce3.png)
+
+32 ◦ We will enter the name we want to give it. `LVMGroup` as indicated in the subject.
+
+[![Screen Shot 2022-10-23 at 4 52 58 PM](https://user-images.githubusercontent.com/66915274/197399065-1ac8d80d-9e18-4b4a-a60f-11496e7de26d.png)](https://user-images.githubusercontent.com/66915274/197399065-1ac8d80d-9e18-4b4a-a60f-11496e7de26d.png)
+
+33 ◦ We will select the partition where we want to create the group.
+
+[![Screen Shot 2022-10-23 at 4 53 22 PM](https://user-images.githubusercontent.com/66915274/197399089-5ea5f48e-176c-4278-8b14-a13b7f5ee45c.png)](https://user-images.githubusercontent.com/66915274/197399089-5ea5f48e-176c-4278-8b14-a13b7f5ee45c.png)
+
+34 ◦ Now we must create all the logical partitions. As we have to repeat the same actions several times, there are captures that will not be documented.
+
+[![image](https://user-images.githubusercontent.com/66915274/197439138-889d6368-1875-402b-a094-bd146bb7cb8a.png)](https://user-images.githubusercontent.com/66915274/197439138-889d6368-1875-402b-a094-bd146bb7cb8a.png)
+
+[![Screen Shot 2022-10-23 at 4 53 50 PM](https://user-images.githubusercontent.com/66915274/197399108-fb566eb4-664f-4509-8948-ab4ed04407b5.png)](https://user-images.githubusercontent.com/66915274/197399108-fb566eb4-664f-4509-8948-ab4ed04407b5.png)
+
+35 ◦ We will start by choosing the group where we want them to be created. We select the only one available (the one we just created).
+
+[![Screen Shot 2022-10-23 at 4 54 02 PM](https://user-images.githubusercontent.com/66915274/197399115-e7d3b313-763c-421c-a71d-850d318432e7.png)](https://user-images.githubusercontent.com/66915274/197399115-e7d3b313-763c-421c-a71d-850d318432e7.png)
+
+36 ◦ The order of creation of the logical units will be the same as indicated in the subject, so we will start with root and end with var-log. Then we will select the name of the logical volume.
+
+[![Screen Shot 2022-10-23 at 4 55 42 PM](https://user-images.githubusercontent.com/66915274/197399188-6ae8c83b-057d-498f-b112-9116079b0808.png)](https://user-images.githubusercontent.com/66915274/197399188-6ae8c83b-057d-498f-b112-9116079b0808.png)
+
+37 ◦ Size, as indicated in the subject, will be 10g.
+
+[![Screen Shot 2022-10-23 at 4 56 21 PM](https://user-images.githubusercontent.com/66915274/197399216-c65f43ca-fb8e-4d05-9212-24ad2ee87b39.png)](https://user-images.githubusercontent.com/66915274/197399216-c65f43ca-fb8e-4d05-9212-24ad2ee87b39.png)
+
+38 ◦ We repeat the process for `swap`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 4 56 49 PM](https://user-images.githubusercontent.com/66915274/197399239-c26598cb-e7bb-474c-aece-90f043e1990f.png)](https://user-images.githubusercontent.com/66915274/197399239-c26598cb-e7bb-474c-aece-90f043e1990f.png)
+
+[![Screen Shot 2022-10-23 at 4 57 26 PM](https://user-images.githubusercontent.com/66915274/197399278-c5cd5a9c-2ab1-42b9-8871-b58e9b33b4b6.png)](https://user-images.githubusercontent.com/66915274/197399278-c5cd5a9c-2ab1-42b9-8871-b58e9b33b4b6.png)
+
+[![Screen Shot 2022-10-23 at 4 57 41 PM](https://user-images.githubusercontent.com/66915274/197399288-7ecf6adf-aaf5-46bf-959f-2159d19b7bbf.png)](https://user-images.githubusercontent.com/66915274/197399288-7ecf6adf-aaf5-46bf-959f-2159d19b7bbf.png)
+
+[![Screen Shot 2022-10-23 at 4 58 11 PM](https://user-images.githubusercontent.com/66915274/197399310-fc6c397e-8257-4e06-8fba-ad35431c9b96.png)](https://user-images.githubusercontent.com/66915274/197399310-fc6c397e-8257-4e06-8fba-ad35431c9b96.png)
+
+39 ◦ We repeat the process for `home`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 4 58 57 PM](https://user-images.githubusercontent.com/66915274/197399347-a815d58b-686e-4d9d-bb5c-34a7b54476ab.png)](https://user-images.githubusercontent.com/66915274/197399347-a815d58b-686e-4d9d-bb5c-34a7b54476ab.png)
+
+[![Screen Shot 2022-10-23 at 4 59 07 PM](https://user-images.githubusercontent.com/66915274/197399355-28617029-c28c-4ca4-b56b-646e066cded6.png)](https://user-images.githubusercontent.com/66915274/197399355-28617029-c28c-4ca4-b56b-646e066cded6.png)
+
+[![Screen Shot 2022-10-23 at 5 01 13 PM](https://user-images.githubusercontent.com/66915274/197399433-1e9c7110-9240-4982-9835-b026ed73171f.png)](https://user-images.githubusercontent.com/66915274/197399433-1e9c7110-9240-4982-9835-b026ed73171f.png)
+
+[![Screen Shot 2022-10-23 at 5 04 34 PM](https://user-images.githubusercontent.com/66915274/197399610-247a7a35-0141-4c14-884e-7ecd07caa96d.png)](https://user-images.githubusercontent.com/66915274/197399610-247a7a35-0141-4c14-884e-7ecd07caa96d.png)
+
+40 ◦ We repeat the process for `var`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 5 05 10 PM](https://user-images.githubusercontent.com/66915274/197399644-58da651c-f4ad-4d1e-b128-de87c92cc292.png)](https://user-images.githubusercontent.com/66915274/197399644-58da651c-f4ad-4d1e-b128-de87c92cc292.png)
+
+[![Screen Shot 2022-10-23 at 5 05 30 PM](https://user-images.githubusercontent.com/66915274/197399662-32ab0a06-c14d-4a0e-ac80-cb0d12fc24eb.png)](https://user-images.githubusercontent.com/66915274/197399662-32ab0a06-c14d-4a0e-ac80-cb0d12fc24eb.png)
+
+[![Screen Shot 2022-10-23 at 5 06 03 PM](https://user-images.githubusercontent.com/66915274/197399693-b49c2ffe-b21a-43c5-bd3f-160bc544b072.png)](https://user-images.githubusercontent.com/66915274/197399693-b49c2ffe-b21a-43c5-bd3f-160bc544b072.png)
+
+41 ◦ We repeat the process for `srv`. We only change the name.
+
+[![Screen Shot 2022-10-23 at 5 06 14 PM](https://user-images.githubusercontent.com/66915274/197399702-6d531de3-690d-458d-9a3b-bf6ceedd7cda.png)](https://user-images.githubusercontent.com/66915274/197399702-6d531de3-690d-458d-9a3b-bf6ceedd7cda.png)
+
+[![Screen Shot 2022-10-23 at 5 06 39 PM](https://user-images.githubusercontent.com/66915274/197399724-0fdd75ad-e978-4468-8509-a62cdc4a3faf.png)](https://user-images.githubusercontent.com/66915274/197399724-0fdd75ad-e978-4468-8509-a62cdc4a3faf.png)
+
+[![Screen Shot 2022-10-23 at 5 06 57 PM](https://user-images.githubusercontent.com/66915274/197399744-b82b1dcd-09c7-44cc-a2ab-b6079abcbb5a.png)](https://user-images.githubusercontent.com/66915274/197399744-b82b1dcd-09c7-44cc-a2ab-b6079abcbb5a.png)
+
+[![Screen Shot 2022-10-23 at 5 07 13 PM](https://user-images.githubusercontent.com/66915274/197399757-94732b16-585e-4f7d-a20f-f7ef0814b4e7.png)](https://user-images.githubusercontent.com/66915274/197399757-94732b16-585e-4f7d-a20f-f7ef0814b4e7.png)
+
+42 ◦ We repeat the process for `tmp`. We only change the name.
+
+[![Screen Shot 2022-10-23 at 5 07 34 PM](https://user-images.githubusercontent.com/66915274/197399777-9d871f2a-856d-4b4d-ad18-1195001b0fdf.png)](https://user-images.githubusercontent.com/66915274/197399777-9d871f2a-856d-4b4d-ad18-1195001b0fdf.png)
+
+[![Screen Shot 2022-10-23 at 5 07 46 PM](https://user-images.githubusercontent.com/66915274/197399792-0794ace5-c236-4f68-b023-bb471753eba2.png)](https://user-images.githubusercontent.com/66915274/197399792-0794ace5-c236-4f68-b023-bb471753eba2.png)
+
+[![Screen Shot 2022-10-23 at 5 07 55 PM](https://user-images.githubusercontent.com/66915274/197399798-84a31102-6953-468b-85d4-0a248e98cb17.png)](https://user-images.githubusercontent.com/66915274/197399798-84a31102-6953-468b-85d4-0a248e98cb17.png)
+
+[![Screen Shot 2022-10-23 at 5 08 19 PM](https://user-images.githubusercontent.com/66915274/197399827-5dfc8571-e82c-4a28-aae7-dc716fb6e77b.png)](https://user-images.githubusercontent.com/66915274/197399827-5dfc8571-e82c-4a28-aae7-dc716fb6e77b.png)
+
+43 ◦ Finally, we repeat the process for `var-log`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 5 08 34 PM](https://user-images.githubusercontent.com/66915274/197399838-2cd49171-45dd-469a-887c-3ce99d84b7cd.png)](https://user-images.githubusercontent.com/66915274/197399838-2cd49171-45dd-469a-887c-3ce99d84b7cd.png)
+
+[![Screen Shot 2022-10-23 at 5 08 40 PM](https://user-images.githubusercontent.com/66915274/197399841-04b75112-4d21-456c-bf50-8335839764e0.png)](https://user-images.githubusercontent.com/66915274/197399841-04b75112-4d21-456c-bf50-8335839764e0.png)
+
+[![Screen Shot 2022-10-23 at 5 08 59 PM](https://user-images.githubusercontent.com/66915274/197399859-d706de2e-bb20-4a04-96db-4dd57b3778be.png)](https://user-images.githubusercontent.com/66915274/197399859-d706de2e-bb20-4a04-96db-4dd57b3778be.png)
+
+[![Screen Shot 2022-10-23 at 5 09 28 PM](https://user-images.githubusercontent.com/66915274/197399886-a1e9ee69-78a4-4071-af99-2192d535c6cd.png)](https://user-images.githubusercontent.com/66915274/197399886-a1e9ee69-78a4-4071-af99-2192d535c6cd.png)
+
+44 ◦ Once we have completed all the previous steps, we will finish the configuration of the logical volume manager.
+
+[![Screen Shot 2022-10-23 at 5 09 51 PM](https://user-images.githubusercontent.com/66915274/197399904-c584fcdf-eb38-486f-af12-7374f1e04465.png)](https://user-images.githubusercontent.com/66915274/197399904-c584fcdf-eb38-486f-af12-7374f1e04465.png)
+
+45 ◦ Now we can see how in the section where it shows us all our partitions and free space, all the logical partitions that we just created are already appearing. Good, we must configure all of them to select the file system that we want and the mount point indicated in the subject. Again we will go in order and select the first one that appears, which is `home`.
+
+[![Screen Shot 2022-10-23 at 5 10 36 PM](https://user-images.githubusercontent.com/66915274/197399944-bccbe599-b80a-4abe-ac6c-d770447ea727.png)](https://user-images.githubusercontent.com/66915274/197399944-bccbe599-b80a-4abe-ac6c-d770447ea727.png)
+
+46 ◦ Show us the configuration of the partition. We must choose a file system as it currently does not have one.
+
+[![Screen Shot 2022-10-23 at 5 10 55 PM](https://user-images.githubusercontent.com/66915274/197399976-9b871bda-9425-4dbe-b8c9-25c8c6d6c811.png)](https://user-images.githubusercontent.com/66915274/197399976-9b871bda-9425-4dbe-b8c9-25c8c6d6c811.png)
+
+47 ◦ Choose the Ext4 file system, it is the most commonly used file system in Linux distributions.
+
+[![Screen Shot 2022-10-23 at 5 11 18 PM](https://user-images.githubusercontent.com/66915274/197400000-2e855fc9-10b1-4f3e-9c58-85b6ff02a4fb.png)](https://user-images.githubusercontent.com/66915274/197400000-2e855fc9-10b1-4f3e-9c58-85b6ff02a4fb.png)
+
+48 ◦ Now we need to select the mount point.
+
+[![Screen Shot 2022-10-23 at 5 11 44 PM](https://user-images.githubusercontent.com/66915274/197400023-387a70aa-b491-43c0-91d2-cb378da9fc75.png)](https://user-images.githubusercontent.com/66915274/197400023-387a70aa-b491-43c0-91d2-cb378da9fc75.png)
+
+49 ◦ We select `home` as indicated in the subject.
+
+[![Screen Shot 2022-10-23 at 5 11 54 PM](https://user-images.githubusercontent.com/66915274/197400040-e79cad4f-368b-4cee-9ec0-942f38b2f785.png)](https://user-images.githubusercontent.com/66915274/197400040-e79cad4f-368b-4cee-9ec0-942f38b2f785.png)
+
+50 ◦ Once we have selected it, we will finish the configuration of the partition.
+
+[![Screen Shot 2022-10-23 at 5 12 10 PM](https://user-images.githubusercontent.com/66915274/197400059-ab96f2c4-cd92-47cb-a9ee-61257537ee6a.png)](https://user-images.githubusercontent.com/66915274/197400059-ab96f2c4-cd92-47cb-a9ee-61257537ee6a.png)
+
+51 ◦ Again, these steps can become very repetitive so I won't comment much. We repeat everything the same way (except for the mount point) for `root`.
+
+[![Screen Shot 2022-10-23 at 5 13 36 PM](https://user-images.githubusercontent.com/66915274/197400135-c08444fe-e39d-45fa-a3b6-3c73db2a4935.png)](https://user-images.githubusercontent.com/66915274/197400135-c08444fe-e39d-45fa-a3b6-3c73db2a4935.png)
+
+[![Screen Shot 2022-10-23 at 5 13 53 PM](https://user-images.githubusercontent.com/66915274/197400146-41ce0b0c-142c-46b4-a3c5-918676a3a852.png)](https://user-images.githubusercontent.com/66915274/197400146-41ce0b0c-142c-46b4-a3c5-918676a3a852.png)
+
+[![Screen Shot 2022-10-23 at 5 14 08 PM](https://user-images.githubusercontent.com/66915274/197400155-92759327-5671-41f4-8104-dd1de4bc88cb.png)](https://user-images.githubusercontent.com/66915274/197400155-92759327-5671-41f4-8104-dd1de4bc88cb.png)
+
+[![Screen Shot 2022-10-23 at 5 14 22 PM](https://user-images.githubusercontent.com/66915274/197400171-6fd04783-e833-4afd-a753-4b943133a4ab.png)](https://user-images.githubusercontent.com/66915274/197400171-6fd04783-e833-4afd-a753-4b943133a4ab.png)
+
+[![Screen Shot 2022-10-23 at 5 14 39 PM](https://user-images.githubusercontent.com/66915274/197400182-780e1917-3f77-4986-b0e8-b50a90d75403.png)](https://user-images.githubusercontent.com/66915274/197400182-780e1917-3f77-4986-b0e8-b50a90d75403.png)
+
+[![Screen Shot 2022-10-23 at 5 14 52 PM](https://user-images.githubusercontent.com/66915274/197400186-88da831a-c672-4ec0-a64c-0ad2808bb6c5.png)](https://user-images.githubusercontent.com/66915274/197400186-88da831a-c672-4ec0-a64c-0ad2808bb6c5.png)
+
+52 ◦ Repeat the process for `srv` and change the mount point.
+
+[![Screen Shot 2022-10-23 at 5 15 05 PM](https://user-images.githubusercontent.com/66915274/197400198-599b4aa3-a511-45d1-86b0-dd42da4c380f.png)](https://user-images.githubusercontent.com/66915274/197400198-599b4aa3-a511-45d1-86b0-dd42da4c380f.png)
+
+[![Screen Shot 2022-10-23 at 5 15 31 PM](https://user-images.githubusercontent.com/66915274/197400218-e6b26eb7-7933-426f-a7cd-a791400ebdab.png)](https://user-images.githubusercontent.com/66915274/197400218-e6b26eb7-7933-426f-a7cd-a791400ebdab.png)
+
+[![Screen Shot 2022-10-23 at 5 15 37 PM](https://user-images.githubusercontent.com/66915274/197400222-95107b34-8d28-4d4d-a74b-7de6c6a46d33.png)](https://user-images.githubusercontent.com/66915274/197400222-95107b34-8d28-4d4d-a74b-7de6c6a46d33.png)
+
+[![Screen Shot 2022-10-23 at 5 15 44 PM](https://user-images.githubusercontent.com/66915274/197400227-20c13dc0-52cd-4c70-bf4e-531979c54a3e.png)](https://user-images.githubusercontent.com/66915274/197400227-20c13dc0-52cd-4c70-bf4e-531979c54a3e.png)
+
+[![Screen Shot 2022-10-23 at 5 15 52 PM](https://user-images.githubusercontent.com/66915274/197400238-3b403294-74d1-4e63-aca7-7d83447ed5b8.png)](https://user-images.githubusercontent.com/66915274/197400238-3b403294-74d1-4e63-aca7-7d83447ed5b8.png)
+
+[![Screen Shot 2022-10-23 at 5 16 04 PM](https://user-images.githubusercontent.com/66915274/197400249-035f6b9d-3716-4565-9776-aa0af49b3fd7.png)](https://user-images.githubusercontent.com/66915274/197400249-035f6b9d-3716-4565-9776-aa0af49b3fd7.png)
+
+53 ◦ For `swap`, we will make an exception because the file system will be different. We select `swap`.
+
+[![Screen Shot 2022-10-23 at 5 16 32 PM](https://user-images.githubusercontent.com/66915274/197400272-112b44ef-4996-438a-90b8-6620cdd7d2ff.png)](https://user-images.githubusercontent.com/66915274/197400272-112b44ef-4996-438a-90b8-6620cdd7d2ff.png)
+
+54 ◦ At the time of selecting the file system, we leave it on `swap area`.
+
+[![Screen Shot 2022-10-23 at 5 16 41 PM](https://user-images.githubusercontent.com/66915274/197400281-e12ee636-8696-4bee-9198-862b7d6be199.png)](https://user-images.githubusercontent.com/66915274/197400281-e12ee636-8696-4bee-9198-862b7d6be199.png)
+
+55 ◦ Once the previous step is completed, we will finish the partition configuration.
+
+[![Screen Shot 2022-10-23 at 5 16 59 PM](https://user-images.githubusercontent.com/66915274/197400297-8eed129d-0ec0-49a8-8b2a-dd0d04055f75.png)](https://user-images.githubusercontent.com/66915274/197400297-8eed129d-0ec0-49a8-8b2a-dd0d04055f75.png)
+
+[![Screen Shot 2022-10-23 at 5 17 09 PM](https://user-images.githubusercontent.com/66915274/197400309-74e83209-4b2a-4e27-9a67-44373c1db362.png)](https://user-images.githubusercontent.com/66915274/197400309-74e83209-4b2a-4e27-9a67-44373c1db362.png)
+
+56 ◦ Now we will do the same thing as before, but now we will do it with `tmp` and changing the mount point.
+
+[![Screen Shot 2022-10-23 at 5 17 41 PM](https://user-images.githubusercontent.com/66915274/197400341-608516f6-0f5a-4cdd-83d8-c8fbd1635624.png)](https://user-images.githubusercontent.com/66915274/197400341-608516f6-0f5a-4cdd-83d8-c8fbd1635624.png)
+
+[![Screen Shot 2022-10-23 at 5 17 49 PM](https://user-images.githubusercontent.com/66915274/197400346-e9647c7a-a9a2-4a0f-b439-a912247fb3f9.png)](https://user-images.githubusercontent.com/66915274/197400346-e9647c7a-a9a2-4a0f-b439-a912247fb3f9.png)
+
+[![Screen Shot 2022-10-23 at 5 18 01 PM](https://user-images.githubusercontent.com/66915274/197400360-1816d06a-252e-4d41-b1a2-fc547961f353.png)](https://user-images.githubusercontent.com/66915274/197400360-1816d06a-252e-4d41-b1a2-fc547961f353.png)
+
+[![Screen Shot 2022-10-23 at 5 18 08 PM](https://user-images.githubusercontent.com/66915274/197400370-0474b71f-c1c3-445f-ba02-088dc1c64ce3.png)](https://user-images.githubusercontent.com/66915274/197400370-0474b71f-c1c3-445f-ba02-088dc1c64ce3.png)
+
+[![Screen Shot 2022-10-23 at 5 18 24 PM](https://user-images.githubusercontent.com/66915274/197400386-f66494c5-97b9-4bb9-8c75-5856d69d26cc.png)](https://user-images.githubusercontent.com/66915274/197400386-f66494c5-97b9-4bb9-8c75-5856d69d26cc.png)
+
+[![Screen Shot 2022-10-23 at 5 18 40 PM](https://user-images.githubusercontent.com/66915274/197400405-4a368bfb-f862-4bbd-a33e-b87c3038d232.png)](https://user-images.githubusercontent.com/66915274/197400405-4a368bfb-f862-4bbd-a33e-b87c3038d232.png)
+
+57 ◦ We repeat the process again for `var`, changing the mount point.
+
+[![Screen Shot 2022-10-23 at 5 19 13 PM](https://user-images.githubusercontent.com/66915274/197400447-85bcad13-8083-4aec-acb2-fa467e5d4e33.png)](https://user-images.githubusercontent.com/66915274/197400447-85bcad13-8083-4aec-acb2-fa467e5d4e33.png)
+
+[![Screen Shot 2022-10-23 at 5 19 21 PM](https://user-images.githubusercontent.com/66915274/197400452-aed22368-4889-4c04-bf60-5a06fb93944e.png)](https://user-images.githubusercontent.com/66915274/197400452-aed22368-4889-4c04-bf60-5a06fb93944e.png)
+
+[![Screen Shot 2022-10-23 at 5 19 28 PM](https://user-images.githubusercontent.com/66915274/197400459-b6f59948-e804-414a-b41d-21d2f495fccc.png)](https://user-images.githubusercontent.com/66915274/197400459-b6f59948-e804-414a-b41d-21d2f495fccc.png)
+
+[![Screen Shot 2022-10-23 at 5 19 36 PM](https://user-images.githubusercontent.com/66915274/197400462-788d29e5-7798-418a-8725-3cb8dd2849bd.png)](https://user-images.githubusercontent.com/66915274/197400462-788d29e5-7798-418a-8725-3cb8dd2849bd.png)
+
+[![Screen Shot 2022-10-23 at 5 19 51 PM](https://user-images.githubusercontent.com/66915274/197400473-4508d9d6-481d-4f3a-9630-6c1eba7c5cc0.png)](https://user-images.githubusercontent.com/66915274/197400473-4508d9d6-481d-4f3a-9630-6c1eba7c5cc0.png)
+
+[![Screen Shot 2022-10-23 at 5 20 00 PM](https://user-images.githubusercontent.com/66915274/197400482-1f8c147f-66d8-438b-866f-3e9eff75ef5e.png)](https://user-images.githubusercontent.com/66915274/197400482-1f8c147f-66d8-438b-866f-3e9eff75ef5e.png)
+
+58 ◦ Finally, we repeat the process again for `var-log`. In this case, we will have to manually enter the mount point..
+
+[![Screen Shot 2022-10-23 at 5 20 23 PM](https://user-images.githubusercontent.com/66915274/197400513-53b3f899-47f5-4cdb-ab4b-205b1d1bce31.png)](https://user-images.githubusercontent.com/66915274/197400513-53b3f899-47f5-4cdb-ab4b-205b1d1bce31.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602511-fa34155b-3244-4b0c-8054-2778edecfb16.png)](https://user-images.githubusercontent.com/66915274/197602511-fa34155b-3244-4b0c-8054-2778edecfb16.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602585-03b540af-5d7a-4364-b90a-559bac0cb2a2.png)](https://user-images.githubusercontent.com/66915274/197602585-03b540af-5d7a-4364-b90a-559bac0cb2a2.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602630-cc749189-9ac9-48bc-a595-dc33282840ec.png)](https://user-images.githubusercontent.com/66915274/197602630-cc749189-9ac9-48bc-a595-dc33282840ec.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602673-5c18be85-1b0f-430b-b507-66711b807115.png)](https://user-images.githubusercontent.com/66915274/197602673-5c18be85-1b0f-430b-b507-66711b807115.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602699-fddadd2d-c54d-4313-8165-a93db1249b26.png)](https://user-images.githubusercontent.com/66915274/197602699-fddadd2d-c54d-4313-8165-a93db1249b26.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602741-431bd866-1558-4735-bb34-ab57dc5745b7.png)](https://user-images.githubusercontent.com/66915274/197602741-431bd866-1558-4735-bb34-ab57dc5745b7.png)
+
+59 ◦ Once we have completed all of the previous steps, we are almost finished. We must click 'finish partitioning' to save all of the changes to the disk.
+
+[![image](https://user-images.githubusercontent.com/66915274/197602907-4a3ba459-1a5d-468e-81dc-5206403cf034.png)](https://user-images.githubusercontent.com/66915274/197602907-4a3ba459-1a5d-468e-81dc-5206403cf034.png)
+
+60 ◦ We accept the message and the changes will be saved. Make sure that all of the partitions look the same as in the screenshot.
+
+[![image](https://user-images.githubusercontent.com/66915274/197602944-13ca67b2-bcc5-476c-84dc-aadc5e1d3baf.png)](https://user-images.githubusercontent.com/66915274/197602944-13ca67b2-bcc5-476c-84dc-aadc5e1d3baf.png)
+
+61 ◦ We select the option `No` because we do not need additional packages.
+
+[![Captura de pantalla 2022-07-13 a las 20 05 42](https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png)](https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png)
+
+62 ◦ We choose our Country.29 ◦ We will configure the logical volume manager.
+
+[![Screen Shot 2022-10-23 at 4 50 17 PM](https://user-images.githubusercontent.com/66915274/197398933-85e0025e-0a4d-41f0-8fd0-5f0c8ee32e9b.png)](https://user-images.githubusercontent.com/66915274/197398933-85e0025e-0a4d-41f0-8fd0-5f0c8ee32e9b.png)
+
+30 ◦ We will accept the confirmation message as we agree to save the changes to the disk.
+
+[![Screen Shot 2022-10-23 at 4 50 42 PM](https://user-images.githubusercontent.com/66915274/197398945-d79ea2a7-a13e-4e6a-9e9c-40bdcd2dd502.png)](https://user-images.githubusercontent.com/66915274/197398945-d79ea2a7-a13e-4e6a-9e9c-40bdcd2dd502.png)
+
+31 ◦ We will create a new volume group. Volume groups group partitions.
+
+[![Screen Shot 2022-10-23 at 4 52 04 PM](https://user-images.githubusercontent.com/66915274/197399021-29b21274-37c1-4fd9-8526-962969d1cce3.png)](https://user-images.githubusercontent.com/66915274/197399021-29b21274-37c1-4fd9-8526-962969d1cce3.png)
+
+32 ◦ We will enter the name we want to give it. `LVMGroup` as indicated in the subject.
+
+[![Screen Shot 2022-10-23 at 4 52 58 PM](https://user-images.githubusercontent.com/66915274/197399065-1ac8d80d-9e18-4b4a-a60f-11496e7de26d.png)](https://user-images.githubusercontent.com/66915274/197399065-1ac8d80d-9e18-4b4a-a60f-11496e7de26d.png)
+
+33 ◦ We will select the partition where we want to create the group.
+
+[![Screen Shot 2022-10-23 at 4 53 22 PM](https://user-images.githubusercontent.com/66915274/197399089-5ea5f48e-176c-4278-8b14-a13b7f5ee45c.png)](https://user-images.githubusercontent.com/66915274/197399089-5ea5f48e-176c-4278-8b14-a13b7f5ee45c.png)
+
+34 ◦ Now we must create all the logical partitions. As we have to repeat the same actions several times, there are captures that will not be documented.
+
+[![image](https://user-images.githubusercontent.com/66915274/197439138-889d6368-1875-402b-a094-bd146bb7cb8a.png)](https://user-images.githubusercontent.com/66915274/197439138-889d6368-1875-402b-a094-bd146bb7cb8a.png)
+
+[![Screen Shot 2022-10-23 at 4 53 50 PM](https://user-images.githubusercontent.com/66915274/197399108-fb566eb4-664f-4509-8948-ab4ed04407b5.png)](https://user-images.githubusercontent.com/66915274/197399108-fb566eb4-664f-4509-8948-ab4ed04407b5.png)
+
+35 ◦ We will start by choosing the group where we want them to be created. We select the only one available (the one we just created).
+
+[![Screen Shot 2022-10-23 at 4 54 02 PM](https://user-images.githubusercontent.com/66915274/197399115-e7d3b313-763c-421c-a71d-850d318432e7.png)](https://user-images.githubusercontent.com/66915274/197399115-e7d3b313-763c-421c-a71d-850d318432e7.png)
+
+36 ◦ The order of creation of the logical units will be the same as indicated in the subject, so we will start with root and end with var-log. Then we will select the name of the logical volume.
+
+[![Screen Shot 2022-10-23 at 4 55 42 PM](https://user-images.githubusercontent.com/66915274/197399188-6ae8c83b-057d-498f-b112-9116079b0808.png)](https://user-images.githubusercontent.com/66915274/197399188-6ae8c83b-057d-498f-b112-9116079b0808.png)
+
+37 ◦ Size, as indicated in the subject, will be 10g.
+
+[![Screen Shot 2022-10-23 at 4 56 21 PM](https://user-images.githubusercontent.com/66915274/197399216-c65f43ca-fb8e-4d05-9212-24ad2ee87b39.png)](https://user-images.githubusercontent.com/66915274/197399216-c65f43ca-fb8e-4d05-9212-24ad2ee87b39.png)
+
+38 ◦ We repeat the process for `swap`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 4 56 49 PM](https://user-images.githubusercontent.com/66915274/197399239-c26598cb-e7bb-474c-aece-90f043e1990f.png)](https://user-images.githubusercontent.com/66915274/197399239-c26598cb-e7bb-474c-aece-90f043e1990f.png)
+
+[![Screen Shot 2022-10-23 at 4 57 26 PM](https://user-images.githubusercontent.com/66915274/197399278-c5cd5a9c-2ab1-42b9-8871-b58e9b33b4b6.png)](https://user-images.githubusercontent.com/66915274/197399278-c5cd5a9c-2ab1-42b9-8871-b58e9b33b4b6.png)
+
+[![Screen Shot 2022-10-23 at 4 57 41 PM](https://user-images.githubusercontent.com/66915274/197399288-7ecf6adf-aaf5-46bf-959f-2159d19b7bbf.png)](https://user-images.githubusercontent.com/66915274/197399288-7ecf6adf-aaf5-46bf-959f-2159d19b7bbf.png)
+
+[![Screen Shot 2022-10-23 at 4 58 11 PM](https://user-images.githubusercontent.com/66915274/197399310-fc6c397e-8257-4e06-8fba-ad35431c9b96.png)](https://user-images.githubusercontent.com/66915274/197399310-fc6c397e-8257-4e06-8fba-ad35431c9b96.png)
+
+39 ◦ We repeat the process for `home`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 4 58 57 PM](https://user-images.githubusercontent.com/66915274/197399347-a815d58b-686e-4d9d-bb5c-34a7b54476ab.png)](https://user-images.githubusercontent.com/66915274/197399347-a815d58b-686e-4d9d-bb5c-34a7b54476ab.png)
+
+[![Screen Shot 2022-10-23 at 4 59 07 PM](https://user-images.githubusercontent.com/66915274/197399355-28617029-c28c-4ca4-b56b-646e066cded6.png)](https://user-images.githubusercontent.com/66915274/197399355-28617029-c28c-4ca4-b56b-646e066cded6.png)
+
+[![Screen Shot 2022-10-23 at 5 01 13 PM](https://user-images.githubusercontent.com/66915274/197399433-1e9c7110-9240-4982-9835-b026ed73171f.png)](https://user-images.githubusercontent.com/66915274/197399433-1e9c7110-9240-4982-9835-b026ed73171f.png)
+
+[![Screen Shot 2022-10-23 at 5 04 34 PM](https://user-images.githubusercontent.com/66915274/197399610-247a7a35-0141-4c14-884e-7ecd07caa96d.png)](https://user-images.githubusercontent.com/66915274/197399610-247a7a35-0141-4c14-884e-7ecd07caa96d.png)
+
+40 ◦ We repeat the process for `var`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 5 05 10 PM](https://user-images.githubusercontent.com/66915274/197399644-58da651c-f4ad-4d1e-b128-de87c92cc292.png)](https://user-images.githubusercontent.com/66915274/197399644-58da651c-f4ad-4d1e-b128-de87c92cc292.png)
+
+[![Screen Shot 2022-10-23 at 5 05 30 PM](https://user-images.githubusercontent.com/66915274/197399662-32ab0a06-c14d-4a0e-ac80-cb0d12fc24eb.png)](https://user-images.githubusercontent.com/66915274/197399662-32ab0a06-c14d-4a0e-ac80-cb0d12fc24eb.png)
+
+[![Screen Shot 2022-10-23 at 5 06 03 PM](https://user-images.githubusercontent.com/66915274/197399693-b49c2ffe-b21a-43c5-bd3f-160bc544b072.png)](https://user-images.githubusercontent.com/66915274/197399693-b49c2ffe-b21a-43c5-bd3f-160bc544b072.png)
+
+41 ◦ We repeat the process for `srv`. We only change the name.
+
+[![Screen Shot 2022-10-23 at 5 06 14 PM](https://user-images.githubusercontent.com/66915274/197399702-6d531de3-690d-458d-9a3b-bf6ceedd7cda.png)](https://user-images.githubusercontent.com/66915274/197399702-6d531de3-690d-458d-9a3b-bf6ceedd7cda.png)
+
+[![Screen Shot 2022-10-23 at 5 06 39 PM](https://user-images.githubusercontent.com/66915274/197399724-0fdd75ad-e978-4468-8509-a62cdc4a3faf.png)](https://user-images.githubusercontent.com/66915274/197399724-0fdd75ad-e978-4468-8509-a62cdc4a3faf.png)
+
+[![Screen Shot 2022-10-23 at 5 06 57 PM](https://user-images.githubusercontent.com/66915274/197399744-b82b1dcd-09c7-44cc-a2ab-b6079abcbb5a.png)](https://user-images.githubusercontent.com/66915274/197399744-b82b1dcd-09c7-44cc-a2ab-b6079abcbb5a.png)
+
+[![Screen Shot 2022-10-23 at 5 07 13 PM](https://user-images.githubusercontent.com/66915274/197399757-94732b16-585e-4f7d-a20f-f7ef0814b4e7.png)](https://user-images.githubusercontent.com/66915274/197399757-94732b16-585e-4f7d-a20f-f7ef0814b4e7.png)
+
+42 ◦ We repeat the process for `tmp`. We only change the name.
+
+[![Screen Shot 2022-10-23 at 5 07 34 PM](https://user-images.githubusercontent.com/66915274/197399777-9d871f2a-856d-4b4d-ad18-1195001b0fdf.png)](https://user-images.githubusercontent.com/66915274/197399777-9d871f2a-856d-4b4d-ad18-1195001b0fdf.png)
+
+[![Screen Shot 2022-10-23 at 5 07 46 PM](https://user-images.githubusercontent.com/66915274/197399792-0794ace5-c236-4f68-b023-bb471753eba2.png)](https://user-images.githubusercontent.com/66915274/197399792-0794ace5-c236-4f68-b023-bb471753eba2.png)
+
+[![Screen Shot 2022-10-23 at 5 07 55 PM](https://user-images.githubusercontent.com/66915274/197399798-84a31102-6953-468b-85d4-0a248e98cb17.png)](https://user-images.githubusercontent.com/66915274/197399798-84a31102-6953-468b-85d4-0a248e98cb17.png)
+
+[![Screen Shot 2022-10-23 at 5 08 19 PM](https://user-images.githubusercontent.com/66915274/197399827-5dfc8571-e82c-4a28-aae7-dc716fb6e77b.png)](https://user-images.githubusercontent.com/66915274/197399827-5dfc8571-e82c-4a28-aae7-dc716fb6e77b.png)
+
+43 ◦ Finally, we repeat the process for `var-log`. We only change the name and size.
+
+[![Screen Shot 2022-10-23 at 5 08 34 PM](https://user-images.githubusercontent.com/66915274/197399838-2cd49171-45dd-469a-887c-3ce99d84b7cd.png)](https://user-images.githubusercontent.com/66915274/197399838-2cd49171-45dd-469a-887c-3ce99d84b7cd.png)
+
+[![Screen Shot 2022-10-23 at 5 08 40 PM](https://user-images.githubusercontent.com/66915274/197399841-04b75112-4d21-456c-bf50-8335839764e0.png)](https://user-images.githubusercontent.com/66915274/197399841-04b75112-4d21-456c-bf50-8335839764e0.png)
+
+[![Screen Shot 2022-10-23 at 5 08 59 PM](https://user-images.githubusercontent.com/66915274/197399859-d706de2e-bb20-4a04-96db-4dd57b3778be.png)](https://user-images.githubusercontent.com/66915274/197399859-d706de2e-bb20-4a04-96db-4dd57b3778be.png)
+
+[![Screen Shot 2022-10-23 at 5 09 28 PM](https://user-images.githubusercontent.com/66915274/197399886-a1e9ee69-78a4-4071-af99-2192d535c6cd.png)](https://user-images.githubusercontent.com/66915274/197399886-a1e9ee69-78a4-4071-af99-2192d535c6cd.png)
+
+44 ◦ Once we have completed all the previous steps, we will finish the configuration of the logical volume manager.
+
+[![Screen Shot 2022-10-23 at 5 09 51 PM](https://user-images.githubusercontent.com/66915274/197399904-c584fcdf-eb38-486f-af12-7374f1e04465.png)](https://user-images.githubusercontent.com/66915274/197399904-c584fcdf-eb38-486f-af12-7374f1e04465.png)
+
+45 ◦ Now we can see how in the section where it shows us all our partitions and free space, all the logical partitions that we just created are already appearing. Good, we must configure all of them to select the file system that we want and the mount point indicated in the subject. Again we will go in order and select the first one that appears, which is `home`.
+
+[![Screen Shot 2022-10-23 at 5 10 36 PM](https://user-images.githubusercontent.com/66915274/197399944-bccbe599-b80a-4abe-ac6c-d770447ea727.png)](https://user-images.githubusercontent.com/66915274/197399944-bccbe599-b80a-4abe-ac6c-d770447ea727.png)
+
+46 ◦ Show us the configuration of the partition. We must choose a file system as it currently does not have one.
+
+[![Screen Shot 2022-10-23 at 5 10 55 PM](https://user-images.githubusercontent.com/66915274/197399976-9b871bda-9425-4dbe-b8c9-25c8c6d6c811.png)](https://user-images.githubusercontent.com/66915274/197399976-9b871bda-9425-4dbe-b8c9-25c8c6d6c811.png)
+
+47 ◦ Choose the Ext4 file system, it is the most commonly used file system in Linux distributions.
+
+[![Screen Shot 2022-10-23 at 5 11 18 PM](https://user-images.githubusercontent.com/66915274/197400000-2e855fc9-10b1-4f3e-9c58-85b6ff02a4fb.png)](https://user-images.githubusercontent.com/66915274/197400000-2e855fc9-10b1-4f3e-9c58-85b6ff02a4fb.png)
+
+48 ◦ Now we need to select the mount point.
+
+[![Screen Shot 2022-10-23 at 5 11 44 PM](https://user-images.githubusercontent.com/66915274/197400023-387a70aa-b491-43c0-91d2-cb378da9fc75.png)](https://user-images.githubusercontent.com/66915274/197400023-387a70aa-b491-43c0-91d2-cb378da9fc75.png)
+
+49 ◦ We select `home` as indicated in the subject.
+
+[![Screen Shot 2022-10-23 at 5 11 54 PM](https://user-images.githubusercontent.com/66915274/197400040-e79cad4f-368b-4cee-9ec0-942f38b2f785.png)](https://user-images.githubusercontent.com/66915274/197400040-e79cad4f-368b-4cee-9ec0-942f38b2f785.png)
+
+50 ◦ Once we have selected it, we will finish the configuration of the partition.
+
+[![Screen Shot 2022-10-23 at 5 12 10 PM](https://user-images.githubusercontent.com/66915274/197400059-ab96f2c4-cd92-47cb-a9ee-61257537ee6a.png)](https://user-images.githubusercontent.com/66915274/197400059-ab96f2c4-cd92-47cb-a9ee-61257537ee6a.png)
+
+51 ◦ Again, these steps can become very repetitive so I won't comment much. We repeat everything the same way (except for the mount point) for `root`.
+
+[![Screen Shot 2022-10-23 at 5 13 36 PM](https://user-images.githubusercontent.com/66915274/197400135-c08444fe-e39d-45fa-a3b6-3c73db2a4935.png)](https://user-images.githubusercontent.com/66915274/197400135-c08444fe-e39d-45fa-a3b6-3c73db2a4935.png)
+
+[![Screen Shot 2022-10-23 at 5 13 53 PM](https://user-images.githubusercontent.com/66915274/197400146-41ce0b0c-142c-46b4-a3c5-918676a3a852.png)](https://user-images.githubusercontent.com/66915274/197400146-41ce0b0c-142c-46b4-a3c5-918676a3a852.png)
+
+[![Screen Shot 2022-10-23 at 5 14 08 PM](https://user-images.githubusercontent.com/66915274/197400155-92759327-5671-41f4-8104-dd1de4bc88cb.png)](https://user-images.githubusercontent.com/66915274/197400155-92759327-5671-41f4-8104-dd1de4bc88cb.png)
+
+[![Screen Shot 2022-10-23 at 5 14 22 PM](https://user-images.githubusercontent.com/66915274/197400171-6fd04783-e833-4afd-a753-4b943133a4ab.png)](https://user-images.githubusercontent.com/66915274/197400171-6fd04783-e833-4afd-a753-4b943133a4ab.png)
+
+[![Screen Shot 2022-10-23 at 5 14 39 PM](https://user-images.githubusercontent.com/66915274/197400182-780e1917-3f77-4986-b0e8-b50a90d75403.png)](https://user-images.githubusercontent.com/66915274/197400182-780e1917-3f77-4986-b0e8-b50a90d75403.png)
+
+[![Screen Shot 2022-10-23 at 5 14 52 PM](https://user-images.githubusercontent.com/66915274/197400186-88da831a-c672-4ec0-a64c-0ad2808bb6c5.png)](https://user-images.githubusercontent.com/66915274/197400186-88da831a-c672-4ec0-a64c-0ad2808bb6c5.png)
+
+52 ◦ Repeat the process for `srv` and change the mount point.
+
+[![Screen Shot 2022-10-23 at 5 15 05 PM](https://user-images.githubusercontent.com/66915274/197400198-599b4aa3-a511-45d1-86b0-dd42da4c380f.png)](https://user-images.githubusercontent.com/66915274/197400198-599b4aa3-a511-45d1-86b0-dd42da4c380f.png)
+
+[![Screen Shot 2022-10-23 at 5 15 31 PM](https://user-images.githubusercontent.com/66915274/197400218-e6b26eb7-7933-426f-a7cd-a791400ebdab.png)](https://user-images.githubusercontent.com/66915274/197400218-e6b26eb7-7933-426f-a7cd-a791400ebdab.png)
+
+[![Screen Shot 2022-10-23 at 5 15 37 PM](https://user-images.githubusercontent.com/66915274/197400222-95107b34-8d28-4d4d-a74b-7de6c6a46d33.png)](https://user-images.githubusercontent.com/66915274/197400222-95107b34-8d28-4d4d-a74b-7de6c6a46d33.png)
+
+[![Screen Shot 2022-10-23 at 5 15 44 PM](https://user-images.githubusercontent.com/66915274/197400227-20c13dc0-52cd-4c70-bf4e-531979c54a3e.png)](https://user-images.githubusercontent.com/66915274/197400227-20c13dc0-52cd-4c70-bf4e-531979c54a3e.png)
+
+[![Screen Shot 2022-10-23 at 5 15 52 PM](https://user-images.githubusercontent.com/66915274/197400238-3b403294-74d1-4e63-aca7-7d83447ed5b8.png)](https://user-images.githubusercontent.com/66915274/197400238-3b403294-74d1-4e63-aca7-7d83447ed5b8.png)
+
+[![Screen Shot 2022-10-23 at 5 16 04 PM](https://user-images.githubusercontent.com/66915274/197400249-035f6b9d-3716-4565-9776-aa0af49b3fd7.png)](https://user-images.githubusercontent.com/66915274/197400249-035f6b9d-3716-4565-9776-aa0af49b3fd7.png)
+
+53 ◦ For `swap`, we will make an exception because the file system will be different. We select `swap`.
+
+[![Screen Shot 2022-10-23 at 5 16 32 PM](https://user-images.githubusercontent.com/66915274/197400272-112b44ef-4996-438a-90b8-6620cdd7d2ff.png)](https://user-images.githubusercontent.com/66915274/197400272-112b44ef-4996-438a-90b8-6620cdd7d2ff.png)
+
+54 ◦ At the time of selecting the file system, we leave it on `swap area`.
+
+[![Screen Shot 2022-10-23 at 5 16 41 PM](https://user-images.githubusercontent.com/66915274/197400281-e12ee636-8696-4bee-9198-862b7d6be199.png)](https://user-images.githubusercontent.com/66915274/197400281-e12ee636-8696-4bee-9198-862b7d6be199.png)
+
+55 ◦ Once the previous step is completed, we will finish the partition configuration.
+
+[![Screen Shot 2022-10-23 at 5 16 59 PM](https://user-images.githubusercontent.com/66915274/197400297-8eed129d-0ec0-49a8-8b2a-dd0d04055f75.png)](https://user-images.githubusercontent.com/66915274/197400297-8eed129d-0ec0-49a8-8b2a-dd0d04055f75.png)
+
+[![Screen Shot 2022-10-23 at 5 17 09 PM](https://user-images.githubusercontent.com/66915274/197400309-74e83209-4b2a-4e27-9a67-44373c1db362.png)](https://user-images.githubusercontent.com/66915274/197400309-74e83209-4b2a-4e27-9a67-44373c1db362.png)
+
+56 ◦ Now we will do the same thing as before, but now we will do it with `tmp` and changing the mount point.
+
+[![Screen Shot 2022-10-23 at 5 17 41 PM](https://user-images.githubusercontent.com/66915274/197400341-608516f6-0f5a-4cdd-83d8-c8fbd1635624.png)](https://user-images.githubusercontent.com/66915274/197400341-608516f6-0f5a-4cdd-83d8-c8fbd1635624.png)
+
+[![Screen Shot 2022-10-23 at 5 17 49 PM](https://user-images.githubusercontent.com/66915274/197400346-e9647c7a-a9a2-4a0f-b439-a912247fb3f9.png)](https://user-images.githubusercontent.com/66915274/197400346-e9647c7a-a9a2-4a0f-b439-a912247fb3f9.png)
+
+[![Screen Shot 2022-10-23 at 5 18 01 PM](https://user-images.githubusercontent.com/66915274/197400360-1816d06a-252e-4d41-b1a2-fc547961f353.png)](https://user-images.githubusercontent.com/66915274/197400360-1816d06a-252e-4d41-b1a2-fc547961f353.png)
+
+[![Screen Shot 2022-10-23 at 5 18 08 PM](https://user-images.githubusercontent.com/66915274/197400370-0474b71f-c1c3-445f-ba02-088dc1c64ce3.png)](https://user-images.githubusercontent.com/66915274/197400370-0474b71f-c1c3-445f-ba02-088dc1c64ce3.png)
+
+[![Screen Shot 2022-10-23 at 5 18 24 PM](https://user-images.githubusercontent.com/66915274/197400386-f66494c5-97b9-4bb9-8c75-5856d69d26cc.png)](https://user-images.githubusercontent.com/66915274/197400386-f66494c5-97b9-4bb9-8c75-5856d69d26cc.png)
+
+[![Screen Shot 2022-10-23 at 5 18 40 PM](https://user-images.githubusercontent.com/66915274/197400405-4a368bfb-f862-4bbd-a33e-b87c3038d232.png)](https://user-images.githubusercontent.com/66915274/197400405-4a368bfb-f862-4bbd-a33e-b87c3038d232.png)
+
+57 ◦ We repeat the process again for `var`, changing the mount point.
+
+[![Screen Shot 2022-10-23 at 5 19 13 PM](https://user-images.githubusercontent.com/66915274/197400447-85bcad13-8083-4aec-acb2-fa467e5d4e33.png)](https://user-images.githubusercontent.com/66915274/197400447-85bcad13-8083-4aec-acb2-fa467e5d4e33.png)
+
+[![Screen Shot 2022-10-23 at 5 19 21 PM](https://user-images.githubusercontent.com/66915274/197400452-aed22368-4889-4c04-bf60-5a06fb93944e.png)](https://user-images.githubusercontent.com/66915274/197400452-aed22368-4889-4c04-bf60-5a06fb93944e.png)
+
+[![Screen Shot 2022-10-23 at 5 19 28 PM](https://user-images.githubusercontent.com/66915274/197400459-b6f59948-e804-414a-b41d-21d2f495fccc.png)](https://user-images.githubusercontent.com/66915274/197400459-b6f59948-e804-414a-b41d-21d2f495fccc.png)
+
+[![Screen Shot 2022-10-23 at 5 19 36 PM](https://user-images.githubusercontent.com/66915274/197400462-788d29e5-7798-418a-8725-3cb8dd2849bd.png)](https://user-images.githubusercontent.com/66915274/197400462-788d29e5-7798-418a-8725-3cb8dd2849bd.png)
+
+[![Screen Shot 2022-10-23 at 5 19 51 PM](https://user-images.githubusercontent.com/66915274/197400473-4508d9d6-481d-4f3a-9630-6c1eba7c5cc0.png)](https://user-images.githubusercontent.com/66915274/197400473-4508d9d6-481d-4f3a-9630-6c1eba7c5cc0.png)
+
+[![Screen Shot 2022-10-23 at 5 20 00 PM](https://user-images.githubusercontent.com/66915274/197400482-1f8c147f-66d8-438b-866f-3e9eff75ef5e.png)](https://user-images.githubusercontent.com/66915274/197400482-1f8c147f-66d8-438b-866f-3e9eff75ef5e.png)
+
+58 ◦ Finally, we repeat the process again for `var-log`. In this case, we will have to manually enter the mount point..
+
+[![Screen Shot 2022-10-23 at 5 20 23 PM](https://user-images.githubusercontent.com/66915274/197400513-53b3f899-47f5-4cdb-ab4b-205b1d1bce31.png)](https://user-images.githubusercontent.com/66915274/197400513-53b3f899-47f5-4cdb-ab4b-205b1d1bce31.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602511-fa34155b-3244-4b0c-8054-2778edecfb16.png)](https://user-images.githubusercontent.com/66915274/197602511-fa34155b-3244-4b0c-8054-2778edecfb16.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602585-03b540af-5d7a-4364-b90a-559bac0cb2a2.png)](https://user-images.githubusercontent.com/66915274/197602585-03b540af-5d7a-4364-b90a-559bac0cb2a2.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602630-cc749189-9ac9-48bc-a595-dc33282840ec.png)](https://user-images.githubusercontent.com/66915274/197602630-cc749189-9ac9-48bc-a595-dc33282840ec.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602673-5c18be85-1b0f-430b-b507-66711b807115.png)](https://user-images.githubusercontent.com/66915274/197602673-5c18be85-1b0f-430b-b507-66711b807115.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602699-fddadd2d-c54d-4313-8165-a93db1249b26.png)](https://user-images.githubusercontent.com/66915274/197602699-fddadd2d-c54d-4313-8165-a93db1249b26.png)
+
+[![image](https://user-images.githubusercontent.com/66915274/197602741-431bd866-1558-4735-bb34-ab57dc5745b7.png)](https://user-images.githubusercontent.com/66915274/197602741-431bd866-1558-4735-bb34-ab57dc5745b7.png)
+
+59 ◦ Once we have completed all of the previous steps, we are almost finished. We must click 'finish partitioning' to save all of the changes to the disk.
+
+[![image](https://user-images.githubusercontent.com/66915274/197602907-4a3ba459-1a5d-468e-81dc-5206403cf034.png)](https://user-images.githubusercontent.com/66915274/197602907-4a3ba459-1a5d-468e-81dc-5206403cf034.png)
+
+60 ◦ We accept the message and the changes will be saved. Make sure that all of the partitions look the same as in the screenshot.
+
+[![image](https://user-images.githubusercontent.com/66915274/197602944-13ca67b2-bcc5-476c-84dc-aadc5e1d3baf.png)](https://user-images.githubusercontent.com/66915274/197602944-13ca67b2-bcc5-476c-84dc-aadc5e1d3baf.png)
+
+61 ◦ We select the option `No` because we do not need additional packages.
+
+[![Captura de pantalla 2022-07-13 a las 20 05 42](https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png)](https://user-images.githubusercontent.com/66915274/178801099-2dda24f5-0d46-4184-8c44-a8fe0bf46527.png)
+
+62 ◦ We choose our Country.
+
+<img  src="https://imgur.com/2l0qU8r.png">
+
+63 ◦ We choose deb.debian.org because, considering our region, it is where we will have the best connection.
+
+<img  src="https://imgur.com/w7Uc3Ch.png">
