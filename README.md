@@ -1616,3 +1616,31 @@ As is requires on the subject.
 63 ◦ We choose deb.debian.org because, considering our region, it is where we will have the best connection.
 
 <img  src="https://imgur.com/w7Uc3Ch.png">
+
+
+64 ◦ We will leave this option empty and click directly on `Continue`.
+
+[![Captura de pantalla 2022-07-13 a las 20 17 24](https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png)](https://user-images.githubusercontent.com/66915274/178803208-2969acae-3fa7-423e-8a3c-bb7c76eff824.png)
+
+65 ◦ We selected the option `No` because we do not want developers to see our statistics even though they are anonymous.
+
+[![Captura de pantalla 2022-07-13 a las 20 21 54](https://user-images.githubusercontent.com/66915274/178803926-a4efbc70-f3e2-4e6c-9809-9152478d8237.png)](https://user-images.githubusercontent.com/66915274/178803926-a4efbc70-f3e2-4e6c-9809-9152478d8237.png)
+
+66 ◦ To remove all software options, use the `Down Arrow` key to navigate through the list, press the `Spacebar` to deselect each option, and then press `Continue`.
+
+[![Captura de pantalla 2022-07-13 a las 20 24 17](https://user-images.githubusercontent.com/66915274/178804377-e775b89e-93d4-482f-a4d0-0ef126f47719.png)](https://user-images.githubusercontent.com/66915274/178804377-e775b89e-93d4-482f-a4d0-0ef126f47719.png)
+
+67 ◦ We will select `Yes` to install [GRUB boot](https://es.wikipedia.org/wiki/GNU_GRUB) on the hard drive.
+
+[![Captura de pantalla 2022-07-13 a las 20 26 24](https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png)](https://user-images.githubusercontent.com/66915274/178804771-ba16e0b7-9f06-4c5b-9451-0bfd65efd2bb.png)
+
+68 ◦ We will choose the device for the bootloader installation `/dev/sda (ata_VBOX_HARDDISK)`.
+
+[![Captura de pantalla 2022-07-13 a las 20 35 46](https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png)](https://user-images.githubusercontent.com/66915274/178806441-f1bf3159-4e09-4c9a-9102-b3261c9000d8.png)
+
+69 ◦ We will press `Continue` to finish the installation.
+
+[![Captura de pantalla 2022-07-13 a las 20 39 30](https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png)](https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png)
+
+70 ◦ Once we have finished with the installation of Debian, we must set up our virtual machine.
+[Click here to navigate to the virtual machine settings ⚙️](https://github.com/Miami05/Born2beRoot?tab=readme-ov-file#6-virtual-machine-setup%EF%B8%8F)
