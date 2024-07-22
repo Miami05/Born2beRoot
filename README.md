@@ -1644,3 +1644,5 @@ As is requires on the subject.
 
 70 ◦ Once we have finished with the installation of Debian, we must set up our virtual machine.
 [Click here to navigate to the virtual machine settings ⚙️](https://github.com/Miami05/Born2beRoot?tab=readme-ov-file#6-virtual-machine-setup)
+
+### 10.2 Wordpress and services configuration🌐
