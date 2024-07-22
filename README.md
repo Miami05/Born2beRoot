@@ -39,7 +39,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 8.  [Crontab⏰](#8-crontab)
 
-9.  [Signature.txt 📝](#signaturetxt)
+9.  [Signature.txt📝](#9-signaturetxt)
 
 10.  [Bonus ⭐](#bonus)
 
@@ -989,10 +989,12 @@ To configure crontab, follow these steps:
 
     Edit the Crontab File:
     Use the command `sudo crontab -u root -e` to edit the crontab file for the root user.
-	
+
 Within the file, you'll add the following command to execute your script every 10 minutes: */10 * * * * sh /path/to/your/script.
 
 <img  width="836"  src="https://imgur.com/c8c9Zzo.png">
+
+Operation of each crontab parameter:
 
 ```
 * m: Represents the minute when the script will be executed. Valid values range from 0 to 59.
@@ -1007,3 +1009,5 @@ Within the file, you'll add the following command to execute your script every 1
 
 * command: Refers to the command or the absolute path of the script to be executed.
 ```
+
+## 9. Signature.txt📝
