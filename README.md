@@ -980,3 +980,30 @@ Result after executing the script ↙️
 <img  width="836"  src="https://imgur.com/hcAdhjx.png">
 
 ## 8. Crontab⏰
+
+🧠 What is Crontab?
+
+Crontab is the timekeeper of your system, responsible for scheduling background tasks to run at specific times or intervals. This powerful tool enables the automation of repetitive tasks without requiring manual intervention.
+
+To configure crontab, follow these steps:
+
+    Edit the Crontab File:
+    Use the command `sudo crontab -u root -e` to edit the crontab file for the root user.
+	
+Within the file, you'll add the following command to execute your script every 10 minutes: */10 * * * * sh /path/to/your/script.
+
+<img  width="836"  src="https://imgur.com/c8c9Zzo.png">
+
+```
+* m: Represents the minute when the script will be executed. Valid values range from 0 to 59.
+
+* h: Indicates the hour in the 24-hour format. Values range from 0 to 23, where 0 represents midnight (12:00 AM).
+
+* dom: Stands for the day of the month. For example, setting it to 15 would execute the script on the 15th day of each month.
+
+* dow: Denotes the day of the week, either as a numeric value (0 to 7, where 0 and 7 represent Sunday) or using the first three letters of the English day names: mon, tue, wed, thu, fri, sat, sun.
+
+* user: Specifies the user who will execute the command. This can be root or another user with appropriate permissions to run the script.
+
+* command: Refers to the command or the absolute path of the script to be executed.
+```
