@@ -1646,3 +1646,14 @@ As is requires on the subject.
 [Click here to navigate to the virtual machine settings ⚙️](https://github.com/Miami05/Born2beRoot?tab=readme-ov-file#6-virtual-machine-setup)
 
 ### 10.2 Wordpress and services configuration🌐
+
+Lighttpd
+🧠 What is Lighttpd❓ Lighttpd is a web server designed to be fast, secure, flexible, and standards-compliant. It is optimized for environments where speed is a top priority because it consumes less CPU and RAM than other servers.
+
+1 ◦ Installation of Lighttpd packages.
+
+<img  src="https://imgur.com/xgCNO8T.png">
+
+2 ◦ We allow connections through port 80 with the command sudo ufw allow 80.
+
+<img  src="https://imgur.com/JCCr3eo.png">
