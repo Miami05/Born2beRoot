@@ -16,7 +16,6 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 5.  [Installing Debian🌀](#5-installing-debian)
 
-
 6.  [Virtual Machine Setup📡](#6-virtual-machine-setup)<br>
 
 	6.1 [Installing Sudo and Configuring Users and Groups👤](#61-installing-sudo-and-configuring-users-and-groups)<br>
@@ -43,11 +42,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 10.  [Bonus⭐](#10-bonus)
 
-	10.1 [Manual partition](#101-manual-partition)
-
-	10.2 [Wordpress & services configuration 🌐](#102-wordpress--services-configuration)
-
-	10.3 [Additional service ➕](#103-additional-service)
+	10.1 [Manual Partition](#101-manual-partition)
 
 11.  [Correction sheet ✅](#correction-sheet)
 
