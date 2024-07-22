@@ -1036,4 +1036,4 @@ cd `/home/ldurmish/sgoinfre/Born2beRoot/`
 
 ## 10. Bonus⭐
 
-## 10.1 Manual partition
+### 10.1 Manual partition
