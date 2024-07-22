@@ -264,7 +264,7 @@ Then, press the Tab key and select Continue
 
 <img  width="836"  src="https://imgur.com/3ksvHxJ.png">
 
-16 ◦ Select Guied - use entire disk and set up encrypted LVM. ⚠️❗️ If you want to do the bonus select Manual and then click here ❗️⚠️
+16 ◦ Select Guied - use entire disk and set up encrypted LVM. ⚠️❗️ If you want to do the bonus select Manual and then [click here](#9-bonus) ❗️⚠️
 
 <img  width="836"  src="https://user-images.githubusercontent.com/66915274/178795367-b82018de-edc8-47d3-8cd6-b90c5e3be2fa.png">
 
