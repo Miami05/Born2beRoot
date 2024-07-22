@@ -49,8 +49,6 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	10.3 [Additional service ➕](#103-additional-service)
 
-
-
 11.  [Correction sheet ✅](#correction-sheet)
 
 
@@ -1038,4 +1036,4 @@ cd `/home/ldurmish/sgoinfre/Born2beRoot/`
 
 ## 10. Bonus⭐
 
-## 10.1 Manual partition
+### 10.1 Manual partition
