@@ -43,7 +43,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 10.  [Bonus⭐](#10-bonus)
 
-    10.1 [Manual partition](#101-manual-partition)
+	10.1 [Manual partition](#101-manual-partition)
 
 	10.2 [Wordpress & services configuration 🌐](#102-wordpress--services-configuration)|
 
