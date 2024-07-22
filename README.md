@@ -42,7 +42,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 10.  [Bonus⭐](#10-bonus)
 
-	10.1 [Manual Partition](#101-manual-partition)
+10.1 [Manual Partition](#101-manual-partition)
 
 11.  [Correction sheet ✅](#correction-sheet)
 
