@@ -1662,5 +1662,7 @@ Lighttpd<br>
 
 <img  src="https://imgur.com/O6OiFby.png">
 
-4 ◦ We add the rule that includes port 80. If you don't remember how to add rules in port forwarding.
+4 ◦ We add the rule that includes port 80. If you don't remember how to add rules in port forwarding.<br>
 **Settings → Network → Advanced → Port forwarding → Replicate the capture**
+
+<img  src="https://imgur.com/6keGD2p.png">
