@@ -1011,3 +1011,31 @@ Operation of each crontab parameter:
 ```
 
 ## 9. Signature.txt📝
+
+1 ◦ To obtain the signature, the first thing we must do is shut down the virtual machine, since once you turn it on or modify something, the signature will change.
+
+<img  width="836"  src="https://imgur.com/cgsV5T9.png">
+
+2 ◦ The next step is to navigate to the directory where your virtual machine's .vdi file is located. To do this, open your terminal and use the cd command:
+
+cd `/home/ldurmish/sgoinfre/Born2beRoot/`
+
+<img  width="836"  src="https://imgur.com/aoqADk0.png">
+
+3 ◦ Before performing the shasum command to verify the integrity of your .vdi file, it's important to take a screenshot of your current virtual machine state. This helps in comparing the state of your virtual machine before and after any operations. Once there we will click on 3 dots.
+
+<img  width="836"  src="https://imgur.com/mPIebPK.png">
+
+4 ◦ Change the  dropdown from `Details` to `Snapshot`.
+
+<img  width="836"  src="https://imgur.com/gemIIqn.png">
+
+5 ◦ Press the `Take` button to capture a screenshot of the current state. This screenshot will serve as a reference to ensure that the machine's state remains consistent.
+
+<img  width="836"  src="https://imgur.com/HXN0Yug.png">
+
+6 ◦ Finally, we will run shasum machinename.vdi and this will give us the signature. The result of this signature is what we will need to add to our signature.txt file and subsequently upload the file to the intra repository.
+
+<img  width="836"  src="https://imgur.com/QW37nQk.png">
+
+**Important**: You can safely reopen and use the virtual machine because the state is saved in the snapshot. If you need to make changes and then verify the integrity again, revert to this snapshot before generating a new shasum.
