@@ -1643,4 +1643,4 @@ As is requires on the subject.
 [![Captura de pantalla 2022-07-13 a las 20 39 30](https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png)](https://user-images.githubusercontent.com/66915274/178807102-e2a9722e-791f-48a0-ae35-b05b36a37ed2.png)
 
 70 ◦ Once we have finished with the installation of Debian, we must set up our virtual machine.
-[Click here to navigate to the virtual machine settings ⚙️](https://github.com/Miami05/Born2beRoot?tab=readme-ov-file#6-virtual-machine-setup%EF%B8%8F)
+[Click here to navigate to the virtual machine settings ⚙️](https://github.com/Miami05/Born2beRoot?tab=readme-ov-file#6-virtual-machine-setup)
