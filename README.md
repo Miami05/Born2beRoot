@@ -45,7 +45,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	10.1 [Manual partition](#101-manual-partition)
 
-	10.2 [Wordpress & services configuration 🌐](#102-wordpress--services-configuration)|
+	10.2 [Wordpress & services configuration 🌐](#102-wordpress--services-configuration)
 
 	10.3 [Additional service ➕](#103-additional-service)
 
@@ -1036,4 +1036,4 @@ cd `/home/ldurmish/sgoinfre/Born2beRoot/`
 
 ## 10. Bonus⭐
 
-### 10.1 Manual partition
+## 10.1 Manual partition
