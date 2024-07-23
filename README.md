@@ -1737,3 +1737,16 @@ Reload privilege tables now? → Y
 <img  src="https://imgur.com/FBBqJe3.png">
 
 <img  src="https://imgur.com/sDBw6Jp.png">
+
+- **Switch to unix_socket authentication? We choose N because we don't want it to switch to Unix socket authentication because we already have a protected root account.**
+
+- **Change the root password? We choose N. We do not want to change the root password. By default we have no password but in mariadb he is not really root as we must give him administrator permissions.**
+
+- **Remove anonymous users? We choose Y. By default when you install mariadb it has an anonymous user, which allows anyone to log into mariadb without having to create their own user account. This is designed for testing purposes and to make the installation smoother. When we leave the development environment and want to move to a production environment we must remove the anonymous users.**
+
+Disallow root login remotely? Choose Y. Disabling root login remotely will prevent anyone from guessing the root password. We will only be able to connect to root from localhost.
+
+Remove test database and access to it? Choose Y. This will remove the test database and any users who have access to it.
+
+Reaload privilege tables now? Choose Y. This will reload the MySQL permission tables so that the changes to the security settings will take effect immediately.
+
