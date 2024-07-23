@@ -1775,3 +1775,11 @@ Reload privilege tables now? → Y
 9 ◦ Once we have completed the previous step, we can exit mariadb.
 
 <img  src="https://imgur.com/rtLWX5z.png">
+
+PHP
+
+🧠 What is PHP❓ It is a programming language. It is mainly used to develop dynamic web applications and interactive websites. PHP runs on the server side.
+
+1 ◦ We install the necessary packages to be able to run web applications written in PHP language and that need to connect to a MySQL database. Run the following command `sudo apt install php-cgi php-mysql`.
+
+<img  src="https://imgur.com/VU38xDh.png">
