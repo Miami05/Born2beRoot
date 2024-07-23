@@ -1707,3 +1707,33 @@ Here’s a breakdown of the command and what the permissions mean:
     -   **7**: The owner has read (`4`), write (`2`), and execute (`1`) permissions.
     -   **5**: The group has read (`4`) and execute (`1`) permissions, but no write permissions.
     -   **5**: Others have read (`4`) and execute (`1`) permissions, but no write permissions.
+
+### Mariadb
+🧠 What is MariaDB❓ It is a database. It is used for various purposes, such as data warehousing, e-commerce, enterprise-level functions, and logging applications.
+
+1 ◦ We will install the packages with the command `sudo apt install mariadb-server`.
+
+<img  src="https://imgur.com/Qt7Efcf.png">
+
+2 ◦ Because the default configuration leaves your MariaDB installation unsecure, we will use a script provided by the mariadb-server package to restrict access to the server and remove unused accounts. We will run the script with the following command `sudo mysql_secure_installation`. It will ask if we want to switch to Unix socket authentication. Since we already have a protected root account we will type `N`.
+
+```
+Switch to unix_socket authentication? → N
+Change the root password? → N
+Remove anonymous users? → Y
+Disallow root login remotely? → Y
+Remove test database and access to it? → Y
+Reload privilege tables now? → Y
+```
+
+<img  src="https://imgur.com/iCxisJu.png">
+
+<img  src="https://imgur.com/w4dNGaX.png">
+
+<img  src="https://imgur.com/X7QBQ6z.png">
+
+<img  src="https://imgur.com/Mk3I6ha.png">
+
+<img  src="https://imgur.com/FBBqJe3.png">
+
+<img  src="https://imgur.com/sDBw6Jp.png">
