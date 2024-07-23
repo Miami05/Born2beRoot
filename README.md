@@ -1825,3 +1825,19 @@ You should see the following:
 8 ◦ We must fill in all the fields. In my case I have put the following:
 
 <img  src="https://imgur.com/8Qm7Gxb.png">
+
+9 ◦ Once we have filled in all the fields we must click on `Install WordPress` and we will have finished the installation. You will see the next tab. Now WordPress can create the tables and dump all the data it needs to work in the database we have assigned to it.
+
+<img  src="https://imgur.com/DUHSuqa.png">
+
+10 ◦ If we access again to our localhost from the browser we can see our functional page.
+
+<img  src="https://imgur.com/PK1BPpW.png">
+
+11 ◦ If we want to access the admin panel to make changes to our site we will have to put in the browser `localhost/wp-admin` and log in with our account.
+
+<img  src="https://imgur.com/TqhZWj6.png">
+
+12 ◦ Once you have logged in, you can modify whatever you like. Customizing the page is optional, as it is not specified in the subject of this guide, we will not deal with it.
+
+<img  src="https://imgur.com/aTgwzoX.png">
