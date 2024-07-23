@@ -1776,10 +1776,52 @@ Reload privilege tables now? → Y
 
 <img  src="https://imgur.com/rtLWX5z.png">
 
-PHP
+### PHP
 
 🧠 What is PHP❓ It is a programming language. It is mainly used to develop dynamic web applications and interactive websites. PHP runs on the server side.
 
 1 ◦ We install the necessary packages to be able to run web applications written in PHP language and that need to connect to a MySQL database. Run the following command `sudo apt install php-cgi php-mysql`.
 
 <img  src="https://imgur.com/VU38xDh.png">
+
+### WordPress configuration
+
+1 ◦ Access the /var/www/html directory with the command: `cd /var/www/html`.
+
+<img  src="https://imgur.com/LLDfEIx.png">
+
+2 ◦ Copy the file wp-config-sample.php and rename it wp-config.php
+
+<img  src="https://imgur.com/lEbamN5.png">
+
+3 ◦ Once we have renamed it we will edit the file wp-config.php nano wp-config.php and modify the following values.
+
+<img  src="https://user-images.githubusercontent.com/66915274/229308713-bbbb69f4-5f6c-4146-bc10-006cd968fb95.png">
+
+You have to replace them with the values that we have previously set when we created the database and the user so that WordPress can connect and make use of it.
+
+<img  src="https://imgur.com/MbwTuz4.png">
+
+4 ◦ We enabled the fastcgi-php module in Lighttpd to improve the performance and speed of web applications on the server. `sudo lighty-enable-mod fastcgi`.
+
+<img  src="https://imgur.com/O0IjsyG.png">
+
+5 ◦ We enabled the fastcgi-php module in Lighttpd to improve the performance and speed of PHP-based web applications on the server. `sudo lighty-enable-mod fastcgi-php`.
+
+<img  src="https://imgur.com/BxMBANp.png">
+
+6 ◦ We update and apply the changes in the configuration with the command `sudo service lighttpd force-reload`.
+
+<img  src="https://imgur.com/eJYG3Yu.png">
+
+7 ◦ Once we have completed the previous steps we can go back to our browser and type `localhost`.
+
+<img  src="https://imgur.com/B6Apabm.png">
+
+You should see the following:
+
+<img width="836" src="https://imgur.com/M57LIRt.png">
+
+8 ◦ We must fill in all the fields. In my case I have put the following:
+
+<img  width="836" src="https://imgur.com/8Qm7Gxb.png">
