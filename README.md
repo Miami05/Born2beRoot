@@ -582,6 +582,7 @@ enforce_for_root
 ```
 
 ➤ This is how the line must be↙️
+
 <img  width="836"  src="https://imgur.com/9srPwvE.png">
 
 ➤ This is how the file must look ↙️
@@ -628,7 +629,13 @@ Then check it again.
 
 ## 6.6 SSH
 
-1 ◦
+1 ◦ After configuring the password, if you encounter issues connecting via SSH on port 4242, it may be because the port is already in use, which could be causing the connection error.
+
+<img  width="836"  src="https://imgur.com/vIhskRT.png">
+
+1 ◦ 
+
+https://imgur.com/eCgmUd5
 
 ## 6.7 Connecting Via SSH through Nat🗣
 
