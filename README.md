@@ -46,7 +46,7 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
 	10.2 [Wordpress and Services Configuration🌐](#102-wordpress-and-services-configuration)
 
-    10.3
+    10.3 [Additional Service](#103-additional-service)
 
 11.  [Correction sheet ✅](#correction-sheet)
 
@@ -559,7 +559,7 @@ PASS_MIN_DAYS: It's the min days till password change.
 
 PASS_WARN_AGE: It's the days till password warning.
 
-3 ◦ For continuing the installation we must install the next packages with the following command`sudo apt install libpam-pwquality` , then we write `Y` so we can continue, we wait till it finish.
+3 ◦ For continuing the installation we must install the next packages with the following command `sudo apt install libpam-pwquality` , then we write `Y` so we can continue, we wait till it finish.
 
 <img  width="836"  src="https://imgur.com/nxsgXMT.png">
 
@@ -1841,3 +1841,5 @@ You should see the following:
 12 ◦ Once you have logged in, you can modify whatever you like. Customizing the page is optional, as it is not specified in the subject of this guide, we will not deal with it.
 
 <img  src="https://imgur.com/aTgwzoX.png">
+
+## 10.3 Additional Service
