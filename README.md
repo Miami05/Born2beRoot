@@ -1820,8 +1820,8 @@ You have to replace them with the values that we have previously set when we cre
 
 You should see the following:
 
-<img width="836" src="https://imgur.com/M57LIRt.png">
+<img src="https://imgur.com/M57LIRt.png">
 
 8 ◦ We must fill in all the fields. In my case I have put the following:
 
-<img  width="836" src="https://imgur.com/8Qm7Gxb.png">
+<img  src="https://imgur.com/8Qm7Gxb.png">
