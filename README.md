@@ -633,9 +633,19 @@ Then check it again.
 
 <img  width="836"  src="https://imgur.com/vIhskRT.png">
 
-1 ◦ 
+2 ◦ The error message you received indicates that the ECDSA key for the host localhost on port 4242 has changed since the last time you connected, and your SSH client is configured to perform strict host key checking, which prevents the connection due to this change.
 
-https://imgur.com/eCgmUd5
+<img  width="836"  src="https://imgur.com/eCgmUd5.png">
+
+3 ◦ Go on and type in your terminal.
+
+<img  width="836"  src="https://imgur.com/V6Q6yev.png">
+
+4 ◦ Delete all the lines. Save the file and exit the editor by typing `:wq` and pressing Enter.
+
+<img  width="836"  src="https://imgur.com/OeuILVf.png">
+
+Try connecting again.
 
 ## 6.7 Connecting Via SSH through Nat🗣
 
