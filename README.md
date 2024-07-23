@@ -1687,9 +1687,9 @@ Lighttpd<br>
 
 4 ◦ Unzip the file you just downloaded with the command `sudo unzip latest.zip`.
 
-5 ◦ We will rename the folder html and call it html_old. sudo mv html/ html_old/.
+5 ◦ We will rename the folder html and call it html_old. `sudo mv html/ html_old/`.
 
-<img  src="https://imgur.com/2SiWUi3>
+<img  src="https://imgur.com/2SiWUi3.png">
 
 6 ◦ Now we will rename the wordpress folder and call it html. sudo mv wordpress/ html
 
