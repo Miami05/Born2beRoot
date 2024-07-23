@@ -1749,3 +1749,29 @@ Reload privilege tables now? → Y
 -   **Remove test database and access to it?** Choose **Y**. This will delete the test database that comes with MariaDB and remove any users who had access to it, which is a good practice for cleaning up.
 
 -   **Reload privilege tables now?** Choose **Y**. This command updates the system so that all the changes you’ve made take effect right away.
+
+3 ◦ Once we have finished with the installation of mariadb we must create the database and the user for the WordPress. First we must access mariadb.
+
+<img  src="https://imgur.com/slRkfsx.png">
+
+4 ◦ We create a database for the WordPress. In my case I'm going to call it wp_database. I will do all this with the command `CREATE DATABASE wp_database;`.
+
+5 ◦ To make sure that the database for WordPress has been created we can view all existing databases with the command `SHOW DATABASES;`.
+
+<img  src="https://imgur.com/UE1j5Tc.png">
+
+6 ◦ Next we need to create a user inside the database. We will use the command `CREATE USER 'ldurmish'@'localhost' IDENTIFIED BY '12345';`.
+
+<img  src="https://imgur.com/BXcn8qZ.png">
+
+7 ◦ We bind the new user to our database so that we grant him the necessary permissions to be able to work. We will use the command `GRANT ALL PRIVILEGES ON wp_database.* TO 'ldurmish'@'localhost';`.
+
+<img  src="https://imgur.com/6cAcveT.png">
+
+8 ◦ We update the permissions for the changes to take effect with the command `FLUSH PRIVILEGES;`
+
+<img  src="https://imgur.com/PnvsWLl.png">
+
+9 ◦ Once we have completed the previous step, we can exit mariadb.
+
+<img  src="https://imgur.com/rtLWX5z.png">
