@@ -50,16 +50,6 @@ Through hands-on tasks, students learn to identify vulnerabilities, implement se
 
     10.3 [Additional Service](#103-additional-service)
 
-11.  [Correction sheet ✅](#correction-sheet)
-
-
-
--  [Evaluation answers 💯](#evaluation-answers)
-
-
-
--  [Evaluation commands ⌨️](#evaluation-commands)
-
 
 ##  1. Download Virtual Machine💿
 
@@ -1866,3 +1856,131 @@ You should see the following:
 <img  src="https://imgur.com/aTgwzoX.png">
 
 ## 10.3 Additional Service
+
+Before installing the FTP server, update the package list and upgrade the installed packages to ensure you have the latest versions.
+
+1 ◦ Update the package list with the command `sudo apt update`.
+
+<img  src="https://imgur.com/xBEUZYw.png">
+
+2 ◦ Upgrade the installed packages with the commands `sudo apt upgrade`.
+
+<img  src="https://imgur.com/ssHBFzO.png">
+
+3 ◦ Now we install the `FTP` with the command `sudo apt install vsftpd`.
+
+<img  src="https://imgur.com/7dnAel5.png">
+
+4 ◦ Open the configuration file.
+
+<img  src="https://imgur.com/QqaayJJ.png">
+
+5 ◦ **Open the configuration file** in a text editor press `Ctrl + Shift + Down Arrow` to select everything and cut everything with `Ctrl + K`.
+
+<img  src="https://imgur.com/wjWw8a0.png">
+
+6 ◦ Write this configuration
+
+<img  src="https://imgur.com/Mm7XO0B.png">
+
+-   **`anonymous_enable=YES`**
+
+    -   **Description**: Allows anonymous users to log in to the FTP server.
+    -   **Usage**: This is useful if you want to allow users to access your FTP server without needing a username and password.
+
+-   **`local_enable=YES`**
+
+    -   **Description**: Allows local users (users with accounts on the server) to log in.
+    -   **Usage**: Essential for allowing regular system users to access the FTP server.
+
+-   **`write_enable=YES`**
+
+    -   **Description**: Enables write permissions on the server.
+    -   **Usage**: Allows users to upload files, create directories, and delete files.
+
+-   **`dirmessage_enable=YES`**
+
+    -   **Description**: Displays messages when users enter a directory.
+    -   **Usage**: Useful for showing welcome messages or important notices within directories.
+
+-   **`xferlog_enable=YES`**
+
+    -   **Description**: Enables logging of file transfers.
+    -   **Usage**: Important for keeping records of who transferred what and when.
+
+-   **`connect_from_port_20=YES`**
+
+    -   **Description**: Uses port 20 for data connections.
+    -   **Usage**: Standard practice for FTP data transfer.
+
+-   **`ftpd_banner=Welcome to FTP server!`**
+
+    -   **Description**: Sets a custom welcome message displayed when users log in.
+    -   **Usage**: Personalizes the user experience and can provide useful information.
+
+-   **`chroot_local_user=YES`**
+
+    -   **Description**: Restricts local users to their home directories.
+    -   **Usage**: Enhances security by preventing users from accessing the entire filesystem.
+
+-   **`allow_writeable_chroot=YES`**
+
+    -   **Description**: Allows the root directory to be writable when using chroot.
+    -   **Usage**: Necessary when `chroot_local_user=YES` to avoid errors if the root directory is writable.
+
+-   **`user_sub_token=$USER`**
+
+    -   **Description**: Replaces `$USER` with the actual username in paths.
+    -   **Usage**: Helps in creating user-specific paths dynamically.
+
+-   **`local_root=/var/www/html`**
+
+    -   **Description**: Sets the root directory for local users.
+    -   **Usage**: Points to the directory where users will be chrooted.
+
+-   **`listen=YES`**
+
+    -   **Description**: Enables standalone mode.
+    -   **Usage**: Allows `vsftpd` to run independently rather than through `inetd`.
+
+-   **`listen_port=21`**
+
+    -   **Description**: Sets the port for the FTP control connection.
+    -   **Usage**: Standard port for FTP control messages.
+
+-   **`listen_address=0.0.0.0`**
+
+    -   **Description**: Binds the FTP server to all available IP addresses.
+    -   **Usage**: Ensures the server listens on all network interfaces.
+
+-   **`seccomp_sandbox=NO`**
+
+    -   **Description**: Disables seccomp sandboxing.
+    -   **Usage**: Turning this off can be a security risk, but may be needed for compatibility reasons.
+-   **`pasv_enable=YES`**
+
+    -   **Description**: Enables passive mode.
+    -   **Usage**: Passive mode is often used for FTP through firewalls.
+-   **`pasv_min_port=21000`**
+
+    -   **Description**: Sets the minimum port for passive mode connections.
+    -   **Usage**: Specifies the range of ports used for data connections in passive mode.
+-   **`pasv_max_port=21010`**
+
+    -   **Description**: Sets the maximum port for passive mode connections.
+    -   **Usage**: Defines the end of the port range for passive mode.
+
+-   **`userlist_enable=YES`**
+
+    -   **Description**: Enables the use of a user list file.
+    -   **Usage**: Controls which users can log in based on the user list.
+
+-   **`userlist_file=/etc/vsftpd.userlist`**
+
+    -   **Description**: Specifies the path to the user list file.
+    -   **Usage**: Points to the file that contains the list of allowed or denied users.
+
+-   **`userlist_deny=NO`**
+
+    -   **Description**: Changes the user list behavior to allow listed users.
+    -   **Usage**: If set to `YES`, users in the list are denied; if `NO`, users in the list are allowed.
