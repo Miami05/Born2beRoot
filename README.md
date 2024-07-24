@@ -1984,3 +1984,57 @@ Before installing the FTP server, update the package list and upgrade the instal
 
     -   **Description**: Changes the user list behavior to allow listed users.
     -   **Usage**: If set to `YES`, users in the list are denied; if `NO`, users in the list are allowed.
+
+7 ◦ After making changes to the configuration file, restart the vsftpd service with `sudo systemctl restart vsftpd`.
+
+<img  src="https://imgur.com/glgRcom.png">
+
+8 ◦ To ensure FTP functions correctly, you need to allow ports 20 and 21 through UFW:
+
+-   **Port 21**: This is the control port used for establishing the FTP connection and for sending commands from the client to the server.
+
+-   **Port 20**: This is the data port used for transferring data between the client and the server.
+
+<img  src="https://imgur.com/ETpbw8K.png">
+
+9 ◦ If your FTP server uses passive mode, you need to open ports 20000-20010 to allow it to handle file transfers correctly. This range lets the server manage multiple data connections at once.
+
+<img  src="https://imgur.com/mNTdHe5.png">
+
+10 ◦ To make sure the ports are open, check your UFW status with `sudo ufw status`.
+
+<img  src="https://imgur.com/J0nw8f5.png">
+
+11 ◦ After making changes to the configuration file, restart the vsftpd service with `sudo systemctl restart vsftpd`.
+
+<img  src="https://imgur.com/glgRcom.png">
+
+12 ◦ Create a file called `vsftpd.userlist ` file specifies which users are allowed or denied access to the FTP server, depending on how it is configured.
+
+<img  src="https://imgur.com/auoO9bg.png">
+
+13 ◦ This is part of vsftpd’s security measures to control who can connect to your FTP server. U can put ur username.
+
+<img  src="https://imgur.com/HydYmmj.png">
+
+14 ◦ To configure port forwarding in your VM, go to the VM's network settings, select the NAT adapter, and click on the **Port Forwarding** button. Press the **Add** button to enter the port details, specifying the host and guest ports to forward traffic appropriately.
+
+<img  src="https://imgur.com/AfYP1VX.png">
+
+14 ◦ After adding all the ports, you should see the configuration appear as shown in the picture below.
+
+<img  src="https://imgur.com/QtUPpH1.png">
+
+15 ◦ Open the terminal and enter the command `ftp localhost`.
+
+<img  src="https://imgur.com/tb4rmtO.png">
+
+16 ◦ Enter the username and the password.
+
+<img  src="https://imgur.com/Skfvxo9.png">
+
+17 ◦ You are now successfully connected to the FTP server.
+
+<img  src="https://imgur.com/vqZKHXB.png">
+
+🎉 Congratulations on completing this tutorial! I hope you found it useful and that it made your task easier. This guide took a lot of effort to put together, and if you found it valuable, I’d greatly appreciate a star 🌟 to help it reach more people and assist other students 👨🏻‍🎓❤️. Your support motivates me to create more helpful content and improve existing guides. If you have any feedback, suggestions, or questions, feel free to reach out. Keep up the great work and happy learning! 🚀🌟
